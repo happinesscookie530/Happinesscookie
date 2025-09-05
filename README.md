@@ -1,48 +1,35 @@
-# 網頁切版直播班 Vite 範例 - Bootstrap 版本
+## **專題主題：**晴天餅乾· Happiness Cookie
 
-## Node.js 版本
-  - 專案的 Node.js 版本需為 v18 以上
-  - 查看自己版本指令：`node -v`
+**晴天餅乾**
+> 
+**專題成員**：
 
+[孟](https://www.notion.so/2286e9dba91380ed9ea0efaf9877c57b?pvs=21)
 
-## 指令列表
-- `npm install` - 初次下載該範例專案後，需要使用 npm install 來安裝套件
-- `npm run dev` - 執行開發模式
-  - 若沒有自動開啟瀏覽器，可嘗試手動在瀏覽器上輸入
-    `http://localhost:5173/<專案名稱>/pages/index.html`
-- `npm run build` - 執行編譯模式（不會開啟瀏覽器）
-- `npm ru deploy` - 自動化部署
+[YiHan](https://www.notion.so/YiHan-2286e9dba91380ae8a8adfb89ee6922e?pvs=21)
 
-## 資料夾結構
-  - assets # 靜態資源放置處
-    - images # 圖片放置處
-    - scss # SCSS 的樣式放置處
+[Sid](https://www.notion.so/Sid-2286e9dba913807b9a07ec6d54249b64?pvs=21)
 
-  - layout # ejs 模板放置處
-  - pages # 頁面放置處
+[Min](https://www.notion.so/Min-2296e9dba9138066b578dcad697876e4?pvs=21)
 
-- JavaScript 程式碼可寫在 main.js 檔案
+[Wayne](https://www.notion.so/Wayne-2296e9dba9138035b576e2c4bcf6a88d?pvs=21)
 
-### 注意事項
-- 已將 pages 資料夾內的 index.html 預設為首頁，建議不要任意修改 index.html 的檔案名稱
-- .gitignore 檔案是用來忽略掉不該上傳到 GitHub 的檔案（例如 node_modules），請不要移除 .gitignore
+**主題理念**：
 
-## 開發模式的監聽
-vite 專案執行開發模式 `npm run dev` 後即會自動監聽，不需要使用 `Live Sass Compiler` 的 `Watch SCSS` 功能
+有時候，甜點不是為了慶祝
 
+而是為了撫慰日常裡的小小波動
 
-## 部署 gh-pages 流程說明
-### Windows 版本
-1. 在 GitHub 建立一個新的 Repository
+一走進店裡
 
-2. 部署前請務必先將原始碼上傳到 GitHub Repository 也就是初始化 GitHub，因此通常第一步驟會在專案終端機輸入以下指令
-```cmd
-git init # 若已經初始化過就可以不用輸入
-git add .
-git commit -m 'first commit'
-git branch -M main
-git remote add origin [GitHub Repositories Url]
-git push -u origin main // 僅限第一次輸入，往後只需要輸入 git push
-```
+是餅乾剛出爐的香氣，
 
-3. 初始化完畢後，執行 `npm run deploy` 指令進行自動化部署
+是陽光灑在木櫃上的溫柔，
+
+是我們親手為你準備的剛剛好的甜
+
+晴天餅乾 手工製作
+
+只為了在平凡的每一天
+
+成為你心裡那道小小的光
