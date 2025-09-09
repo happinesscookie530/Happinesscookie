@@ -298,24 +298,56 @@ $cyans: (
 // fusv-enable
 
 // scss-docs-start theme-color-variables
-$primary: $blue !default;
-$secondary: $gray-600 !default;
+// $primary: $blue !default;
+
+$black: #000000;
+$neutral-80: #333;
+$neutral-60: #909090;
+$neutral-40: #ececec;
+$while: #ffffff;
+$primary: #02b5d4;
+$primary-40: #70daed;
+$primary-20: #adeaf5;
+$primary-10: #dff7fb;
+// $secondary: $gray-600 !default;
+$secondary: #ffcc4d;
+$secondary-30: #ffdb80;
+$secondary-15: #ffe8b2;
+$secondary-10: #fff1d1;
+$secondary-5: #fff9eb;
 $success: $green !default;
 $info: $cyan !default;
 $warning: $yellow !default;
 $danger: $red !default;
+$alert: #f00000;
 $light: $gray-100 !default;
 $dark: $gray-900 !default;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
 $theme-colors: (
+  "black": $black,
+  "neutral-80": $neutral-80,
+  "neutral-60": $neutral-60,
+  "neutral-40": $neutral-40,
+  "while": $while,
+
   "primary": $primary,
+  "primary-40": $primary-40,
+  "primary-20": $primary-20,
+  "primary-10": $primary-10,
+
   "secondary": $secondary,
+  "secondary-30": $secondary-30,
+  "secondary-15": $secondary-15,
+  "secondary-10": $secondary-10,
+  "secondary-5": $secondary-5,
+
   "success": $success,
   "info": $info,
   "warning": $warning,
   "danger": $danger,
+  "alert": $alert,
   "light": $light,
   "dark": $dark,
 ) !default;
