@@ -1,4 +1,33 @@
-.header{
-  background: #69F0AE;
-  font-size: 64px;
+.header-logo {
+  object-fit: cover;
+  width: 120px;
+  height: 56px;
+  @media (min-width: 992px) {
+    width: 160px;
+    height: 80px;
+  }
+}
+
+.header-list a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.header-mobile-list a {
+  text-decoration: none;
+}
+
+.mobile-logo-white {
+  width: 216px;
+  height: 104px;
+  object-fit: cover;
+}
+
+.header-main.scrolled {
+  background-color: white !important;
+}
+
+.header-main.scrolled .header-list a,
+.header-main.scrolled .material-icons-outlined {
+  color: #000 !important;
 }
