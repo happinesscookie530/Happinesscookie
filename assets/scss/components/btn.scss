@@ -17,10 +17,10 @@ $neutral-80: #333333;
   --bs-btn-disabled-bg: #{$neutral-40};
 
   // 加入邊框設定
-  --bs-btn-border-color: #{$primary};
-  --bs-btn-hover-border-color: #{$primary-40};
-  --bs-btn-active-border-color: #{$primary-40};
-  --bs-btn-disabled-border-color: #{$neutral-40};
+  --bs-btn-border-color: transparent;
+  --bs-btn-hover-border-color: transparent;
+  --bs-btn-active-border-color: transparent;
+  --bs-btn-disabled-border-color: transparent;
 
   border-radius: 100px;
   font-weight: 700;
