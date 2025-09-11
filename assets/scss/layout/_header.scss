@@ -13,8 +13,19 @@
   transition: color 0.3s ease;
 }
 
-.header-mobile-list a {
-  text-decoration: none;
+.header-mobile-list {
+  li {
+    &:hover {
+      background-color: $primary-10;
+      border-radius: 8px;
+      a {
+        color: $black !important;
+      }
+    }
+  }
+  a {
+    text-decoration: none;
+  }
 }
 
 .mobile-logo-white {
@@ -24,10 +35,30 @@
 }
 
 .header-main.scrolled {
-  background-color: white !important;
+  background-color: white;
 }
 
-.header-main.scrolled .header-list a,
-.header-main.scrolled .material-icons-outlined {
-  color: #000 !important;
+.header-main.scrolled .header-list a:not(.dropdown-item),
+.header-main.scrolled .header-nav-icon {
+  color: #000;
+}
+
+.header-main {
+  .header-dropdown-menu {
+    border-radius: 10px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    span {
+      color: $black !important;
+    }
+    .dropdown-item:hover {
+      background-color: $primary-10;
+      border-radius: 8px;
+    }
+  }
+  .dropdown-menu {
+    --bs-dropdown-min-width: 140px;
+    min-width: 140px;
+  }
 }
