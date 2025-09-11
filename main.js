@@ -3,32 +3,44 @@ import "bootstrap/dist/js/bootstrap.min.js";
 
 console.log("Hello world");
 
+import "./assets/scss/all.scss";
+import "bootstrap/dist/js/bootstrap.min.js";
+
+console.log("Hello world");
+
+//header 滾動測試
+import "./assets/scss/all.scss";
+import "bootstrap/dist/js/bootstrap.min.js";
+
+console.log("Hello world");
+
 //header 滾動測試
 document.addEventListener("DOMContentLoaded", function () {
   const header = document.querySelector(".header-main");
+  const offcanvas = document.querySelector(".offcanvas");
   const headerLinks = document.querySelectorAll(
     ".header-list a, .material-icons-outlined"
   );
-  // 移除對 loginBtn 的選取，因為我們不再需要操作它
-  // const loginBtn = document.querySelector('.btn-primary');
 
   window.addEventListener("scroll", function () {
     if (window.scrollY > 50) {
       header.classList.add("scrolled");
-      // 只有 header 連結和圖示變色
-      headerLinks.forEach((link) => link.classList.remove("text-white"));
-
-      // 移除這裡的程式碼，讓按鈕維持原樣
-      // loginBtn.classList.remove('btn-primary');
-      // loginBtn.classList.add('btn-dark');
+      headerLinks.forEach((link) => {
+        // 檢查這個連結是否在 offcanvas 內，如果是就跳過
+        if (offcanvas.contains(link)) {
+          return;
+        }
+        link.classList.remove("text-white");
+      });
     } else {
       header.classList.remove("scrolled");
-      // 只有 header 連結和圖示恢復顏色
-      headerLinks.forEach((link) => link.classList.add("text-white"));
-
-      // 移除這裡的程式碼，讓按鈕維持原樣
-      // loginBtn.classList.remove('btn-dark');
-      // loginBtn.classList.add('btn-primary');
+      headerLinks.forEach((link) => {
+        // 檢查這個連結是否在 offcanvas 內，如果是就跳過
+        if (offcanvas.contains(link)) {
+          return;
+        }
+        link.classList.add("text-white");
+      });
     }
   });
 });
