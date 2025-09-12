@@ -1,3 +1,4 @@
+// 如果其他頁面有用到swiper這裡要再做些微調整
 .swiper-slide img {
   width: 100%;
   height: 100vh;
@@ -29,13 +30,12 @@
     width: 40px;
     height: 7px;
   }
-}
-
-.hero-swiper {
-  .swiper-pagination {
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 40px;
-    padding-bottom: 24px;
+  .hero-swiper {
+    .swiper-pagination {
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 40px;
+      padding-bottom: 24px;
+    }
   }
 }
