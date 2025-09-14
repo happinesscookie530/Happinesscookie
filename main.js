@@ -6,14 +6,6 @@ console.log("Hello world");
 import "./assets/scss/all.scss";
 import "bootstrap/dist/js/bootstrap.min.js";
 
-console.log("Hello world");
-
-//header 滾動測試
-import "./assets/scss/all.scss";
-import "bootstrap/dist/js/bootstrap.min.js";
-
-console.log("Hello world");
-
 //header 滾動測試
 document.addEventListener("DOMContentLoaded", function () {
   const header = document.querySelector(".header-main");
@@ -43,4 +35,22 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   });
+});
+
+//swiper設定
+const swiper = new Swiper(".hero-swiper", {
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+  },
+
+  effect: "fade",
+  fadeEffect: {
+    crossFade: true,
+  },
+  speed: 1000,
+  autoplay: {
+    delay: 1500,
+    disableOnInteraction: false,
+  },
 });
