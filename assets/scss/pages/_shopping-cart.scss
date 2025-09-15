@@ -1,0 +1,47 @@
+.stepBar--wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .stepBar--circle {
+    max-width: 56px;
+
+    .stepBar--number {
+      max-width: 25px;
+      background-color: $neutral-20;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 25px;
+      margin: 0 auto;
+      font-size: 14px;
+      font-weight: 400;
+      color: $while;
+      margin-bottom: 8px;
+
+      &__active {
+        background-color: $primary;
+      }
+    }
+
+    .stepBar--circle__text {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+  }
+
+  .stepBar--line {
+    width: 66px;
+    padding: 0 8px;
+
+    .stepBar--line__mid {
+      width: 100%; /* 線橫跨整個容器 */
+      height: 2px;
+      background-color: $neutral-20;
+
+      &-active {
+        background-color: $primary;
+      }
+    }
+  }
+}
