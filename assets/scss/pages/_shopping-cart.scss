@@ -1,47 +1,63 @@
-.stepBar--wrapper {
+.stepbar__list {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  gap: map-get($spacers, 4);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.stepbar__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: map-get($spacers, 4);
+}
+.stepbar__badge {
+  width: 25px;
+  line-height: 25px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: $neutral-20;
+  color: $white;
+}
+.is-active .stepbar__badge {
+  background-color: $primary;
+}
+.stepbar__label {
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+}
 
-  .stepBar--circle {
-    max-width: 56px;
+.stepbar__divider {
+  flex: 1;
+  height: 2px;
+  background-color: $neutral-20;
+}
 
-    .stepBar--number {
-      max-width: 25px;
-      background-color: $neutral-20;
-      border-radius: 50%;
-      text-align: center;
-      line-height: 25px;
-      margin: 0 auto;
-      font-size: 14px;
-      font-weight: 400;
-      color: $while;
-      margin-bottom: 8px;
+.is-active + .stepbar__divider {
+  background-color: $primary;
+} // 已完成區段高亮
 
-      &__active {
-        background-color: $primary;
-      }
-    }
-
-    .stepBar--circle__text {
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 1.5;
-    }
+@media (min-width: 768px) {
+  .stepbar__item {
+    flex-direction: row;
   }
-
-  .stepBar--line {
-    width: 66px;
-    padding: 0 8px;
-
-    .stepBar--line__mid {
-      width: 100%; /* 線橫跨整個容器 */
-      height: 2px;
-      background-color: $neutral-20;
-
-      &-active {
-        background-color: $primary;
-      }
-    }
+  .stepbar__badge {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    font-weight: 700;
+    font-size: 16px;
+  }
+  .stepbar__label {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+  .stepbar__list {
+    gap: map-get($spacers, 8);
   }
 }

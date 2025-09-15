@@ -12,38 +12,36 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
-    <%- include('./layout/header'); -%>
-    <div class="shopping--stepBar container mt-56">
+    <!-- stepbar-start -->
+    <div class="container">
       <div class="row">
-        <div class="col">
-          <div class="stepBar--wrapper">
-            <div class="stepBar--circle">
-              <div class="stepBar--number stepBar--number__active">1</div>
-              <p class="stepBar--circle__text">確認訂單</p>
-            </div>
+        <div class="col col-md-6 mx-auto">
+          <nav class="stepbar">
+            <ol class="stepbar__list">
+              <li class="stepbar__item is-active">
+                <span class="stepbar__badge">1</span>
+                <span class="stepbar__label">確認訂單</span>
+              </li>
 
-            <div class="stepBar--line">
-              <div class="stepBar--line__mid stepBar--line__mid-active"></div>
-            </div>
+              <li class="stepbar__divider"></li>
 
-            <div class="stepBar--circle">
-              <div class="stepBar--number">2</div>
-              <p class="stepBar--circle__text">訂單資訊</p>
-            </div>
+              <li class="stepbar__item">
+                <span class="stepbar__badge">2</span>
+                <span class="stepbar__label">訂單資訊</span>
+              </li>
 
-            <div class="stepBar--line">
-              <div class="stepBar--line__mid"></div>
-            </div>
+              <li class="stepbar__divider"></li>
 
-            <div class="stepBar--circle">
-              <div class="stepBar--number">3</div>
-              <p class="stepBar--circle__text">完成訂單</p>
-            </div>
-          </div>
+              <li class="stepbar__item">
+                <span class="stepbar__badge">3</span>
+                <span class="stepbar__label">完成訂單</span>
+              </li>
+            </ol>
+          </nav>
         </div>
       </div>
     </div>
-    <%-include('./layout/footer'); -%>
+    <!-- stepbar-end -->
 
     <script type="module" src="../main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
