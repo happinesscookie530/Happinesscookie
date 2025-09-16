@@ -61,3 +61,17 @@
     gap: map-get($spacers, 8);
   }
 }
+// test
+#content {
+  max-height: 0; /* 一開始收起來 */
+  overflow: hidden; /* 隱藏多餘的內容 */
+  border: 1px solid #ccc;
+  padding: 0 10px; /* padding 左右固定，避免收起來內容消失 */
+  margin-top: 10px;
+  transition: all 0.4s ease; /* 加上過度動畫 */
+}
+
+#content.show {
+  max-height: 300px; /* 展開時的最大高度，要比內容高一些 */
+  padding: 10px; /* 展開時回來完整 padding */
+}

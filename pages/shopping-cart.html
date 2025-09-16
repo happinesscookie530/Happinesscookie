@@ -42,9 +42,24 @@
       </div>
     </div>
     <!-- stepbar-end -->
+    <!-- test -->
+    <button id="toggleBtn">展開 / 收起</button>
+
+    <div id="content">
+      <p>這是會被收合的內容</p>
+      <p>這是更多的內容</p>
+    </div>
 
     <script type="module" src="../main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      const btn = document.getElementById("toggleBtn");
+      const content = document.getElementById("content");
+
+      btn.addEventListener("click", () => {
+        content.classList.toggle("show");
+      });
+    </script>
   </body>
 </html>
