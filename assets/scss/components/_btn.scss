@@ -1,0 +1,162 @@
+//$primary: #02b5d4;
+//$primary-40: #70daed;
+//$primary-10: #dff7fb;
+//$neutral-40: #c5c6c6;
+//$white: #fff;
+//$neutral-80: #333333;
+//.btn-primary {
+//  --bs-btn-color: #{$white};
+//  --bs-btn-hover-color: #{$white};
+//  --bs-btn-active-color: #{$white};
+//  --bs-btn-disabled-color: #{$white};
+//
+//  --bs-btn-bg: #{$primary};
+//  --bs-btn-hover-bg: #{$primary-40};
+//  --bs-btn-active-bg: #{$primary-40};
+//  --bs-btn-disabled-bg: #{$neutral-40};
+//
+//  // 加入邊框設定
+//  --bs-btn-border-color: transparent;
+//  --bs-btn-hover-border-color: transparent;
+//  --bs-btn-active-border-color: transparent;
+//  --bs-btn-disabled-border-color: transparent;
+//
+//  border-radius: 100px;
+//  font-weight: 700;
+//}
+//
+//.btn-outline-primary {
+//  --bs-btn-color: #{$primary};
+//  --bs-btn-bg: transparent;
+//  --bs-btn-hover-color: #{$primary}; // hover 字色
+//  --bs-btn-active-color: #{$primary}; // active 字色
+//  --bs-btn-active-bg: #{$primary-10};
+//  --bs-btn-disabled-color: transparent; // disabled 字色
+//  --bs-btn-border-color: #{$primary}; // 邊框顏色
+//  --bs-btn-hover-bg: #{$primary-10}; // hover 背景色
+//  --bs-btn-hover-border-color: #{$primary};
+//  --bs-btn-disabled-border-color: #{$neutral-40};
+//  border-width: 3px;
+//  border-radius: 100px;
+//  font-weight: 700;
+//}
+//
+///*白文字按鈕*/
+//.btn-text-white {
+//  color: #{$neutral-80}; // 預設文字顏色
+//  background: transparent;
+//  border: none;
+//  padding: 0;
+//  font-weight: 700;
+//
+//  &:hover {
+//    color: #{$primary}; // hover 顏色
+//    text-decoration: none; // 去掉 hover 底線
+//  }
+//
+//  &:disabled,
+//  &.disabled {
+//    color: #{$neutral-40}; // disabled 顏色
+//    pointer-events: none; // 禁止點擊
+//    text-decoration: none; // 去掉 hover 底線
+//  }
+//}
+//
+///*黑文字按鈕*/
+//.btn-text-neutral-80 {
+//  color: #{$white}; // 預設文字顏色
+//  background: transparent;
+//  border: none;
+//  padding: 0;
+//  font-weight: 700;
+//
+//  &:hover {
+//    color: #{$primary}; // hover 顏色
+//    text-decoration: none; // 去掉 hover 底線
+//  }
+//
+//  &:disabled,
+//  &.disabled {
+//    color: #{$neutral-40}; // disabled 顏色
+//    pointer-events: none; // 禁止點擊
+//    text-decoration: none; // 去掉 hover 底線
+//  }
+//}
+.btn-primary {
+  --bs-btn-color: $white;
+  --bs-btn-hover-color: $white;
+  --bs-btn-active-color: $white;
+  --bs-btn-disabled-color: $white;
+
+  --bs-btn-bg: $primary;
+  --bs-btn-hover-bg: $primary-40;
+  --bs-btn-active-bg: $primary-40;
+  --bs-btn-disabled-bg: $neutral-40;
+
+  // 加入邊框設定
+  --bs-btn-border-color: transparent;
+  --bs-btn-hover-border-color: transparent;
+  --bs-btn-active-border-color: transparent;
+  --bs-btn-disabled-border-color: transparent;
+
+  border-radius: 100px;
+  font-weight: 700;
+}
+
+.btn-outline-primary {
+  --bs-btn-color: $primary;
+  --bs-btn-bg: transparent;
+  --bs-btn-hover-color: $primary; // hover 字色
+  --bs-btn-active-color: $primary; // active 字色
+  --bs-btn-active-bg: $primary-10;
+  --bs-btn-disabled-color: transparent; // disabled 字色
+  --bs-btn-border-color: $primary; // 邊框顏色
+  --bs-btn-hover-bg: $primary-10; // hover 背景色
+  --bs-btn-hover-border-color: $primary;
+  --bs-btn-disabled-border-color: $neutral-40;
+  border-width: 3px;
+  border-radius: 100px;
+  font-weight: 700;
+}
+
+/*白文字按鈕*/
+.btn-text-white {
+  color: $neutral-80; // 預設文字顏色
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-weight: 700;
+
+  &:hover {
+    color: $primary; // hover 顏色
+    text-decoration: none; // 去掉 hover 底線
+  }
+
+  &:disabled,
+  &.disabled {
+    color: $neutral-40; // disabled 顏色
+    pointer-events: none; // 禁止點擊
+    text-decoration: none; // 去掉 hover 底線
+  }
+}
+
+/*黑文字按鈕*/
+.btn-text-neutral-80 {
+  color: $white; // 預設文字顏色
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-weight: 700;
+
+  &:hover {
+    color: $primary; // hover 顏色
+    text-decoration: none; // 去掉 hover 底線
+  }
+
+  &:disabled,
+  &.disabled {
+    color: $neutral-40; // disabled 顏色
+    pointer-events: none; // 禁止點擊
+    text-decoration: none; // 去掉 hover 底線
+  }
+}
