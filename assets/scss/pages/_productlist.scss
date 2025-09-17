@@ -1,0 +1,21 @@
+#headingHot .accordion-button::after {
+  display: none;
+}
+
+// 主分類按鈕的活躍樣式 (點選或子分類被點選時)
+.active-link {
+  background-color: $primary !important;
+  color: white !important;
+}
+
+// 細項分類連結的活躍樣式
+.sub-category-active {
+  background-color: #f0f0f0 !important;
+  color: #212529 !important;
+}
+
+// 確保未選取的按鈕是白色底色
+.accordion-button:not(.active-link) {
+  background-color: white !important;
+  color: #212529 !important;
+}
