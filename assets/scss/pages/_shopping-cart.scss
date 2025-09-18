@@ -61,17 +61,70 @@
     gap: map-get($spacers, 8);
   }
 }
-// test
-#content {
-  max-height: 0; /* 一開始收起來 */
-  overflow: hidden; /* 隱藏多餘的內容 */
-  border: 1px solid #ccc;
-  padding: 0 10px; /* padding 左右固定，避免收起來內容消失 */
-  margin-top: 10px;
-  transition: all 0.4s ease; /* 加上過度動畫 */
+// offcanvas
+.booking-wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.booking-btn-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  .booking-a-wrapper {
+    width: 50%;
+    margin-bottom: 8px;
+
+    .booking-a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+  }
+
+  .booking-btn-wrapper {
+    width: 50%;
+
+    .booking-btn {
+      height: 100%;
+      width: 100%;
+    }
+  }
 }
 
-#content.show {
-  max-height: 300px; /* 展開時的最大高度，要比內容高一些 */
-  padding: 10px; /* 展開時回來完整 padding */
+.position-r {
+  position: relative;
 }
+
+.booking-wrapper-two {
+}
+.booking-btn-flex-two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  .booking-a-wrapper-two {
+    width: 50%;
+    margin-bottom: 8px;
+
+    .booking-a-two {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+  }
+
+  .booking-btn-wrapper-two {
+    width: 50%;
+
+    .booking-btn-two {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+// 從底部滑上的 Offcanvas
