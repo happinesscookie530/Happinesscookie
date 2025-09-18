@@ -94,8 +94,6 @@
   }
 }
 
-.booking-wrapper-two {
-}
 .booking-btn-flex-two {
   display: flex;
   justify-content: center;
@@ -124,3 +122,13 @@
 }
 
 // 從底部滑上的 Offcanvas
+#offcanvasExample {
+  --bs-offcanvas-height: 60vh;
+}
+#offcanvasExample .offcanvas-body {
+  overflow-y: auto;
+  scrollbar-width: none; // Firefox 隱藏捲軸
+}
+#offcanvasExample .offcanvas-body::-webkit-scrollbar {
+  display: none; // Chrome/Safari/Edge 隱藏捲軸
+}
