@@ -25,114 +25,210 @@
   </head>
   <body>
     <%- include('./layout/header'); -%>
-    <div class="container mt-5 pt-60">
-      <div class="row">
-        <div class="col-md-3">
-          <div class="accordion" id="productMenu">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingHot">
+
+    <div class="container-fluid product-list-hero"></div>
+
+    <div class="container d-flex py-60 align-items-center">
+      <h3 class="fw-bold me-auto">所有商品</h3>
+      <div class="d-flex position-relative">
+        <button class="btn btn-text-white fs-5 py-4 me-12">
+          排序<span class="material-icons-outlined align-bottom ms-4 fs-20">
+            keyboard_arrow_down
+          </span>
+        </button>
+
+        <button
+          class="btn fw-bold fs-5 border-0 me-12"
+          type="button"
+          id="product-list-filter"
+          data-bs-toggle="dropdown"
+          data-bs-target="#product-list-dropdown"
+          aria-expanded="false"
+        >
+          篩選條件<span class="material-icons-outlined align-bottom ms-4 fs-20">
+            keyboard_arrow_down
+          </span>
+        </button>
+
+        <ul
+          class="dropdown-menu rounded-4 product-list-filter p-0"
+          id="product-list-dropdown"
+          aria-labelledby="product-list-filter"
+        >
+          <section
+            class="d-flex justify-content-between align-items-center p-16"
+          >
+            <p class="py-2 fw-bold fs-5 mb-0">篩選條件</p>
+            <button
+              type="button"
+              class="btn p-2 border-0"
+              data-bs-dismiss="dropdown"
+              aria-label="Close"
+            >
+              <span class="material-icons-outlined align-bottom"> close </span>
+            </button>
+          </section>
+          <hr class="dropdown-divider" />
+          <div
+            class="accordion dropdown-stay-open px-20 py-16"
+            id="accordion-productlist"
+          >
+            <div
+              class="accordion-item accordion-item-hot border-0 border-bottom rounded-0 mb-16"
+            >
+              <h2 class="accordion-header me-auto" id="headingHot">
                 <button
-                  class="accordion-button active-link"
+                  class="accordion-button dropdown-stay-open p-0 mb-16 fw-bold fs-5 filter-btn"
                   type="button"
-                  data-category="hot-products"
+                  data-filter="hot"
                 >
-                  熱門商品
+                  熱門產品
                 </button>
               </h2>
             </div>
 
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingGift">
+            <div class="accordion-item border-0 border-bottom rounded-0 mb-16">
+              <h2 class="accordion-header me-auto" id="headingGift">
                 <button
-                  class="accordion-button collapsed"
+                  class="accordion-button dropdown-stay-open p-0 mb-16 fw-bold fs-5"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseGift"
                   aria-expanded="false"
                   aria-controls="collapseGift"
                 >
-                  來點禮盒
+                  禮盒
                 </button>
               </h2>
               <div
                 id="collapseGift"
                 class="accordion-collapse collapse"
                 aria-labelledby="headingGift"
-                data-bs-parent="#productMenu"
               >
                 <div class="accordion-body p-0">
-                  <div class="list-group list-group-flush">
-                    <a
-                      href="#"
-                      class="list-group-item list-group-item-action"
-                      data-category="gift-festival"
-                      >節慶禮盒</a
-                    >
-                    <a
-                      href="#"
-                      class="list-group-item list-group-item-action"
-                      data-category="gift-baby"
-                      >彌月禮盒</a
-                    >
-                    <a
-                      href="#"
-                      class="list-group-item list-group-item-action"
-                      data-category="gift-small"
-                      >送禮小物</a
-                    >
-                  </div>
+                  <ul class="list-group pb-16">
+                    <li class="list-group-item border-0 p-0 mb-8">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input filter-radio"
+                          type="radio"
+                          value="gift-festival"
+                          name="main-filter"
+                          id="gift-festival-checkbox"
+                        />
+                        <label
+                          class="form-check-label"
+                          for="gift-festival-checkbox"
+                          >節慶禮盒</label
+                        >
+                      </div>
+                    </li>
+                    <li class="list-group-item border-0 p-0 mb-8">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input filter-radio"
+                          type="radio"
+                          value="gift-baby"
+                          name="main-filter"
+                          id="gift-baby-checkbox"
+                        />
+                        <label class="form-check-label" for="gift-baby-checkbox"
+                          >彌月禮盒</label
+                        >
+                      </div>
+                    </li>
+                    <li class="list-group-item border-0 p-0">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input filter-radio"
+                          type="radio"
+                          value="gift-small"
+                          name="main-filter"
+                          id="gift-small-checkbox"
+                        />
+                        <label
+                          class="form-check-label"
+                          for="gift-small-checkbox"
+                          >送禮小物</label
+                        >
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
 
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingVegan">
+            <div class="accordion-item border-0 border-bottom rounded-0 mb-16">
+              <h2 class="accordion-header me-auto" id="headingVeg">
                 <button
-                  class="accordion-button collapsed"
+                  class="accordion-button dropdown-stay-open p-0 mb-16 fw-bold fs-5"
                   type="button"
                   data-bs-toggle="collapse"
-                  data-bs-target="#collapseVegan"
+                  data-bs-target="#collapseVeg"
                   aria-expanded="false"
-                  aria-controls="collapseVegan"
+                  aria-controls="collapseVeg"
                 >
                   我吃素
                 </button>
               </h2>
               <div
-                id="collapseVegan"
+                id="collapseVeg"
                 class="accordion-collapse collapse"
-                aria-labelledby="headingVegan"
-                data-bs-parent="#productMenu"
+                aria-labelledby="headingVeg"
               >
                 <div class="accordion-body p-0">
-                  <div class="list-group list-group-flush">
-                    <a
-                      href="#"
-                      class="list-group-item list-group-item-action"
-                      data-category="vegan-pure"
-                      >純素</a
-                    >
-                    <a
-                      href="#"
-                      class="list-group-item list-group-item-action"
-                      data-category="vegan-egg"
-                      >蛋素</a
-                    >
-                    <a
-                      href="#"
-                      class="list-group-item list-group-item-action"
-                      data-category="vegan-eggdairy"
-                      >蛋奶素</a
-                    >
-                  </div>
+                  <ul class="list-group pb-16">
+                    <li class="list-group-item border-0 p-0 mb-8">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input filter-radio"
+                          type="radio"
+                          value="veg-pure"
+                          name="main-filter"
+                          id="veg-pure-checkbox"
+                        />
+                        <label class="form-check-label" for="veg-pure-checkbox"
+                          >純素</label
+                        >
+                      </div>
+                    </li>
+                    <li class="list-group-item border-0 p-0 mb-8">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input filter-radio"
+                          type="radio"
+                          value="veg-egg"
+                          name="main-filter"
+                          id="veg-egg-checkbox"
+                        />
+                        <label class="form-check-label" for="veg-egg-checkbox"
+                          >蛋素</label
+                        >
+                      </div>
+                    </li>
+                    <li class="list-group-item border-0 p-0">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input filter-radio"
+                          type="radio"
+                          value="veg-both"
+                          name="main-filter"
+                          id="veg-both-checkbox"
+                        />
+                        <label class="form-check-label" for="veg-both-checkbox"
+                          >蛋奶素</label
+                        >
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
 
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingPrice">
+            <div class="accordion-item border-0 rounded-0">
+              <h2 class="accordion-header me-auto" id="headingPrice">
                 <button
-                  class="accordion-button collapsed"
+                  class="accordion-button dropdown-stay-open p-0 mb-16 fw-bold fs-5"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapsePrice"
@@ -146,157 +242,250 @@
                 id="collapsePrice"
                 class="accordion-collapse collapse"
                 aria-labelledby="headingPrice"
-                data-bs-parent="#productMenu"
               >
                 <div class="accordion-body p-0">
-                  <div class="list-group list-group-flush">
-                    <a
-                      href="#"
-                      class="list-group-item list-group-item-action"
-                      data-sort="price-asc"
-                      >由低至高</a
-                    >
-                    <a
-                      href="#"
-                      class="list-group-item list-group-item-action"
-                      data-sort="price-desc"
-                      >由高至低</a
-                    >
-                  </div>
+                  <ul class="list-group pb-16">
+                    <li class="list-group-item border-0 p-0 mb-8">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input filter-radio"
+                          type="radio"
+                          value="price-low-to-high"
+                          name="main-filter"
+                          id="price-low-to-high-checkbox"
+                        />
+                        <label
+                          class="form-check-label"
+                          for="price-low-to-high-checkbox"
+                          >由低至高</label
+                        >
+                      </div>
+                    </li>
+                    <li class="list-group-item border-0 p-0">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input filter-radio"
+                          type="radio"
+                          value="price-high-to-low"
+                          name="main-filter"
+                          id="price-high-to-low-checkbox"
+                        />
+                        <label
+                          class="form-check-label"
+                          for="price-high-to-low-checkbox"
+                          >由高至低</label
+                        >
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
-
-            <hr />
-            <div class="d-grid gap-2">
-              <button class="btn btn-secondary" id="show-all-btn">
-                顯示所有商品
-              </button>
-            </div>
           </div>
-        </div>
-        <div class="col-md-9">
-          <div id="product-display" class="row">
-            <div
-              class="col-12 col-sm-6 col-md-4 mb-4 product-item"
-              data-category="gift-festival"
-              style="display: none"
+
+          <hr class="dropdown-divider" />
+          <div class="d-flex justify-content-between p-3">
+            <button
+              class="btn btn-outline-primary rounded-pill w-50 me-2"
+              id="clear-filters"
             >
-              <p>這是**節慶禮盒**商品A</p>
-            </div>
-            <div
-              class="col-12 col-sm-6 col-md-4 mb-4 product-item"
-              data-category="gift-festival"
-              style="display: none"
+              清除篩選
+            </button>
+            <button
+              class="btn btn-primary rounded-pill w-50 ms-2"
+              id="apply-filters"
             >
-              <p>這是**節慶禮盒**商品B</p>
-            </div>
-            <div
-              class="col-12 col-sm-6 col-md-4 mb-4 product-item"
-              data-category="gift-baby"
-              style="display: none"
-            >
-              <p>這是**彌月禮盒**商品C</p>
-            </div>
-            <div
-              class="col-12 col-sm-6 col-md-4 mb-4 product-item"
-              data-category="gift-small"
-              style="display: none"
-            >
-              <p>這是**送禮小物**商品D</p>
-            </div>
-            <div
-              class="col-12 col-sm-6 col-md-4 mb-4 product-item"
-              data-category="vegan-pure"
-              style="display: none"
-            >
-              <p>這是**純素**商品E</p>
-            </div>
-            <div
-              class="col-12 col-sm-6 col-md-4 mb-4 product-item"
-              data-category="vegan-eggdairy"
-              style="display: none"
-            >
-              <p>這是**蛋奶素**商品F</p>
-            </div>
-            <div
-              class="col-12 col-sm-6 col-md-4 mb-4 product-item"
-              data-category="hot-products"
-            >
-              <p>這是**熱門**商品G</p>
+              確定篩選
+            </button>
+          </div>
+        </ul>
+        <button
+          class="btn btn-text-white py-4 fs-5"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#productlist-search"
+          aria-expanded="false"
+          aria-controls="productlist-search"
+        >
+          <span class="material-icons-outlined align-bottom"> search </span>
+        </button>
+        <div class="position-absolute z-1 start-0 end-0 bg-white py-2">
+          <div class="collapse" id="productlist-search">
+            <div class="d-flex align-items-center">
+              <form class="position-relative w-100">
+                <span
+                  class="material-icons-outlined align-bottom position-absolute top-50 start-0 translate-middle-y ps-6"
+                >
+                  search
+                </span>
+                <input
+                  type="search"
+                  class="form-control search-lineheight rounded-pill py-4 ps-6 bg-primary-10 border-0"
+                  id="exampleFormControlInput1"
+                />
+              </form>
+              <button
+                type="button"
+                class="btn p-2 border-0 text-neutral-80"
+                data-bs-toggle="collapse"
+                data-bs-target="#productlist-search"
+                aria-expanded="true"
+              >
+                <span class="material-icons-outlined align-bottom">
+                  close
+                </span>
+              </button>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <%-include('./layout/footer'); -%>
+    <div class="container mt-5">
+      <div id="product-list-hot" class="product-list">
+        <h4>熱門商品</h4>
+        <div class="product-item">暢銷手工餅乾</div>
+        <div class="product-item">年度最佳彌月禮盒</div>
+        <div class="product-item">人氣聖誕禮盒</div>
+      </div>
+
+      <div id="product-list-gift-festival" class="product-list d-none">
+        <h4>節慶禮盒</h4>
+        <div class="product-item">新年禮盒</div>
+        <div class="product-item">中秋禮盒</div>
+        <div class="product-item">聖誕禮盒</div>
+      </div>
+      <div id="product-list-gift-baby" class="product-list d-none">
+        <h4>彌月禮盒</h4>
+        <div class="product-item">寶寶彌月禮盒</div>
+        <div class="product-item">精緻彌月禮盒</div>
+      </div>
+      <div id="product-list-gift-small" class="product-list d-none">
+        <h4>送禮小物</h4>
+        <div class="product-item">手工餅乾</div>
+        <div class="product-item">精緻果醬</div>
+      </div>
+
+      <div id="product-list-veg-pure" class="product-list d-none">
+        <h4>純素商品</h4>
+        <div class="product-item">純素燕麥餅乾</div>
+        <div class="product-item">純素巧克力</div>
+      </div>
+      <div id="product-list-veg-egg" class="product-list d-none">
+        <h4>蛋素商品</h4>
+        <div class="product-item">蛋素麵包</div>
+        <div class="product-item">蛋素蛋糕</div>
+      </div>
+      <div id="product-list-veg-both" class="product-list d-none">
+        <h4>蛋奶素商品</h4>
+        <div class="product-item">蛋奶素餅乾</div>
+        <div class="product-item">蛋奶素蛋糕</div>
+        <div class="product-item">蛋奶素含酒巧克力</div>
+      </div>
+
+      <div id="product-list-price-low-to-high" class="product-list d-none">
+        <h4>價格: 由低至高</h4>
+        <div class="product-item">小禮物 ($50)</div>
+        <div class="product-item">餅乾禮盒 ($200)</div>
+        <div class="product-item">豪華蛋糕 ($1000)</div>
+      </div>
+      <div id="product-list-price-high-to-low" class="product-list d-none">
+        <h4>價格: 由高至低</h4>
+        <div class="product-item">豪華蛋糕 ($1000)</div>
+        <div class="product-item">餅乾禮盒 ($200)</div>
+        <div class="product-item">小禮物 ($50)</div>
+      </div>
+    </div>
+
+    \ <%-include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const filterButtons = document.querySelectorAll(".accordion-button");
-        const filterLinks = document.querySelectorAll(".list-group-item");
-        const allFilters = [...filterButtons, ...filterLinks];
-        const products = document.querySelectorAll(".product-item");
-        const showAllBtn = document.getElementById("show-all-btn");
+      document.addEventListener("DOMContentLoaded", function () {
+        const dropdownStayOpenElements = document.querySelectorAll(
+          ".dropdown-stay-open"
+        );
+        // 修正：現在只有單選鈕了，統一選取
+        const filterRadios = document.querySelectorAll(".filter-radio");
+        const filterButtons = document.querySelectorAll(".filter-btn");
+        const clearButton = document.getElementById("clear-filters");
+        const applyButton = document.getElementById("apply-filters");
+        const allProductLists = document.querySelectorAll(".product-list");
 
-        allFilters.forEach((element) => {
-          element.addEventListener("click", (e) => {
-            e.preventDefault();
-
-            // 1. 清除所有選項的活躍樣式
-            allFilters.forEach((el) => {
-              el.classList.remove("active-link", "sub-category-active");
-            });
-
-            // 2. 根據點擊的元素類型，套用不同的活躍樣式
-            if (e.target.classList.contains("accordion-button")) {
-              // 點擊的是主分類按鈕，直接套用主要活躍樣式
-              e.target.classList.add("active-link");
-            } else if (e.target.classList.contains("list-group-item")) {
-              // 點擊的是細項分類連結
-              e.target.classList.add("sub-category-active");
-              // 並為其父層按鈕加上主分類的活躍樣式
-              const parentButton = e.target
-                .closest(".accordion-item")
-                ?.querySelector(".accordion-button");
-              if (parentButton) {
-                parentButton.classList.add("active-link");
-              }
-            }
-
-            // 3. 處理商品顯示/隱藏的邏輯
-            if (e.target.dataset.category) {
-              const selectedCategory = e.target.dataset.category;
-              products.forEach((product) => {
-                product.style.display = "none";
-                if (product.dataset.category === selectedCategory) {
-                  product.style.display = "block";
-                }
-              });
-            } else if (e.target.dataset.sort) {
-              const sortType = e.target.dataset.sort;
-              console.log(`進行排序: ${sortType}`);
-            }
+        // 阻止點擊下拉選單內的元素時關閉下拉選單
+        dropdownStayOpenElements.forEach(function (element) {
+          element.addEventListener("click", function (event) {
+            event.stopPropagation();
           });
         });
 
-        showAllBtn.addEventListener("click", () => {
-          allFilters.forEach((el) => {
-            el.classList.remove("active-link", "sub-category-active");
+        // 根據勾選的單選鈕來顯示對應的商品區塊
+        function updateProductDisplay() {
+          const checkedValues = [];
+
+          filterRadios.forEach((radio) => {
+            if (radio.checked) {
+              checkedValues.push(radio.value);
+            }
           });
-          products.forEach((product) => {
-            product.style.display = "block";
+
+          allProductLists.forEach((list) => list.classList.add("d-none"));
+
+          if (checkedValues.length === 0) {
+            document
+              .getElementById("product-list-hot")
+              .classList.remove("d-none");
+            return;
+          }
+
+          checkedValues.forEach((value) => {
+            const targetId = `product-list-${value}`;
+            const targetList = document.getElementById(targetId);
+            if (targetList) {
+              targetList.classList.remove("d-none");
+            }
+          });
+        }
+
+        // 篩選按鈕的點擊事件
+        filterButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            filterRadios.forEach((radio) => (radio.checked = false));
+
+            document
+              .getElementById("product-list-hot")
+              .classList.remove("d-none");
+
+            const otherLists = Array.from(allProductLists).filter(
+              (list) => list.id !== "product-list-hot"
+            );
+            otherLists.forEach((list) => list.classList.add("d-none"));
           });
         });
 
-        // 頁面載入時，預設將「熱門商品」設為活躍狀態
-        document
-          .querySelector('[data-category="hot-products"]')
-          .classList.add("active-link");
+        // 清除篩選按鈕
+        clearButton.addEventListener("click", function () {
+          filterRadios.forEach((radio) => (radio.checked = false));
+          updateProductDisplay();
+        });
+
+        // 確定篩選按鈕
+        applyButton.addEventListener("click", function () {
+          updateProductDisplay();
+        });
+
+        // 每次點擊單選鈕時即時更新顯示
+        filterRadios.forEach((radio) => {
+          radio.addEventListener("change", () => {
+            document.getElementById("product-list-hot").classList.add("d-none");
+            updateProductDisplay();
+          });
+        });
+
+        // 初始載入時顯示熱門產品
+        document.getElementById("product-list-hot").classList.remove("d-none");
       });
     </script>
   </body>

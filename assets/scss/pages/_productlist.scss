@@ -1,21 +1,57 @@
-#headingHot .accordion-button::after {
-  display: none;
+.product-list-hero {
+  height: 708px;
+  background-image: url(/assets/images/hero-1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-// 主分類按鈕的活躍樣式 (點選或子分類被點選時)
-.active-link {
-  background-color: $primary !important;
-  color: white !important;
-}
+.product-list-filter {
+  width: 772px; // 預設強制寬度為 772px
+  @media (max-width: 767.98px) {
+    // 當螢幕小於 768px 時，強制覆蓋樣式
+    width: 100%;
+    max-width: 100%;
+  }
+  a {
+    color: $neutral-80;
+  }
+  .accordion-button:not(.collapsed) {
+    color: $neutral-80;
+    background-color: white;
+    box-shadow: none;
+  }
+  .accordion-item:first-of-type > .accordion-header .accordion-button {
+    border-radius: 0px;
+    box-shadow: none;
+  }
 
-// 細項分類連結的活躍樣式
-.sub-category-active {
-  background-color: #f0f0f0 !important;
-  color: #212529 !important;
-}
+  .accordion-item-hot {
+    .accordion-button:not(.collapsed)::after {
+      background-image: none;
+    }
+  }
 
-// 確保未選取的按鈕是白色底色
-.accordion-button:not(.active-link) {
-  background-color: white !important;
-  color: #212529 !important;
+  .form-check-input {
+    // 正常狀態下的邊框顏色
+    border-color: $neutral-80;
+
+    &:checked {
+      // 當核取方塊被勾選時，將背景色和邊框色設定為你的 $primary 顏色
+      background-color: $primary;
+      border-color: $primary;
+    }
+
+    // 確保勾選狀態下的圖示顏色為白色
+    &:checked[type="checkbox"] {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3 6-6'/%3e%3c/svg%3e");
+    }
+
+    // 移除焦點時的陰影
+    &:focus {
+      box-shadow: none;
+      outline: 0;
+      border-color: $primary;
+    }
+  }
 }
