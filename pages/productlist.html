@@ -28,325 +28,460 @@
 
     <div class="container-fluid product-list-hero"></div>
 
-    <div class="container d-flex py-60 align-items-center">
-      <h3 class="fw-bold me-auto">所有商品</h3>
-      <div class="d-flex position-relative">
-        <button class="btn btn-text-white fs-5 py-4 me-12">
-          排序<span class="material-icons-outlined align-bottom ms-4 fs-20">
-            keyboard_arrow_down
-          </span>
-        </button>
-
-        <button
-          class="btn fw-bold fs-5 border-0 me-12"
-          type="button"
-          id="product-list-filter"
-          data-bs-toggle="dropdown"
-          data-bs-target="#product-list-dropdown"
-          aria-expanded="false"
+    <div class="container py-60">
+      <div class="row d-flex flex-wrap align-items-center mb-24">
+        <div class="col-lg-8 mb-8 mb-lg-0">
+          <h3 class="fw-bold w-100 w-lg-50 me-auto">所有商品</h3>
+        </div>
+        <div
+          class="col-lg-4 d-flex justify-content-between justify-content-lg-end align-items-center position-relative"
         >
-          篩選條件<span class="material-icons-outlined align-bottom ms-4 fs-20">
-            keyboard_arrow_down
-          </span>
-        </button>
-
-        <ul
-          class="dropdown-menu rounded-4 product-list-filter p-0"
-          id="product-list-dropdown"
-          aria-labelledby="product-list-filter"
-        >
-          <section
-            class="d-flex justify-content-between align-items-center p-16"
-          >
-            <p class="py-2 fw-bold fs-5 mb-0">篩選條件</p>
+          <div class="d-flex">
+            <button class="btn btn-text-white fs-lg-5 py-lg-4 me-6 me-lg-12">
+              排序<span class="material-icons-outlined align-bottom ms-4 fs-20">
+                keyboard_arrow_down
+              </span>
+            </button>
             <button
+              class="btn btn-text-white fw-bold fs-lg-5 border-0 p-0 me-lg-12"
               type="button"
-              class="btn p-2 border-0"
-              data-bs-dismiss="dropdown"
-              aria-label="Close"
+              id="product-list-filter"
+              data-bs-toggle="dropdown"
+              data-bs-target="#product-list-dropdown"
+              aria-expanded="false"
             >
-              <span class="material-icons-outlined align-bottom"> close </span>
+              篩選條件<span
+                class="material-icons-outlined align-bottom ms-4 fs-20"
+              >
+                keyboard_arrow_down
+              </span>
             </button>
-          </section>
-          <hr class="dropdown-divider" />
-          <div
-            class="accordion dropdown-stay-open px-20 py-16"
-            id="accordion-productlist"
+            <ul
+              class="dropdown-menu rounded-4 product-list-filter p-0"
+              id="product-list-dropdown"
+              aria-labelledby="product-list-filter"
+            >
+              <section
+                class="d-flex justify-content-between align-items-center p-16"
+              >
+                <p class="py-2 fw-bold fs-5 mb-0">篩選條件</p>
+                <button
+                  type="button"
+                  class="btn p-2 border-0"
+                  data-bs-dismiss="dropdown"
+                  aria-label="Close"
+                >
+                  <span class="material-icons-outlined align-bottom">
+                    close
+                  </span>
+                </button>
+              </section>
+              <hr class="dropdown-divider" />
+              <div
+                class="accordion dropdown-stay-open px-20 py-16"
+                id="accordion-productlist"
+              >
+                <div
+                  class="accordion-item accordion-item-hot border-0 border-bottom rounded-0 mb-16"
+                >
+                  <h2 class="accordion-header me-auto" id="headingHot">
+                    <button
+                      class="accordion-button dropdown-stay-open p-0 mb-16 fw-bold fs-5 filter-btn collapsed accordion-item-hot"
+                      type="button"
+                      data-filter="hot"
+                    >
+                      熱門產品
+                    </button>
+                  </h2>
+                </div>
+
+                <div
+                  class="accordion-item border-0 border-bottom rounded-0 mb-16"
+                >
+                  <h2 class="accordion-header me-auto" id="headingGift">
+                    <button
+                      class="accordion-button dropdown-stay-open p-0 mb-16 fw-bold fs-5 collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseGift"
+                      aria-expanded="false"
+                      aria-controls="collapseGift"
+                    >
+                      禮盒
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseGift"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingGift"
+                    data-bs-parent="#accordion-productlist"
+                  >
+                    <div class="accordion-body p-0">
+                      <ul class="list-group pb-16">
+                        <li class="list-group-item border-0 p-0 mb-8">
+                          <div class="form-check d-flex align-items-center">
+                            <input
+                              class="form-check-input filter-radio me-4"
+                              type="radio"
+                              value="gift-festival"
+                              name="main-filter"
+                              id="gift-festival-checkbox"
+                            />
+                            <label
+                              class="form-check-label fs-5"
+                              for="gift-festival-checkbox"
+                              >節慶禮盒</label
+                            >
+                          </div>
+                        </li>
+                        <li class="list-group-item border-0 p-0 mb-8">
+                          <div class="form-check d-flex align-items-center">
+                            <input
+                              class="form-check-input filter-radio me-4"
+                              type="radio"
+                              value="gift-baby"
+                              name="main-filter"
+                              id="gift-baby-checkbox"
+                            />
+                            <label
+                              class="form-check-label fs-5"
+                              for="gift-baby-checkbox"
+                              >彌月禮盒</label
+                            >
+                          </div>
+                        </li>
+                        <li class="list-group-item border-0 p-0">
+                          <div class="form-check d-flex align-items-center">
+                            <input
+                              class="form-check-input filter-radio me-4"
+                              type="radio"
+                              value="gift-small"
+                              name="main-filter"
+                              id="gift-small-checkbox"
+                            />
+                            <label
+                              class="form-check-label fs-5"
+                              for="gift-small-checkbox"
+                              >送禮小物</label
+                            >
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="accordion-item border-0 border-bottom rounded-0 mb-16"
+                >
+                  <h2 class="accordion-header me-auto" id="headingVeg">
+                    <button
+                      class="accordion-button dropdown-stay-open p-0 mb-16 fw-bold fs-5 collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseVeg"
+                      aria-expanded="false"
+                      aria-controls="collapseVeg"
+                    >
+                      我吃素
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseVeg"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingVeg"
+                    data-bs-parent="#accordion-productlist"
+                  >
+                    <div class="accordion-body p-0">
+                      <ul class="list-group pb-16">
+                        <li class="list-group-item border-0 p-0 mb-8">
+                          <div class="form-check d-flex align-items-center">
+                            <input
+                              class="form-check-input filter-radio me-4"
+                              type="radio"
+                              value="veg-pure"
+                              name="main-filter"
+                              id="veg-pure-checkbox"
+                            />
+                            <label
+                              class="form-check-label fs-5"
+                              for="veg-pure-checkbox"
+                              >純素</label
+                            >
+                          </div>
+                        </li>
+                        <li class="list-group-item border-0 p-0 mb-8">
+                          <div class="form-check d-flex align-items-center">
+                            <input
+                              class="form-check-input filter-radio me-4"
+                              type="radio"
+                              value="veg-egg"
+                              name="main-filter"
+                              id="veg-egg-checkbox"
+                            />
+                            <label
+                              class="form-check-label fs-5"
+                              for="veg-egg-checkbox"
+                              >蛋素</label
+                            >
+                          </div>
+                        </li>
+                        <li class="list-group-item border-0 p-0">
+                          <div class="form-check d-flex align-items-center">
+                            <input
+                              class="form-check-input filter-radio me-4"
+                              type="radio"
+                              value="veg-both"
+                              name="main-filter"
+                              id="veg-both-checkbox"
+                            />
+                            <label
+                              class="form-check-label fs-5"
+                              for="veg-both-checkbox"
+                              >蛋奶素</label
+                            >
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item border-0 rounded-0">
+                  <h2 class="accordion-header me-auto" id="headingPrice">
+                    <button
+                      class="accordion-button dropdown-stay-open p-0 mb-16 fw-bold fs-5 collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapsePrice"
+                      aria-expanded="false"
+                      aria-controls="collapsePrice"
+                    >
+                      價格
+                    </button>
+                  </h2>
+                  <div
+                    id="collapsePrice"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingPrice"
+                    data-bs-parent="#accordion-productlist"
+                  >
+                    <div class="accordion-body p-0">
+                      <ul class="list-group">
+                        <li
+                          class="list-group-item border-0 p-0 mb-8 d-flex align-items-center"
+                        >
+                          <div class="form-check">
+                            <input
+                              class="form-check-input filter-radio me-4"
+                              type="radio"
+                              value="price-low-to-high"
+                              name="main-filter"
+                              id="price-low-to-high-checkbox"
+                            />
+                            <label
+                              class="form-check-label fs-5"
+                              for="price-low-to-high-checkbox"
+                              >由低至高</label
+                            >
+                          </div>
+                        </li>
+                        <li class="list-group-item border-0 p-0">
+                          <div class="form-check d-flex align-items-center">
+                            <input
+                              class="form-check-input filter-radio me-4"
+                              type="radio"
+                              value="price-high-to-low"
+                              name="main-filter"
+                              id="price-high-to-low-checkbox"
+                            />
+                            <label
+                              class="form-check-label fs-5"
+                              for="price-high-to-low-checkbox"
+                              >由高至低</label
+                            >
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <hr class="dropdown-divider" />
+              <div class="d-flex justify-content-between p-16">
+                <button
+                  class="btn btn-outline-primary rounded-pill w-50 me-12"
+                  id="clear-filters"
+                >
+                  清除篩選
+                </button>
+                <button
+                  class="btn btn-primary rounded-pill w-50 ms-2"
+                  id="apply-filters"
+                >
+                  確定篩選
+                </button>
+              </div>
+            </ul>
+          </div>
+          <button
+            class="btn btn-text-white py-4 fs-5"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#productlist-search"
+            aria-expanded="false"
+            aria-controls="productlist-search"
           >
-            <div
-              class="accordion-item accordion-item-hot border-0 border-bottom rounded-0 mb-16"
-            >
-              <h2 class="accordion-header me-auto" id="headingHot">
+            <span class="material-icons-outlined align-bottom"> search </span>
+          </button>
+          <div class="position-absolute z-1 start-0 end-0 py-2">
+            <div class="collapse bg-white" id="productlist-search">
+              <div class="d-flex align-items-center">
+                <form class="position-relative w-100">
+                  <span
+                    class="material-icons-outlined align-bottom position-absolute top-50 start-0 translate-middle-y ps-6"
+                  >
+                    search
+                  </span>
+                  <input
+                    type="search"
+                    class="form-control search-lineheight rounded-pill py-4 ps-20 bg-primary-10 border-0"
+                    id="exampleFormControlInput1"
+                  />
+                </form>
                 <button
-                  class="accordion-button dropdown-stay-open p-0 mb-16 fw-bold fs-5 filter-btn"
                   type="button"
-                  data-filter="hot"
-                >
-                  熱門產品
-                </button>
-              </h2>
-            </div>
-
-            <div class="accordion-item border-0 border-bottom rounded-0 mb-16">
-              <h2 class="accordion-header me-auto" id="headingGift">
-                <button
-                  class="accordion-button dropdown-stay-open p-0 mb-16 fw-bold fs-5"
-                  type="button"
+                  class="btn p-2 border-0 text-neutral-80"
                   data-bs-toggle="collapse"
-                  data-bs-target="#collapseGift"
-                  aria-expanded="false"
-                  aria-controls="collapseGift"
+                  data-bs-target="#productlist-search"
+                  aria-expanded="true"
                 >
-                  禮盒
+                  <span class="material-icons-outlined align-bottom">
+                    close
+                  </span>
                 </button>
-              </h2>
-              <div
-                id="collapseGift"
-                class="accordion-collapse collapse"
-                aria-labelledby="headingGift"
-              >
-                <div class="accordion-body p-0">
-                  <ul class="list-group pb-16">
-                    <li class="list-group-item border-0 p-0 mb-8">
-                      <div class="form-check">
-                        <input
-                          class="form-check-input filter-radio"
-                          type="radio"
-                          value="gift-festival"
-                          name="main-filter"
-                          id="gift-festival-checkbox"
-                        />
-                        <label
-                          class="form-check-label"
-                          for="gift-festival-checkbox"
-                          >節慶禮盒</label
-                        >
-                      </div>
-                    </li>
-                    <li class="list-group-item border-0 p-0 mb-8">
-                      <div class="form-check">
-                        <input
-                          class="form-check-input filter-radio"
-                          type="radio"
-                          value="gift-baby"
-                          name="main-filter"
-                          id="gift-baby-checkbox"
-                        />
-                        <label class="form-check-label" for="gift-baby-checkbox"
-                          >彌月禮盒</label
-                        >
-                      </div>
-                    </li>
-                    <li class="list-group-item border-0 p-0">
-                      <div class="form-check">
-                        <input
-                          class="form-check-input filter-radio"
-                          type="radio"
-                          value="gift-small"
-                          name="main-filter"
-                          id="gift-small-checkbox"
-                        />
-                        <label
-                          class="form-check-label"
-                          for="gift-small-checkbox"
-                          >送禮小物</label
-                        >
-                      </div>
-                    </li>
-                  </ul>
-                </div>
               </div>
-            </div>
-
-            <div class="accordion-item border-0 border-bottom rounded-0 mb-16">
-              <h2 class="accordion-header me-auto" id="headingVeg">
-                <button
-                  class="accordion-button dropdown-stay-open p-0 mb-16 fw-bold fs-5"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseVeg"
-                  aria-expanded="false"
-                  aria-controls="collapseVeg"
-                >
-                  我吃素
-                </button>
-              </h2>
-              <div
-                id="collapseVeg"
-                class="accordion-collapse collapse"
-                aria-labelledby="headingVeg"
-              >
-                <div class="accordion-body p-0">
-                  <ul class="list-group pb-16">
-                    <li class="list-group-item border-0 p-0 mb-8">
-                      <div class="form-check">
-                        <input
-                          class="form-check-input filter-radio"
-                          type="radio"
-                          value="veg-pure"
-                          name="main-filter"
-                          id="veg-pure-checkbox"
-                        />
-                        <label class="form-check-label" for="veg-pure-checkbox"
-                          >純素</label
-                        >
-                      </div>
-                    </li>
-                    <li class="list-group-item border-0 p-0 mb-8">
-                      <div class="form-check">
-                        <input
-                          class="form-check-input filter-radio"
-                          type="radio"
-                          value="veg-egg"
-                          name="main-filter"
-                          id="veg-egg-checkbox"
-                        />
-                        <label class="form-check-label" for="veg-egg-checkbox"
-                          >蛋素</label
-                        >
-                      </div>
-                    </li>
-                    <li class="list-group-item border-0 p-0">
-                      <div class="form-check">
-                        <input
-                          class="form-check-input filter-radio"
-                          type="radio"
-                          value="veg-both"
-                          name="main-filter"
-                          id="veg-both-checkbox"
-                        />
-                        <label class="form-check-label" for="veg-both-checkbox"
-                          >蛋奶素</label
-                        >
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div class="accordion-item border-0 rounded-0">
-              <h2 class="accordion-header me-auto" id="headingPrice">
-                <button
-                  class="accordion-button dropdown-stay-open p-0 mb-16 fw-bold fs-5"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapsePrice"
-                  aria-expanded="false"
-                  aria-controls="collapsePrice"
-                >
-                  價格
-                </button>
-              </h2>
-              <div
-                id="collapsePrice"
-                class="accordion-collapse collapse"
-                aria-labelledby="headingPrice"
-              >
-                <div class="accordion-body p-0">
-                  <ul class="list-group pb-16">
-                    <li class="list-group-item border-0 p-0 mb-8">
-                      <div class="form-check">
-                        <input
-                          class="form-check-input filter-radio"
-                          type="radio"
-                          value="price-low-to-high"
-                          name="main-filter"
-                          id="price-low-to-high-checkbox"
-                        />
-                        <label
-                          class="form-check-label"
-                          for="price-low-to-high-checkbox"
-                          >由低至高</label
-                        >
-                      </div>
-                    </li>
-                    <li class="list-group-item border-0 p-0">
-                      <div class="form-check">
-                        <input
-                          class="form-check-input filter-radio"
-                          type="radio"
-                          value="price-high-to-low"
-                          name="main-filter"
-                          id="price-high-to-low-checkbox"
-                        />
-                        <label
-                          class="form-check-label"
-                          for="price-high-to-low-checkbox"
-                          >由高至低</label
-                        >
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <hr class="dropdown-divider" />
-          <div class="d-flex justify-content-between p-3">
-            <button
-              class="btn btn-outline-primary rounded-pill w-50 me-2"
-              id="clear-filters"
-            >
-              清除篩選
-            </button>
-            <button
-              class="btn btn-primary rounded-pill w-50 ms-2"
-              id="apply-filters"
-            >
-              確定篩選
-            </button>
-          </div>
-        </ul>
-        <button
-          class="btn btn-text-white py-4 fs-5"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#productlist-search"
-          aria-expanded="false"
-          aria-controls="productlist-search"
-        >
-          <span class="material-icons-outlined align-bottom"> search </span>
-        </button>
-        <div class="position-absolute z-1 start-0 end-0 bg-white py-2">
-          <div class="collapse" id="productlist-search">
-            <div class="d-flex align-items-center">
-              <form class="position-relative w-100">
-                <span
-                  class="material-icons-outlined align-bottom position-absolute top-50 start-0 translate-middle-y ps-6"
-                >
-                  search
-                </span>
-                <input
-                  type="search"
-                  class="form-control search-lineheight rounded-pill py-4 ps-6 bg-primary-10 border-0"
-                  id="exampleFormControlInput1"
-                />
-              </form>
-              <button
-                type="button"
-                class="btn p-2 border-0 text-neutral-80"
-                data-bs-toggle="collapse"
-                data-bs-target="#productlist-search"
-                aria-expanded="true"
-              >
-                <span class="material-icons-outlined align-bottom">
-                  close
-                </span>
-              </button>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="container mt-5">
-      <div id="product-list-hot" class="product-list">
-        <h4>熱門商品</h4>
-        <div class="product-item">暢銷手工餅乾</div>
-        <div class="product-item">年度最佳彌月禮盒</div>
-        <div class="product-item">人氣聖誕禮盒</div>
+      <div id="product-list-hot" class="product-list row d-flex">
+        <div class="col-6 col-lg-3 mb-10 mb-lg-12">
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/珍珠糖泡芙.png" alt="珍珠糖泡芙" />
+            <span
+              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+              >熱銷 No. 1</span
+            >
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex justify-content-center align-items-end"
+            >
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-center mb-4">
+            <a class="fs-lg-5 fw-bold me-auto" href="/pages/product.html">
+              <p>珍珠糖泡芙</p>
+            </a>
+            <span class="material-icons-outlined align-bottom love-icon fs-5">
+              favorite_border
+            </span>
+          </div>
+          <p class="fs-lg-5 fw-bold">NT$ 70 以上</p>
+        </div>
+        <div class="col-6 col-lg-3 mb-10 mb-lg-12">
+          <a href="/pages/product.html">
+            <div class="product-item position-relative bg-secondary-5 mb-8">
+              <img src="/assets/images/珍珠糖泡芙.png" alt="珍珠糖泡芙" />
+              <span
+                class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+                >熱銷 No. 1</span
+              >
+              <div
+                class="product-item-overlay position-absolute top-0 start-0 d-flex justify-content-center align-items-end"
+              >
+                <button
+                  class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+                >
+                  加入購物車
+                </button>
+              </div>
+            </div>
+            <div class="d-flex align-items-center mb-4">
+              <p class="fs-lg-5 fw-bold me-auto">珍珠糖泡芙</p>
+              <span
+                class="material-icons-outlined align-bottom love-icon fs-6 fs-lg-5"
+              >
+                favorite_border
+              </span>
+            </div>
+            <p class="fs-lg-5 fw-bold">NT$ 70 以上</p>
+          </a>
+        </div>
+        <div class="col-6 col-lg-3 mb-10 mb-lg-12">
+          <a href="/pages/product.html">
+            <div class="product-item position-relative bg-secondary-5 mb-8">
+              <img src="/assets/images/珍珠糖泡芙.png" alt="珍珠糖泡芙" />
+              <span
+                class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+                >熱銷 No. 1</span
+              >
+              <div
+                class="product-item-overlay position-absolute top-0 start-0 d-flex justify-content-center align-items-end"
+              >
+                <button
+                  class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+                >
+                  加入購物車
+                </button>
+              </div>
+            </div>
+            <div class="d-flex align-items-center mb-4">
+              <p class="fs-lg-5 fw-bold me-auto">珍珠糖泡芙</p>
+              <span
+                class="material-icons-outlined align-bottom love-icon fs-6 fs-lg-5"
+              >
+                favorite_border
+              </span>
+            </div>
+            <p class="fs-lg-5 fw-bold">NT$ 70 以上</p>
+          </a>
+        </div>
+        <div class="col-6 col-lg-3 mb-10 mb-lg-12">
+          <a href="/pages/product.html">
+            <div class="product-item position-relative bg-secondary-5 mb-8">
+              <img src="/assets/images/珍珠糖泡芙.png" alt="珍珠糖泡芙" />
+              <span
+                class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+                >熱銷 No. 1</span
+              >
+              <div
+                class="product-item-overlay position-absolute top-0 start-0 d-flex justify-content-center align-items-end"
+              >
+                <button
+                  class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+                >
+                  加入購物車
+                </button>
+              </div>
+            </div>
+            <div class="d-flex align-items-center mb-4">
+              <p class="fs-lg-5 fw-bold me-auto">珍珠糖泡芙</p>
+              <span
+                class="material-icons-outlined align-bottom love-icon fs-6 fs-lg-5"
+              >
+                favorite_border
+              </span>
+            </div>
+            <p class="fs-lg-5 fw-bold">NT$ 70 以上</p>
+          </a>
+        </div>
       </div>
 
       <div id="product-list-gift-festival" class="product-list d-none">
@@ -397,7 +532,7 @@
       </div>
     </div>
 
-    \ <%-include('./layout/footer'); -%>
+    <%-include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

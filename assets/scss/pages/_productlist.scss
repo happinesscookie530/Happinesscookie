@@ -7,8 +7,11 @@
 }
 
 .product-list-filter {
-  width: 772px; // 預設強制寬度為 772px
-  @media (max-width: 767.98px) {
+  width: 500px;
+  margin-top: 80px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  @media (max-width: 1200px) {
     // 當螢幕小於 768px 時，強制覆蓋樣式
     width: 100%;
     max-width: 100%;
@@ -16,20 +19,15 @@
   a {
     color: $neutral-80;
   }
+
   .accordion-button:not(.collapsed) {
-    color: $neutral-80;
+    color: $primary;
     background-color: white;
     box-shadow: none;
   }
-  .accordion-item:first-of-type > .accordion-header .accordion-button {
-    border-radius: 0px;
-    box-shadow: none;
-  }
 
-  .accordion-item-hot {
-    .accordion-button:not(.collapsed)::after {
-      background-image: none;
-    }
+  .accordion-item-hot.accordion-button::after {
+    display: none;
   }
 
   .form-check-input {
@@ -53,5 +51,39 @@
       outline: 0;
       border-color: $primary;
     }
+  }
+}
+
+.product-list {
+  .product-item {
+    display: flex;
+    justify-content: center;
+    height: 184px;
+
+    .product-item-overlay {
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    &:hover .product-item-overlay {
+      opacity: 1;
+    }
+
+    @media (min-width: 992px) {
+      height: 370px;
+    }
+  }
+  img {
+    max-width: 130px;
+    object-fit: contain;
+
+    @media (min-width: 992px) {
+      max-width: 250px;
+    }
+  }
+  a {
+    color: $neutral-80;
   }
 }
