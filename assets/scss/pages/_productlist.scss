@@ -1,9 +1,12 @@
 .product-list-hero {
-  height: 708px;
+  height: 375px;
   background-image: url(/assets/images/hero-1.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  @media (min-width: 768px) {
+    height: 708px;
+  }
 }
 
 .product-list-filter {
@@ -77,11 +80,11 @@
     }
   }
   img {
-    max-width: 130px;
+    max-width: 160px;
     object-fit: contain;
 
     @media (min-width: 992px) {
-      max-width: 250px;
+      max-width: 220px;
     }
   }
   a {
