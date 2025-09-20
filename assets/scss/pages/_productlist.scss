@@ -7,15 +7,16 @@
 }
 
 .product-list-filter {
-  width: 500px;
-  margin-top: 80px !important;
+  width: 100%;
+  max-width: 100%;
+  margin-top: 60px !important;
   left: 50% !important;
   transform: translateX(-50%) !important;
-  @media (max-width: 1200px) {
-    // 當螢幕小於 768px 時，強制覆蓋樣式
-    width: 100%;
-    max-width: 100%;
+
+  @media (min-width: 768px) {
+    width: 500px;
   }
+
   a {
     color: $neutral-80;
   }
@@ -85,5 +86,20 @@
   }
   a {
     color: $neutral-80;
+  }
+  .product-link {
+    :hover {
+      color: $primary;
+    }
+  }
+  // 愛心圖示樣式
+  .love-icon {
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    // 當愛心被點擊，新增 .is-filled 類別後會套用
+    &.is-filled {
+      color: $primary !important;
+    }
   }
 }
