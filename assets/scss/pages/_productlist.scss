@@ -1,23 +1,36 @@
 .product-list-hero {
-  height: 375px;
-  background-image: url(/assets/images/hero-1.png);
+  background-image: url(/assets/images/productlist-hero.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  @media (min-width: 768px) {
-    height: 708px;
+  transform: scaleX(-1);
+
+  .product-list-hero-type {
+    padding: 119px 0px 119px 0px;
+    transform: scaleX(-1);
+    h1 {
+      font-size: 28px;
+    }
+    @media (min-width: 992px) {
+      padding: 284px 0px 284px 0px;
+      h1 {
+        font-size: 58px;
+      }
+    }
   }
 }
 
 .product-list-filter {
-  width: 100%;
-  max-width: 100%;
-  margin-top: 60px !important;
-  left: 50% !important;
+  margin-top: 50px !important;
+  left: 40% !important;
   transform: translateX(-50%) !important;
-
+  width: 280px;
   @media (min-width: 768px) {
+    left: 20% !important;
+  }
+  @media (min-width: 1200px) {
     width: 500px;
+    left: 40% !important;
   }
 
   a {
@@ -37,7 +50,10 @@
   .form-check-input {
     // 正常狀態下的邊框顏色
     border-color: $neutral-80;
-
+    font-size: 14px;
+    @media (min-width: 992px) {
+      font-size: 16px;
+    }
     &:checked {
       // 當核取方塊被勾選時，將背景色和邊框色設定為你的 $primary 顏色
       background-color: $primary;
@@ -103,6 +119,85 @@
     // 當愛心被點擊，新增 .is-filled 類別後會套用
     &.is-filled {
       color: $primary !important;
+    }
+  }
+}
+
+.product-list-hot {
+  h3 {
+    letter-spacing: 0.2em;
+  }
+  .vertical-text {
+    writing-mode: horizontal-tb;
+  }
+
+  .text-line {
+    display: inline-block;
+    background-color: $primary;
+    height: 1px;
+    width: 30px;
+  }
+
+  @media (min-width: 992px) {
+    h3 {
+      letter-spacing: 0em;
+    }
+    .vertical-text {
+      writing-mode: vertical-rl;
+    }
+
+    .text-line {
+      display: inline-block;
+      background-color: $primary;
+      height: 60px;
+      width: 1px;
+    }
+  }
+
+  .product-list-hot-container {
+    max-width: 1608px;
+    margin-left: auto;
+    padding: 0px 0px 0px 12px;
+  }
+
+  .product-list-hot-swiper {
+    .swiper-slide {
+      max-width: 220px;
+      max-height: 303px;
+
+      @media (min-width: 767px) {
+        max-width: 473px;
+        max-height: 400px;
+      }
+
+      .product-image-container {
+        width: 100%;
+        height: 231px;
+
+        @media (min-width: 767px) {
+          height: 319px;
+        }
+      }
+
+      img {
+        object-fit: cover;
+        object-position: 50% 75%;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .product-list-hot-background {
+    display: none;
+    @media (min-width: 992px) {
+      display: inline-flex;
+      height: 460px;
+      width: 1750px;
+      background-color: $secondary-5;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 78.6%;
+      left: 55%;
     }
   }
 }
