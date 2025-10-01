@@ -39,3 +39,55 @@
     }
   }
 }
+
+//單一產品頁輪播
+/* 主輪播大圖 - 正方形 */
+.mainSwiper {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    /* 保持正方形 */
+    border-radius: 32px;
+    overflow: hidden;
+    margin-bottom: 32px;
+    object-fit: cover;
+}
+
+.mainSwiper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 底下縮圖 */
+.thumbSwiper .swiper-slide {
+    width: 25%;
+    /* 每個佔大圖 1/4 */
+    aspect-ratio: 1 / 1;
+    /* 正方形 */
+    cursor: pointer;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: border 0.3s, opacity 0.3s;
+
+}
+.thumbSwiper .swiper-slide img{
+   width: 100%;
+    height: 100%;
+    object-fit: cover;
+      border-radius: 9px;
+}
+
+/* 選中 active 狀態 */
+.thumbSwiper .swiper-slide-thumb-active {
+    border: 6px solid #FFF1D1;
+    /* 外框 */
+    box-sizing: border-box;
+    /* 包含邊框在內不影響 slide 寬度 */
+}
+
+
+/* active 圖片內縮同時保留圓角 */
+.thumbSwiper .swiper-slide-thumb-active img {
+    border-radius: 9px;
+    /* 圓角與外框一致 */
+}
