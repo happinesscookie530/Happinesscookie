@@ -50,15 +50,26 @@
     width: 25%;
   }
 }
-
-.quantity-btn{
+/*數量按鈕*/
+.quantity-btn {
   color: $primary;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 4px;
+  padding: 2px;
 }
-.quantity-btn:hover{
+.quantity-btn:hover {
   background-color: rgba(255, 255, 255, 0.571);
   border-radius: 6px;
+}
+@media (min-width: 992px) {
+  .quantity-btn {
+    padding: 4px;
+  }
+}
+
+/*購物車.喜好按鈕.數量格線間距*/
+.row.g-custom {
+  --bs-gutter-x: 12px; /* 左右間距 */
+  --bs-gutter-y: 12px; /* 上下間距 */
 }
