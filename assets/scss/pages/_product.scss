@@ -1,6 +1,6 @@
 .options {
   display: inline-block;
-  width: 25%;
+  width: 30%;
   color: $neutral-80; /* 預設文字顏色 */
   transition: color 0.3s;
 }
@@ -47,6 +47,18 @@
 }
 @media (min-width: 992px) {
   .options {
-    width: 30%;
+    width: 25%;
   }
+}
+
+.quantity-btn{
+  color: $primary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+}
+.quantity-btn:hover{
+  background-color: rgba(255, 255, 255, 0.571);
+  border-radius: 6px;
 }

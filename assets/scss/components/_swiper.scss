@@ -93,8 +93,8 @@
 @media (min-width: 992px) {
   .mainSwiper {
     /* 保持正方形 */
-    border-radius: 28px;
-    margin-bottom: 28px;
+    border-radius: 20px;
+    margin-bottom: 24px;
   }
 
   /* 底下縮圖 */
@@ -109,7 +109,7 @@
 
   /* 選中 active 狀態 */
   .thumbSwiper .swiper-slide-thumb-active {
-    border: 6px solid #fff1d1;
+    border: 3px solid #fff1d1;
     /* 外框 */
   }
 
