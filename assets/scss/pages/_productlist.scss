@@ -74,7 +74,7 @@
   }
 }
 
-.product-list {
+.product-list-main {
   .product-item {
     display: flex;
     justify-content: center;
@@ -121,6 +121,16 @@
       color: $primary !important;
     }
   }
+  .product-list-navigation {
+    .page-item.active .page-link {
+      background-color: $primary !important;
+      color: $white !important;
+    }
+  }
+
+  .page-link {
+    border: 0px;
+  }
 }
 
 .product-list-hot {
@@ -144,6 +154,9 @@
     }
     .vertical-text {
       writing-mode: vertical-rl;
+    }
+    .product-list-hot-title {
+      letter-spacing: 0.5rem;
     }
 
     .text-line {
