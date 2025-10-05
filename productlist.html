@@ -22,11 +22,11 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <script type="module" crossorigin src="/Happinesscookie/assets/main-BuwhSpun.js"></script>
-    <link rel="stylesheet" crossorigin href="/Happinesscookie/assets/main-CLXSSKAI.css">
+    <script type="module" crossorigin src="/Happinesscookie/assets/main-BNrn8NF7.js"></script>
+    <link rel="stylesheet" crossorigin href="/Happinesscookie/assets/main-BRRsDvSx.css">
   </head>
   <body>
-    <header class="header-main fixed-top">
+    <header class="fixed-top bg-white">
   <nav
     class="container d-flex justify-content-between align-items-center py-6 py-lg-12"
   >
@@ -39,31 +39,35 @@
     </a>
     <ul class="header-list list-unstyled m-0 d-none d-xl-flex">
       <li>
-        <a class="py-8 px-16 fw-bold text-white" href="index.html#topsale"
+        <a class="py-8 px-16 fw-bold text-neutral-80" href="index.html#topsale"
           >推薦商品</a
         >
       </li>
       <li>
-        <a class="py-8 px-16 fw-bold text-white" href="index.html#news"
+        <a class="py-8 px-16 fw-bold text-neutral-80" href="index.html#news"
           >最新消息</a
         >
       </li>
       <li>
-        <a class="py-8 px-16 fw-bold text-white" href="index.html#brandstory"
+        <a
+          class="py-8 px-16 fw-bold text-neutral-80"
+          href="index.html#brandstory"
           >品牌故事</a
         >
       </li>
       <li>
-        <a class="py-8 px-16 fw-bold text-white" href="productlist.html"
+        <a class="py-8 px-16 fw-bold text-neutral-80" href="productlist.html"
           >我們的商品</a
         >
       </li>
       <li>
-        <a class="py-8 px-16 fw-bold text-white" href="#footer">聯絡我們</a>
+        <a class="py-8 px-16 fw-bold text-neutral-80" href="#footer"
+          >聯絡我們</a
+        >
       </li>
     </ul>
     <div class="d-flex align-items-center">
-      <a href="shopping-cart.html" class="text-white p-4 me-lg-8">
+      <a href="shopping-cart.html" class="text-neutral-80 p-4 me-lg-8">
         <span
           class="material-icons-outlined header-material-icon-scroll align-bottom fs-lg-3 header-nav-icon"
         >
@@ -83,7 +87,7 @@
         aria-controls="offcanvas-header-notlogin"
       >
         <span
-          class="material-icons-outlined header-material-icon-scroll align-bottom fs-lg-3 text-white"
+          class="material-icons-outlined header-material-icon-scroll align-bottom fs-lg-3 text-neutral-80"
         >
           menu
         </span>
@@ -150,14 +154,22 @@
 
     <div class="container-fluid product-list-hero">
       <div class="container product-list-hero-type">
-        <h1 class="text-white fw-bold">
+        <h1
+          class="text-white fw-bold"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        >
           Bring A Little <br />
           Happiness For You
         </h1>
       </div>
     </div>
 
-    <div class="container py-20 py-lg-60">
+    <div
+      class="product-list-main container py-20 py-lg-60"
+      data-aos="fade-down"
+      data-aos-duration="1000"
+    >
       <div class="row d-flex flex-wrap align-items-center mb-12 mb-lg-24">
         <div class="col-lg-8 mb-8 mb-lg-0">
           <h3 class="fw-bold w-100 w-lg-50 me-auto">所有商品</h3>
@@ -323,22 +335,6 @@
                             <input
                               class="form-check-input filter-radio me-4"
                               type="radio"
-                              value="veg-pure"
-                              name="main-filter"
-                              id="veg-pure-checkbox"
-                            />
-                            <label
-                              class="form-check-label fs-14 fs-lg-5"
-                              for="veg-pure-checkbox"
-                              >純素</label
-                            >
-                          </div>
-                        </li>
-                        <li class="list-group-item border-0 p-0 mb-5 mb-lg-8">
-                          <div class="form-check d-flex align-items-center">
-                            <input
-                              class="form-check-input filter-radio me-4"
-                              type="radio"
                               value="veg-egg"
                               name="main-filter"
                               id="veg-egg-checkbox"
@@ -350,7 +346,23 @@
                             >
                           </div>
                         </li>
-                        <li class="list-group-item border-0 p-0">
+                        <li class="list-group-item border-0 p-0 mb-5 mb-lg-8">
+                          <div class="form-check d-flex align-items-center">
+                            <input
+                              class="form-check-input filter-radio me-4"
+                              type="radio"
+                              value="veg-milk"
+                              name="main-filter"
+                              id="veg-milk-checkbox"
+                            />
+                            <label
+                              class="form-check-label fs-14 fs-lg-5"
+                              for="veg-milk-checkbox"
+                              >奶素</label
+                            >
+                          </div>
+                        </li>
+                        <li class="list-group-item border-0 p-0 mb-5 mb-lg-8">
                           <div class="form-check d-flex align-items-center">
                             <input
                               class="form-check-input filter-radio me-4"
@@ -363,6 +375,22 @@
                               class="form-check-label fs-14 fs-lg-5"
                               for="veg-both-checkbox"
                               >蛋奶素</label
+                            >
+                          </div>
+                        </li>
+                        <li class="list-group-item border-0 p-0">
+                          <div class="form-check d-flex align-items-center">
+                            <input
+                              class="form-check-input filter-radio me-4"
+                              type="radio"
+                              value="veg-egg-alcohol"
+                              name="main-filter"
+                              id="veg-egg-alcohol-checkbox"
+                            />
+                            <label
+                              class="form-check-label fs-14 fs-lg-5"
+                              for="veg-egg-alcohol-checkbox"
+                              >蛋奶素含酒</label
                             >
                           </div>
                         </li>
@@ -494,7 +522,10 @@
       </div>
 
       <div id="product-list-all" class="product-list row d-flex">
-        <div class="col-6 col-lg-3 mb-10 mb-lg-12">
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
           <div class="product-item position-relative bg-secondary-5 mb-8">
             <img src="/Happinesscookie/assets/%E7%8F%8D%E7%8F%A0%E7%B3%96%E6%B3%A1%E8%8A%99-CIol9KIn.png" alt="珍珠糖泡芙" />
             <span
@@ -524,7 +555,10 @@
             </span>
           </div>
         </div>
-        <div class="col-6 col-lg-3 mb-10 mb-lg-12">
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
           <div class="product-item position-relative bg-secondary-5 mb-8">
             <img src="/Happinesscookie/assets/11.%E5%8F%AF%E9%BA%97%E9%9C%B2-DKDIJqjx.png" alt="可麗露" />
             <div
@@ -550,7 +584,10 @@
             </span>
           </div>
         </div>
-        <div class="col-6 col-lg-3 mb-10 mb-lg-12">
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
           <div class="product-item position-relative bg-secondary-5 mb-8">
             <img src="/Happinesscookie/assets/7.%E5%B8%83%E5%88%97%E5%A1%94%E5%B0%BC%E9%85%A5-CIEfKUYx.png" alt="布列塔尼酥" />
             <span
@@ -580,7 +617,10 @@
             </span>
           </div>
         </div>
-        <div class="col-6 col-lg-3 mb-10 mb-lg-12">
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
           <div class="product-item position-relative bg-secondary-5 mb-8">
             <img src="/Happinesscookie/assets/4.%E7%BE%A9%E5%A4%A7%E5%88%A9%E8%84%86%E9%A4%85-vjNLGqP3.png" alt="義大利脆餅" />
             <div
@@ -606,7 +646,10 @@
             </span>
           </div>
         </div>
-        <div class="col-6 col-lg-3 mb-10 mb-lg-12">
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
           <div class="product-item position-relative bg-secondary-5 mb-8">
             <img src="/Happinesscookie/assets/12.%E5%8F%AF%E5%8F%AF%E6%9D%8F%E4%BB%81%E9%A4%85%E4%B9%BE-BNnQTtIp.png" alt="可可杏仁餅乾" />
             <span
@@ -636,7 +679,10 @@
             </span>
           </div>
         </div>
-        <div class="col-6 col-lg-3 mb-10 mb-lg-12">
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
           <div class="product-item position-relative bg-secondary-5 mb-8">
             <img src="/Happinesscookie/assets/6-1.%E9%91%BD%E7%9F%B3%E6%B2%99%E5%B8%83%E5%88%97-%E5%8F%AF%E5%8F%AF-CWjv-vV9.png" alt="鑽石餅乾" />
 
@@ -663,7 +709,10 @@
             </span>
           </div>
         </div>
-        <div class="col-6 col-lg-3 mb-10 mb-lg-12">
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
           <div class="product-item position-relative bg-secondary-5 mb-8">
             <img src="/Happinesscookie/assets/5.%E9%9B%AA%E7%90%83%E9%A4%85%E4%B9%BE-dn7snPV5.png" alt="雪球餅乾" />
 
@@ -690,7 +739,10 @@
             </span>
           </div>
         </div>
-        <div class="col-6 col-lg-3 mb-10 mb-lg-12">
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
           <div class="product-item position-relative bg-secondary-5 mb-8">
             <img src="/Happinesscookie/assets/3.%E8%B5%B7%E5%8F%B8%E8%84%86%E6%A3%92-D7mehETb.png" alt="起司脆棒" />
             <span
@@ -720,7 +772,10 @@
             </span>
           </div>
         </div>
-        <div class="col-6 col-lg-3 mb-10 mb-lg-12">
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
           <div class="product-item position-relative bg-secondary-5 mb-8">
             <img src="/Happinesscookie/assets/9-1.%E6%9B%B2%E5%A5%87%E9%A4%85%E4%B9%BE%E5%8E%9F%E5%91%B3-D0KAFdp-.png" alt="曲奇餅乾" />
             <span
@@ -750,7 +805,10 @@
             </span>
           </div>
         </div>
-        <div class="col-6 col-lg-3 mb-10 mb-lg-12">
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
           <div class="product-item position-relative bg-secondary-5 mb-8">
             <img src="/Happinesscookie/assets/1.%E6%A4%B0%E9%A6%99%E6%9D%8F%E8%84%86%E9%A4%85-CFN3e61O.png" alt="椰香杏脆餅" />
             <div
@@ -776,12 +834,265 @@
             </span>
           </div>
         </div>
-        <div class="col-6 col-lg-3 mb-10 mb-lg-12">
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
           <div class="product-item position-relative bg-secondary-5 mb-8">
             <img src="/Happinesscookie/assets/%E4%B8%AD%E7%A7%8B%E6%9C%88%E9%A4%85-DJvO1VoZ.png" alt="中秋月餅" />
             <span
               class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
               >熱銷 No. 1</span
+            >
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">中秋禮盒</p>
+              <p class="fs-14 fs-lg-6">季節性商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img
+              src="/Happinesscookie/assets/LINE_ALBUM_%E6%98%9F%E4%B9%8B%E5%BD%8C%E6%9C%88_250801_1-48ksAPkQ.jpg"
+              alt="彌月禮盒"
+            />
+
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">彌月禮盒</p>
+              <p class="fs-14 fs-lg-6">客製化商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card d-none"
+          data-page-content="2"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/Happinesscookie/assets/13.%E9%9F%93%E5%9C%8B%E9%BA%B5%E5%8C%85-CYHJm9bB.png" alt="韓國麵包" />
+
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">韓國麵包</p>
+              <p class="fs-14 fs-lg-6">限定商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card d-none"
+          data-page-content="2"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/Happinesscookie/assets/14.%E8%9D%B4%E8%9D%B6%E9%85%A5-CRAKksIE.png" alt="蝴蝶酥" />
+
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">蝴蝶酥</p>
+              <p class="fs-14 fs-lg-6">限定商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card d-none"
+          data-page-content="2"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/Happinesscookie/assets/8.%E6%A5%93%E7%B3%96%E9%80%A0%E5%9E%8B%E9%A4%85%E4%B9%BE-%E5%AE%A2%E8%A3%BD-3d9Fm9KB.png" alt="楓糖餅乾" />
+
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">楓糖餅乾</p>
+              <p class="fs-14 fs-lg-6">限定商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card d-none"
+          data-page-content="2"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img
+              src="/Happinesscookie/assets/LINE_ALBUM_%E9%A4%85%E4%B9%BE%E5%8C%85%E8%A3%9D%E7%85%A7%E5%80%91_250524_19-CaCFtJ8U.jpg"
+              alt="禮輕情意重"
+            />
+
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">禮輕情意重</p>
+              <p class="fs-14 fs-lg-6">客製化商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card d-none"
+          data-page-content="2"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img
+              src="/Happinesscookie/assets/LINE_ALBUM_%E9%A4%85%E4%B9%BE%E5%8C%85%E8%A3%9D%E7%85%A7%E5%80%91_250524_28-ByW2n3nN.jpg"
+              alt="送到心坎裡"
+            />
+
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">送到心坎裡</p>
+              <p class="fs-14 fs-lg-6">客製化商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div class="col-12 mt-10 mt-lg-28 d-flex justify-content-center">
+          <nav aria-label="Page navigation example" id="productPagination-1">
+            <ul class="pagination product-list-navigation">
+              <li class="page-item">
+                <a
+                  class="page-link"
+                  href="#"
+                  aria-label="Previous"
+                  id="prevPage-1"
+                >
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#" data-page="1">1</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#" data-page="2">2</a>
+              </li>
+
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next" id="nextPage-1">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div id="product-list-hot" class="product-list row d-flex">
+        <div class="col-6 col-lg-3 mb-10 mb-lg-12 product-card">
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/Happinesscookie/assets/%E4%B8%AD%E7%A7%8B%E6%9C%88%E9%A4%85-DJvO1VoZ.png" alt="中秋月餅" />
+            <span
+              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+              >季節限定</span
             >
             <div
               class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
@@ -806,9 +1117,232 @@
             </span>
           </div>
         </div>
-        <div class="col-6 col-lg-3 mb-10 mb-lg-12">
+        <div class="col-6 col-lg-3 mb-10 mb-lg-12 product-card">
           <div class="product-item position-relative bg-secondary-5 mb-8">
-            <img src="/Happinesscookie/assets/%E5%BD%8C%E6%9C%88%E7%A6%AE%E7%9B%92-DkAWrQ7Q.jpg" alt="彌月禮盒" />
+            <img src="/Happinesscookie/assets/%E7%8F%8D%E7%8F%A0%E7%B3%96%E6%B3%A1%E8%8A%99-CIol9KIn.png" alt="珍珠糖泡芙" />
+            <span
+              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+              >熱銷 No. 1</span
+            >
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">珍珠糖泡芙</p>
+              <p class="fs-14 fs-lg-6">NT$ 70 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3 mb-10 mb-lg-12 product-card">
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/Happinesscookie/assets/3.%E8%B5%B7%E5%8F%B8%E8%84%86%E6%A3%92-D7mehETb.png" alt="起司脆棒" />
+            <span
+              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+              >熱銷 No. 2</span
+            >
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">起士脆棒</p>
+              <p class="fs-14 fs-lg-6">NT$ 70 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3 mb-10 mb-lg-12 product-card">
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/Happinesscookie/assets/9-1.%E6%9B%B2%E5%A5%87%E9%A4%85%E4%B9%BE%E5%8E%9F%E5%91%B3-D0KAFdp-.png" alt="曲奇餅乾" />
+            <span
+              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+              >熱銷 No. 3</span
+            >
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">曲奇餅乾</p>
+              <p class="fs-14 fs-lg-6">NT$ 70 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3 mb-10 mb-lg-12 product-card">
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/Happinesscookie/assets/7.%E5%B8%83%E5%88%97%E5%A1%94%E5%B0%BC%E9%85%A5-CIEfKUYx.png" alt="布列塔尼酥" />
+            <span
+              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+              >推薦商品</span
+            >
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">布列塔尼酥 單入</p>
+              <p class="fs-14 fs-lg-6">NT$ 55 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3 mb-10 mb-lg-12 product-card">
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/Happinesscookie/assets/12.%E5%8F%AF%E5%8F%AF%E6%9D%8F%E4%BB%81%E9%A4%85%E4%B9%BE-BNnQTtIp.png" alt="可可杏仁餅乾" />
+            <span
+              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+              >推薦商品</span
+            >
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">可可杏仁餅乾</p>
+              <p class="fs-14 fs-lg-6">NT$ 70</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        id="product-list-gift-festival"
+        class="product-list row d-flex d-none"
+      >
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/Happinesscookie/assets/%E4%B8%AD%E7%A7%8B%E6%9C%88%E9%A4%85-DJvO1VoZ.png" alt="中秋禮盒" />
+
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">中秋禮盒</p>
+              <p class="fs-14 fs-lg-6">季節性商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/Happinesscookie/assets/%E5%A9%9A%E7%A6%AE%E7%A6%AE%E7%9B%92-DkAWrQ7Q.jpg" alt="婚禮禮盒" />
+
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">婚禮禮盒</p>
+              <p class="fs-14 fs-lg-6">客製化商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+      </div>
+      <div id="product-list-gift-baby" class="product-list row d-flex d-none">
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img
+              src="/Happinesscookie/assets/LINE_ALBUM_%E6%98%9F%E4%B9%8B%E5%BD%8C%E6%9C%88_250801_1-48ksAPkQ.jpg"
+              alt="彌月禮盒"
+            />
 
             <div
               class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
@@ -824,7 +1358,75 @@
           <div class="d-flex align-items-star mb-4 product-link">
             <a class="me-auto" href="product.html">
               <p class="fs-lg-5 fw-bold">彌月禮盒</p>
-              <p class="fs-14 fs-lg-6">NT$ 399</p>
+              <p class="fs-14 fs-lg-6">客製化商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+      </div>
+      <div id="product-list-gift-small" class="product-list row d-flex d-none">
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img
+              src="/Happinesscookie/assets/LINE_ALBUM_%E9%A4%85%E4%B9%BE%E5%8C%85%E8%A3%9D%E7%85%A7%E5%80%91_250524_19-CaCFtJ8U.jpg"
+              alt="禮輕情意重"
+            />
+
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">禮輕情意重</p>
+              <p class="fs-14 fs-lg-6">客製化商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img
+              src="/Happinesscookie/assets/LINE_ALBUM_%E9%A4%85%E4%B9%BE%E5%8C%85%E8%A3%9D%E7%85%A7%E5%80%91_250524_28-ByW2n3nN.jpg"
+              alt="送到心坎裡"
+            />
+
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">送到心坎裡</p>
+              <p class="fs-14 fs-lg-6">客製化商品請聯絡店家</p>
             </a>
             <span
               class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
@@ -835,14 +1437,13 @@
         </div>
       </div>
 
-      <div id="product-list-hot" class="product-list row d-flex">
-        <div class="col-6 col-lg-3 mb-10 mb-lg-12">
+      <div id="product-list-veg-egg" class="product-list row d-flex d-none">
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
           <div class="product-item position-relative bg-secondary-5 mb-8">
-            <img src="/Happinesscookie/assets/%E7%8F%8D%E7%8F%A0%E7%B3%96%E6%B3%A1%E8%8A%99-CIol9KIn.png" alt="珍珠糖泡芙" />
-            <span
-              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
-              >熱銷 No. 1</span
-            >
+            <img src="/Happinesscookie/assets/4.%E7%BE%A9%E5%A4%A7%E5%88%A9%E8%84%86%E9%A4%85-vjNLGqP3.png" alt="義大利脆餅" />
             <div
               class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
             >
@@ -856,128 +1457,8 @@
           </div>
           <div class="d-flex align-items-star mb-4 product-link">
             <a class="me-auto" href="product.html">
-              <p class="fs-lg-5 fw-bold">珍珠糖泡芙</p>
-              <p class="fs-14 fs-lg-6">NT$ 70 以上</p>
-            </a>
-            <span
-              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
-            >
-              favorite_border
-            </span>
-          </div>
-        </div>
-        <div class="col-6 col-lg-3 mb-10 mb-lg-12">
-          <div class="product-item position-relative bg-secondary-5 mb-8">
-            <img src="/Happinesscookie/assets/%E7%8F%8D%E7%8F%A0%E7%B3%96%E6%B3%A1%E8%8A%99-CIol9KIn.png" alt="珍珠糖泡芙" />
-            <span
-              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
-              >熱銷 No. 1</span
-            >
-            <div
-              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
-            >
-              <a href="product.html" class="d-block w-100 h-100"></a>
-              <button
-                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
-              >
-                加入購物車
-              </button>
-            </div>
-          </div>
-          <div class="d-flex align-items-star mb-4 product-link">
-            <a class="me-auto" href="product.html">
-              <p class="fs-lg-5 fw-bold">珍珠糖泡芙</p>
-              <p class="fs-14 fs-lg-6">NT$ 70 以上</p>
-            </a>
-            <span
-              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
-            >
-              favorite_border
-            </span>
-          </div>
-        </div>
-        <div class="col-6 col-lg-3 mb-10 mb-lg-12">
-          <div class="product-item position-relative bg-secondary-5 mb-8">
-            <img src="/Happinesscookie/assets/%E7%8F%8D%E7%8F%A0%E7%B3%96%E6%B3%A1%E8%8A%99-CIol9KIn.png" alt="珍珠糖泡芙" />
-            <span
-              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
-              >熱銷 No. 1</span
-            >
-            <div
-              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
-            >
-              <a href="product.html" class="d-block w-100 h-100"></a>
-              <button
-                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
-              >
-                加入購物車
-              </button>
-            </div>
-          </div>
-          <div class="d-flex align-items-star mb-4 product-link">
-            <a class="me-auto" href="product.html">
-              <p class="fs-lg-5 fw-bold">珍珠糖泡芙</p>
-              <p class="fs-14 fs-lg-6">NT$ 70 以上</p>
-            </a>
-            <span
-              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
-            >
-              favorite_border
-            </span>
-          </div>
-        </div>
-        <div class="col-6 col-lg-3 mb-10 mb-lg-12">
-          <div class="product-item position-relative bg-secondary-5 mb-8">
-            <img src="/Happinesscookie/assets/%E7%8F%8D%E7%8F%A0%E7%B3%96%E6%B3%A1%E8%8A%99-CIol9KIn.png" alt="珍珠糖泡芙" />
-            <span
-              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
-              >熱銷 No. 1</span
-            >
-            <div
-              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
-            >
-              <a href="product.html" class="d-block w-100 h-100"></a>
-              <button
-                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
-              >
-                加入購物車
-              </button>
-            </div>
-          </div>
-          <div class="d-flex align-items-star mb-4 product-link">
-            <a class="me-auto" href="product.html">
-              <p class="fs-lg-5 fw-bold">珍珠糖泡芙</p>
-              <p class="fs-14 fs-lg-6">NT$ 70 以上</p>
-            </a>
-            <span
-              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
-            >
-              favorite_border
-            </span>
-          </div>
-        </div>
-        <div class="col-6 col-lg-3 mb-10 mb-lg-12">
-          <div class="product-item position-relative bg-secondary-5 mb-8">
-            <img src="/Happinesscookie/assets/%E7%8F%8D%E7%8F%A0%E7%B3%96%E6%B3%A1%E8%8A%99-CIol9KIn.png" alt="珍珠糖泡芙" />
-            <span
-              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
-              >熱銷 No. 1</span
-            >
-            <div
-              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
-            >
-              <a href="product.html" class="d-block w-100 h-100"></a>
-              <button
-                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
-              >
-                加入購物車
-              </button>
-            </div>
-          </div>
-          <div class="d-flex align-items-star mb-4 product-link">
-            <a class="me-auto" href="product.html">
-              <p class="fs-lg-5 fw-bold">珍珠糖泡芙</p>
-              <p class="fs-14 fs-lg-6">NT$ 70 以上</p>
+              <p class="fs-lg-5 fw-bold">義大利脆餅</p>
+              <p class="fs-14 fs-lg-6">NT$ 75 以上</p>
             </a>
             <span
               class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
@@ -988,51 +1469,1259 @@
         </div>
       </div>
 
-      <div id="product-list-gift-festival" class="product-list d-none">
-        <h4>節慶禮盒</h4>
-        <div class="product-item">新年禮盒</div>
-        <div class="product-item">中秋禮盒</div>
-        <div class="product-item">聖誕禮盒</div>
+      <div id="product-list-veg-milk" class="product-list row d-flex d-none">
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/Happinesscookie/assets/6-1.%E9%91%BD%E7%9F%B3%E6%B2%99%E5%B8%83%E5%88%97-%E5%8F%AF%E5%8F%AF-CWjv-vV9.png" alt="鑽石餅乾" />
+
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">鑽石餅乾</p>
+              <p class="fs-14 fs-lg-6">NT$ 75 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
       </div>
-      <div id="product-list-gift-baby" class="product-list d-none">
-        <h4>彌月禮盒</h4>
-        <div class="product-item">寶寶彌月禮盒</div>
-        <div class="product-item">精緻彌月禮盒</div>
+      <div
+        id="product-list-veg-egg-alcohol"
+        class="product-list row d-flex d-none"
+      >
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/Happinesscookie/assets/11.%E5%8F%AF%E9%BA%97%E9%9C%B2-DKDIJqjx.png" alt="可麗露" />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">迷你可麗露 單入</p>
+              <p class="fs-14 fs-lg-6">NT$ 30</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
       </div>
-      <div id="product-list-gift-small" class="product-list d-none">
-        <h4>送禮小物</h4>
-        <div class="product-item">手工餅乾</div>
-        <div class="product-item">精緻果醬</div>
+      <div id="product-list-veg-both" class="product-list row d-flex d-none">
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/Happinesscookie/assets/7.%E5%B8%83%E5%88%97%E5%A1%94%E5%B0%BC%E9%85%A5-CIEfKUYx.png" alt="布列塔尼酥" />
+            <span
+              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+              >推薦商品</span
+            >
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">布列塔尼酥 單入</p>
+              <p class="fs-14 fs-lg-6">NT$ 55 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/Happinesscookie/assets/12.%E5%8F%AF%E5%8F%AF%E6%9D%8F%E4%BB%81%E9%A4%85%E4%B9%BE-BNnQTtIp.png" alt="可可杏仁餅乾" />
+            <span
+              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+              >推薦商品</span
+            >
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">可可杏仁餅乾</p>
+              <p class="fs-14 fs-lg-6">NT$ 70</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
       </div>
 
-      <div id="product-list-veg-pure" class="product-list d-none">
-        <h4>純素商品</h4>
-        <div class="product-item">純素燕麥餅乾</div>
-        <div class="product-item">純素巧克力</div>
-      </div>
-      <div id="product-list-veg-egg" class="product-list d-none">
-        <h4>蛋素商品</h4>
-        <div class="product-item">蛋素麵包</div>
-        <div class="product-item">蛋素蛋糕</div>
-      </div>
-      <div id="product-list-veg-both" class="product-list d-none">
-        <h4>蛋奶素商品</h4>
-        <div class="product-item">蛋奶素餅乾</div>
-        <div class="product-item">蛋奶素蛋糕</div>
-        <div class="product-item">蛋奶素含酒巧克力</div>
+      <div
+        id="product-list-price-low-to-high"
+        class="product-list row d-flex d-none"
+      >
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/Happinesscookie/assets/11.%E5%8F%AF%E9%BA%97%E9%9C%B2-DKDIJqjx.png" alt="可麗露" />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">迷你可麗露 單入</p>
+              <p class="fs-14 fs-lg-6">NT$ 30</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/Happinesscookie/assets/7.%E5%B8%83%E5%88%97%E5%A1%94%E5%B0%BC%E9%85%A5-CIEfKUYx.png" alt="布列塔尼酥" />
+            <span
+              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+              >推薦商品</span
+            >
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">布列塔尼酥 單入</p>
+              <p class="fs-14 fs-lg-6">NT$ 55 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/Happinesscookie/assets/%E7%8F%8D%E7%8F%A0%E7%B3%96%E6%B3%A1%E8%8A%99-CIol9KIn.png" alt="珍珠糖泡芙" />
+            <span
+              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+              >熱銷 No. 1</span
+            >
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">珍珠糖泡芙</p>
+              <p class="fs-14 fs-lg-6">NT$ 70 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/Happinesscookie/assets/12.%E5%8F%AF%E5%8F%AF%E6%9D%8F%E4%BB%81%E9%A4%85%E4%B9%BE-BNnQTtIp.png" alt="可可杏仁餅乾" />
+            <span
+              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+              >推薦商品</span
+            >
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">可可杏仁餅乾</p>
+              <p class="fs-14 fs-lg-6">NT$ 70</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/Happinesscookie/assets/5.%E9%9B%AA%E7%90%83%E9%A4%85%E4%B9%BE-dn7snPV5.png" alt="雪球餅乾" />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">雪球餅乾</p>
+              <p class="fs-14 fs-lg-6">NT$ 70 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/Happinesscookie/assets/3.%E8%B5%B7%E5%8F%B8%E8%84%86%E6%A3%92-D7mehETb.png" alt="起司脆棒" />
+            <span
+              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+              >熱銷 No. 2</span
+            >
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">起士脆棒</p>
+              <p class="fs-14 fs-lg-6">NT$ 70 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/Happinesscookie/assets/9-1.%E6%9B%B2%E5%A5%87%E9%A4%85%E4%B9%BE%E5%8E%9F%E5%91%B3-D0KAFdp-.png" alt="曲奇餅乾" />
+            <span
+              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+              >熱銷 No. 3</span
+            >
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">曲奇餅乾</p>
+              <p class="fs-14 fs-lg-6">NT$ 70 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/Happinesscookie/assets/1.%E6%A4%B0%E9%A6%99%E6%9D%8F%E8%84%86%E9%A4%85-CFN3e61O.png" alt="椰香杏脆餅" />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">椰香杏脆餅</p>
+              <p class="fs-14 fs-lg-6">NT$ 70 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/Happinesscookie/assets/4.%E7%BE%A9%E5%A4%A7%E5%88%A9%E8%84%86%E9%A4%85-vjNLGqP3.png" alt="義大利脆餅" />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">義大利脆餅</p>
+              <p class="fs-14 fs-lg-6">NT$ 75 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/Happinesscookie/assets/6-1.%E9%91%BD%E7%9F%B3%E6%B2%99%E5%B8%83%E5%88%97-%E5%8F%AF%E5%8F%AF-CWjv-vV9.png" alt="鑽石餅乾" />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">鑽石餅乾</p>
+              <p class="fs-14 fs-lg-6">NT$ 75 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/Happinesscookie/assets/%E4%B8%AD%E7%A7%8B%E6%9C%88%E9%A4%85-DJvO1VoZ.png" alt="中秋月餅" />
+            <span
+              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+              >熱銷 No. 1</span
+            >
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">中秋禮盒</p>
+              <p class="fs-14 fs-lg-6">季節性商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img
+              src="/Happinesscookie/assets/LINE_ALBUM_%E6%98%9F%E4%B9%8B%E5%BD%8C%E6%9C%88_250801_1-48ksAPkQ.jpg"
+              alt="彌月禮盒"
+            />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">彌月禮盒</p>
+              <p class="fs-14 fs-lg-6">客製化商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card d-none d-none"
+          data-page-content="2"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/Happinesscookie/assets/13.%E9%9F%93%E5%9C%8B%E9%BA%B5%E5%8C%85-CYHJm9bB.png" alt="韓國麵包" />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">韓國麵包</p>
+              <p class="fs-14 fs-lg-6">限定商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card d-none d-none"
+          data-page-content="2"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/Happinesscookie/assets/14.%E8%9D%B4%E8%9D%B6%E9%85%A5-CRAKksIE.png" alt="蝴蝶酥" />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">蝴蝶酥</p>
+              <p class="fs-14 fs-lg-6">限定商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card d-none d-none"
+          data-page-content="2"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/Happinesscookie/assets/8.%E6%A5%93%E7%B3%96%E9%80%A0%E5%9E%8B%E9%A4%85%E4%B9%BE-%E5%AE%A2%E8%A3%BD-3d9Fm9KB.png" alt="楓糖餅乾" />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">楓糖餅乾</p>
+              <p class="fs-14 fs-lg-6">限定商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card d-none d-none"
+          data-page-content="2"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img
+              src="/Happinesscookie/assets/LINE_ALBUM_%E9%A4%85%E4%B9%BE%E5%8C%85%E8%A3%9D%E7%85%A7%E5%80%91_250524_19-CaCFtJ8U.jpg"
+              alt="禮輕情意重"
+            />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">禮輕情意重</p>
+              <p class="fs-14 fs-lg-6">客製化商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card d-none d-none"
+          data-page-content="2"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img
+              src="/Happinesscookie/assets/LINE_ALBUM_%E9%A4%85%E4%B9%BE%E5%8C%85%E8%A3%9D%E7%85%A7%E5%80%91_250524_28-ByW2n3nN.jpg"
+              alt="送到心坎裡"
+            />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">送到心坎裡</p>
+              <p class="fs-14 fs-lg-6">客製化商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div class="col-12 mt-10 mt-lg-28 d-flex justify-content-center">
+          <nav aria-label="Page navigation example" id="productPagination-2">
+            <ul class="pagination product-list-navigation">
+              <li class="page-item">
+                <a
+                  class="page-link"
+                  href="#"
+                  aria-label="Previous"
+                  id="prevPage-2"
+                >
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li class="page-item active">
+                <a class="page-link" href="#" data-page="1">1</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#" data-page="2">2</a>
+              </li>
+
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next" id="nextPage-2">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
 
-      <div id="product-list-price-low-to-high" class="product-list d-none">
-        <h4>價格: 由低至高</h4>
-        <div class="product-item">小禮物 ($50)</div>
-        <div class="product-item">餅乾禮盒 ($200)</div>
-        <div class="product-item">豪華蛋糕 ($1000)</div>
-      </div>
-      <div id="product-list-price-high-to-low" class="product-list d-none">
-        <h4>價格: 由高至低</h4>
-        <div class="product-item">豪華蛋糕 ($1000)</div>
-        <div class="product-item">餅乾禮盒 ($200)</div>
-        <div class="product-item">小禮物 ($50)</div>
+      <div
+        id="product-list-price-high-to-low"
+        class="product-list row d-flex d-none"
+      >
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/Happinesscookie/assets/%E4%B8%AD%E7%A7%8B%E6%9C%88%E9%A4%85-DJvO1VoZ.png" alt="中秋月餅" />
+            <span
+              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+              >熱銷 No. 1</span
+            >
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">中秋禮盒</p>
+              <p class="fs-14 fs-lg-6">季節性商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img
+              src="/Happinesscookie/assets/LINE_ALBUM_%E6%98%9F%E4%B9%8B%E5%BD%8C%E6%9C%88_250801_1-48ksAPkQ.jpg"
+              alt="彌月禮盒"
+            />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">彌月禮盒</p>
+              <p class="fs-14 fs-lg-6">客製化商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/Happinesscookie/assets/13.%E9%9F%93%E5%9C%8B%E9%BA%B5%E5%8C%85-CYHJm9bB.png" alt="韓國麵包" />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">韓國麵包</p>
+              <p class="fs-14 fs-lg-6">限定商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/Happinesscookie/assets/14.%E8%9D%B4%E8%9D%B6%E9%85%A5-CRAKksIE.png" alt="蝴蝶酥" />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">蝴蝶酥</p>
+              <p class="fs-14 fs-lg-6">限定商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/Happinesscookie/assets/8.%E6%A5%93%E7%B3%96%E9%80%A0%E5%9E%8B%E9%A4%85%E4%B9%BE-%E5%AE%A2%E8%A3%BD-3d9Fm9KB.png" alt="楓糖餅乾" />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">楓糖餅乾</p>
+              <p class="fs-14 fs-lg-6">限定商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img
+              src="/Happinesscookie/assets/LINE_ALBUM_%E9%A4%85%E4%B9%BE%E5%8C%85%E8%A3%9D%E7%85%A7%E5%80%91_250524_19-CaCFtJ8U.jpg"
+              alt="禮輕情意重"
+            />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">禮輕情意重</p>
+              <p class="fs-14 fs-lg-6">客製化商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img
+              src="/Happinesscookie/assets/LINE_ALBUM_%E9%A4%85%E4%B9%BE%E5%8C%85%E8%A3%9D%E7%85%A7%E5%80%91_250524_28-ByW2n3nN.jpg"
+              alt="送到心坎裡"
+            />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">送到心坎裡</p>
+              <p class="fs-14 fs-lg-6">客製化商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/Happinesscookie/assets/4.%E7%BE%A9%E5%A4%A7%E5%88%A9%E8%84%86%E9%A4%85-vjNLGqP3.png" alt="義大利脆餅" />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">義大利脆餅</p>
+              <p class="fs-14 fs-lg-6">NT$ 75 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/Happinesscookie/assets/6-1.%E9%91%BD%E7%9F%B3%E6%B2%99%E5%B8%83%E5%88%97-%E5%8F%AF%E5%8F%AF-CWjv-vV9.png" alt="鑽石餅乾" />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">鑽石餅乾</p>
+              <p class="fs-14 fs-lg-6">NT$ 75 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/Happinesscookie/assets/%E7%8F%8D%E7%8F%A0%E7%B3%96%E6%B3%A1%E8%8A%99-CIol9KIn.png" alt="珍珠糖泡芙" />
+            <span
+              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+              >熱銷 No. 1</span
+            >
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">珍珠糖泡芙</p>
+              <p class="fs-14 fs-lg-6">NT$ 70 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/Happinesscookie/assets/12.%E5%8F%AF%E5%8F%AF%E6%9D%8F%E4%BB%81%E9%A4%85%E4%B9%BE-BNnQTtIp.png" alt="可可杏仁餅乾" />
+            <span
+              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+              >推薦商品</span
+            >
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">可可杏仁餅乾</p>
+              <p class="fs-14 fs-lg-6">NT$ 70</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/Happinesscookie/assets/5.%E9%9B%AA%E7%90%83%E9%A4%85%E4%B9%BE-dn7snPV5.png" alt="雪球餅乾" />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">雪球餅乾</p>
+              <p class="fs-14 fs-lg-6">NT$ 70 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card d-none d-none"
+          data-page-content="2"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/Happinesscookie/assets/3.%E8%B5%B7%E5%8F%B8%E8%84%86%E6%A3%92-D7mehETb.png" alt="起司脆棒" />
+            <span
+              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+              >熱銷 No. 2</span
+            >
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">起士脆棒</p>
+              <p class="fs-14 fs-lg-6">NT$ 70 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card d-none d-none"
+          data-page-content="2"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/Happinesscookie/assets/9-1.%E6%9B%B2%E5%A5%87%E9%A4%85%E4%B9%BE%E5%8E%9F%E5%91%B3-D0KAFdp-.png" alt="曲奇餅乾" />
+            <span
+              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+              >熱銷 No. 3</span
+            >
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">曲奇餅乾</p>
+              <p class="fs-14 fs-lg-6">NT$ 70 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card d-none d-none"
+          data-page-content="2"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/Happinesscookie/assets/1.%E6%A4%B0%E9%A6%99%E6%9D%8F%E8%84%86%E9%A4%85-CFN3e61O.png" alt="椰香杏脆餅" />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">椰香杏脆餅</p>
+              <p class="fs-14 fs-lg-6">NT$ 70 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card d-none d-none"
+          data-page-content="2"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/Happinesscookie/assets/7.%E5%B8%83%E5%88%97%E5%A1%94%E5%B0%BC%E9%85%A5-CIEfKUYx.png" alt="布列塔尼酥" />
+            <span
+              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+              >推薦商品</span
+            >
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">布列塔尼酥 單入</p>
+              <p class="fs-14 fs-lg-6">NT$ 55 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card d-none d-none"
+          data-page-content="2"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/Happinesscookie/assets/11.%E5%8F%AF%E9%BA%97%E9%9C%B2-DKDIJqjx.png" alt="可麗露" />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">迷你可麗露 單入</p>
+              <p class="fs-14 fs-lg-6">NT$ 30</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div class="col-12 mt-10 mt-lg-28 d-flex justify-content-center">
+          <nav aria-label="Page navigation example" id="productPagination-3">
+            <ul class="pagination product-list-navigation">
+              <li class="page-item">
+                <a
+                  class="page-link"
+                  href="#"
+                  aria-label="Previous"
+                  id="prevPage-3"
+                >
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li class="page-item active">
+                <a class="page-link" href="#" data-page="1">1</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#" data-page="2">2</a>
+              </li>
+
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next" id="nextPage-3">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </div>
 
@@ -1041,9 +2730,15 @@
     >
       <div class="row position-relative">
         <div class="product-list-hot-container d-flex flex-wrap z-1">
-          <div class="col-lg-2 mb-20 mb-lg-0">
+          <div
+            class="col-lg-2 mb-20 mb-lg-0"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
             <div class="d-flex mb-8 mb-lg-0">
-              <h3 class="fs-lg-2 fs-5 fw-bold vertical-text m-0 me-4 me-lg-6">
+              <h3
+                class="product-list-hot-title fs-lg-2 fs-5 fw-bold vertical-text m-0 me-4 me-lg-6"
+              >
                 大家都在吃
               </h3>
               <div
@@ -1070,7 +2765,13 @@
                 看看大家今天選了哪一款，一起分享甜甜的好心情！
               </p>
             </div>
-            <div class="swiper product-list-hot-swiper">
+            <div
+              class="swiper product-list-hot-swiper"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-anchor-placement="top-bottom"
+              data-aos-delay="100"
+            >
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <a
@@ -1208,7 +2909,14 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+      AOS.init();
+    </script>
+    <script>
       document.addEventListener("DOMContentLoaded", function () {
+        // 【追蹤首次載入旗標】: 用於阻止頁面初始載入時自動滾動
+        let isInitialLoad = true;
+
+        // --- 產品篩選邏輯變數 ---
         const dropdownStayOpenElements = document.querySelectorAll(
           ".dropdown-stay-open"
         );
@@ -1217,17 +2925,212 @@
         const applyButton = document.getElementById("apply-filters");
         const allProductLists = document.querySelectorAll(".product-list");
         const hotProductButton = document.querySelector('[data-filter="hot"]');
-        const productTitle = document.querySelector("h3"); // 選取頁面標題
+        const productTitle = document.querySelector("h3");
+        const productListMain = document.querySelector(".product-list-main");
 
-        // 阻止點擊下拉選單內的元素時關閉下拉選單
-        dropdownStayOpenElements.forEach(function (element) {
-          element.addEventListener("click", function (event) {
-            event.stopPropagation();
+        // 【關鍵對應】：列表 ID 後綴 與 分頁 ID 後綴 的對應表
+        const PAGINATION_SUFFIX_MAP = {
+          all: "1",
+          new: "2",
+          sale: "3",
+          "price-high-to-low": "3",
+          "price-low-to-high": "2",
+        };
+
+        // 【關鍵】：為每個分頁區塊獨立追蹤當前頁碼
+        let currentPages = {
+          1: 1,
+          2: 1,
+          3: 1,
+        };
+
+        // --- 輔助函數：執行滾動 ---
+        function scrollToListMain(isInitial = false) {
+          if (isInitial) {
+            return;
+          }
+          if (productListMain) {
+            productListMain.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        }
+
+        // --- 輔助函數：動態取得當前可見列表中的所有相關元件 ---
+        function getActiveElements() {
+          const activeList = document.querySelector(
+            ".product-list:not(.d-none)"
+          );
+          if (!activeList) return null;
+
+          const listIdSuffix = activeList.id.split("-").slice(2).join("-");
+          const paginationNumSuffix = PAGINATION_SUFFIX_MAP[listIdSuffix];
+
+          if (!paginationNumSuffix) {
+            return {
+              productCards: activeList.querySelectorAll("[data-page-content]"),
+              paginationContainer: null,
+              totalPages: 0,
+              pageItems: [],
+              prevButton: null,
+              nextButton: null,
+              currentSuffix: null,
+            };
+          }
+
+          const paginationId = `productPagination-${paginationNumSuffix}`;
+          const prevId = `prevPage-${paginationNumSuffix}`;
+          const nextId = `nextPage-${paginationNumSuffix}`;
+
+          const paginationContainer = document.getElementById(paginationId);
+          const productCards = activeList.querySelectorAll(
+            "[data-page-content]"
+          );
+
+          if (!paginationContainer) {
+            console.error(`找不到分頁導航容器: ID 為 ${paginationId}`);
+            return null;
+          }
+
+          const pageItems = paginationContainer.querySelectorAll("[data-page]");
+          const prevButton = document.getElementById(prevId);
+          const nextButton = document.getElementById(nextId);
+          const totalPages = pageItems.length;
+
+          return {
+            activeList,
+            productCards,
+            paginationContainer,
+            totalPages,
+            pageItems,
+            prevButton,
+            nextButton,
+            currentSuffix: paginationNumSuffix,
+          };
+        }
+
+        // --- 核心函數：切換內容可見性 ---
+        function updateContentVisibility(paginationNumSuffix) {
+          const elements = getActiveElements();
+
+          if (
+            !elements ||
+            elements.currentSuffix !== paginationNumSuffix ||
+            elements.productCards.length === 0
+          ) {
+            if (elements && !elements.currentSuffix) {
+              elements.productCards.forEach((card) =>
+                card.classList.remove("d-none")
+              );
+            }
+            return;
+          }
+
+          const currentPage = currentPages[paginationNumSuffix];
+
+          elements.productCards.forEach((card) => {
+            const cardPage = parseInt(card.dataset.pageContent);
+
+            if (cardPage === currentPage) {
+              card.classList.remove("d-none");
+            } else {
+              card.classList.add("d-none");
+            }
           });
-        });
+        }
 
-        // 根據勾選的單選鈕來顯示對應的商品區塊並更新標題
-        function updateProductDisplay() {
+        // --- 分頁狀態函數：更新按鈕 active 狀態 ---
+        function updatePaginationState(paginationNumSuffix) {
+          const elements = getActiveElements();
+          if (
+            !elements ||
+            !elements.paginationContainer ||
+            elements.currentSuffix !== paginationNumSuffix
+          )
+            return;
+
+          const currentPage = currentPages[paginationNumSuffix];
+
+          // 數字分頁按鈕的 active 狀態
+          elements.pageItems.forEach((link) => {
+            link.closest(".page-item").classList.remove("active");
+            if (parseInt(link.dataset.page) === currentPage) {
+              link.closest(".page-item").classList.add("active");
+            }
+          });
+
+          if (elements.prevButton) {
+            elements.prevButton
+              .closest(".page-item")
+              ?.classList.remove("disabled");
+          }
+          if (elements.nextButton) {
+            elements.nextButton
+              .closest(".page-item")
+              ?.classList.remove("disabled");
+          }
+        }
+
+        // --- 核心函數：在切換列表時，重新設定分頁事件監聽器 ---
+        function setupPaginationHandlers() {
+          const elements = getActiveElements();
+          if (!elements || !elements.paginationContainer) return;
+
+          elements.paginationContainer.onclick = null;
+          const paginationNumSuffix = elements.currentSuffix;
+
+          // 綁定新的委派事件
+          elements.paginationContainer.onclick = function (e) {
+            e.preventDefault();
+            const target = e.target.closest("a");
+            if (!target) return;
+
+            let page = currentPages[paginationNumSuffix];
+            let pageChanged = false;
+
+            if (target.dataset.page) {
+              // 1. 數字分頁按鈕
+              const newPage = parseInt(target.dataset.page);
+              if (newPage !== page) {
+                page = newPage;
+                pageChanged = true;
+              }
+            } else if (target.id.startsWith("prevPage")) {
+              // 2. 上一頁按鈕
+              const newPage = page > 1 ? page - 1 : 1;
+              if (newPage !== page) {
+                page = newPage;
+                pageChanged = true;
+              }
+            } else if (target.id.startsWith("nextPage")) {
+              // 3. 下一頁按鈕
+              const newPage =
+                page < elements.totalPages ? page + 1 : elements.totalPages;
+              if (newPage !== page) {
+                page = newPage;
+                pageChanged = true;
+              }
+            }
+
+            if (pageChanged) {
+              currentPages[paginationNumSuffix] = page;
+              updatePaginationState(paginationNumSuffix);
+              updateContentVisibility(paginationNumSuffix);
+              scrollToListMain(false); // 分頁點擊，執行滾動
+
+              // 【AOS 修正 - 分頁】：分頁內容切換後，使用延遲強制 AOS 重新計算
+              if (typeof AOS !== "undefined") {
+                setTimeout(() => {
+                  AOS.refreshHard();
+                }, 100);
+              }
+            }
+          };
+        }
+
+        // --- 產品篩選核心函數：更新產品顯示和標題 ---
+        function updateProductDisplay(isUserAction = false) {
           let checkedRadio = null;
           filterRadios.forEach((radio) => {
             if (radio.checked) {
@@ -1235,91 +3138,187 @@
             }
           });
 
-          // 隱藏所有商品列表
+          // 1. 隱藏所有產品列表
           allProductLists.forEach((list) => list.classList.add("d-none"));
+
+          // 2. 預設隱藏所有分頁區塊
+          Object.values(PAGINATION_SUFFIX_MAP).forEach((suffix) => {
+            const nav = document.getElementById(`productPagination-${suffix}`);
+            if (nav) nav.closest(".col")?.classList.add("d-none");
+          });
+
+          let targetList = null;
+          let listIdSuffix = "all";
 
           if (checkedRadio) {
             const checkedValue = checkedRadio.value;
             const targetId = `product-list-${checkedValue}`;
-            const targetList = document.getElementById(targetId);
+            targetList = document.getElementById(targetId);
+            listIdSuffix = checkedValue;
 
             if (targetList) {
               targetList.classList.remove("d-none");
-              // 根據選中的單選鈕更新標題
               const label = document.querySelector(
                 `label[for="${checkedRadio.id}"]`
               );
-              if (label) {
-                productTitle.textContent = label.textContent;
-              }
+              productTitle.textContent = label ? label.textContent : "篩選商品";
             }
           } else {
-            // 如果沒有任何單選鈕被選中，則顯示「所有商品」
-            document
-              .getElementById("product-list-all")
-              .classList.remove("d-none");
+            // 預設列表「所有商品」
+            targetList = document.getElementById("product-list-all");
+            if (targetList) {
+              targetList.classList.remove("d-none");
+            }
             productTitle.textContent = "所有商品";
+            listIdSuffix = "all";
+          }
+
+          // --- 統一處理分頁邏輯 ---
+          const targetPaginationNumSuffix = PAGINATION_SUFFIX_MAP[listIdSuffix];
+
+          if (targetPaginationNumSuffix) {
+            // 顯示該列表的分頁
+            const targetPaginationContainer = document.getElementById(
+              `productPagination-${targetPaginationNumSuffix}`
+            );
+            const targetPaginationParentCol = targetPaginationContainer
+              ? targetPaginationContainer.closest(".col")
+              : null;
+
+            if (targetPaginationParentCol) {
+              targetPaginationParentCol.classList.remove("d-none");
+            }
+
+            // 綁定事件並顯示該區塊的當前頁面
+            setupPaginationHandlers();
+            updatePaginationState(targetPaginationNumSuffix);
+            updateContentVisibility(targetPaginationNumSuffix);
+          } else {
+            // 沒有分頁的列表 (如 hot)，則顯示所有卡片
+            if (targetList) {
+              targetList
+                .querySelectorAll("[data-page-content]")
+                .forEach((card) => {
+                  card.classList.remove("d-none");
+                });
+            }
+          }
+
+          // 【滾動修正邏輯】：判斷是否為用戶操作 AND 判斷是否為首次載入
+          if (isUserAction) {
+            scrollToListMain(false);
+
+            // 【AOS 修正 - 篩選/Radio】：切換列表後，使用延遲強制 AOS 重新計算
+            if (typeof AOS !== "undefined") {
+              setTimeout(() => {
+                AOS.refreshHard();
+              }, 100);
+            }
+          } else if (isInitialLoad) {
+            scrollToListMain(true);
           }
         }
 
-        // 「清除篩選」按鈕的點擊事件
-        clearButton.addEventListener("click", function () {
-          filterRadios.forEach((radio) => (radio.checked = false));
-          updateProductDisplay();
-        });
+        // 【愛心收藏（點擊填滿）功能】
+        const favoriteIcons = document.querySelectorAll(".love-icon");
 
-        // 「熱門產品」按鈕的點擊事件
-        hotProductButton.addEventListener("click", function () {
-          // 隱藏所有商品列表
-          allProductLists.forEach((list) => list.classList.add("d-none"));
-          // 清除所有單選鈕的勾選狀態
-          filterRadios.forEach((radio) => (radio.checked = false));
-          // 直接顯示熱門商品列表
-          document
-            .getElementById("product-list-hot")
-            .classList.remove("d-none");
-          // 更新標題為熱門產品
-          productTitle.textContent = "熱門產品";
-        });
+        favoriteIcons.forEach((icon) => {
+          icon.addEventListener("click", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
 
-        // 「確定篩選」按鈕的點擊事件
-        applyButton.addEventListener("click", function () {
-          updateProductDisplay();
-        });
-
-        // 每次點擊單選鈕時即時更新顯示
-        filterRadios.forEach((radio) => {
-          radio.addEventListener("change", () => {
-            updateProductDisplay();
-          });
-        });
-
-        // 初始載入時顯示所有商品
-        updateProductDisplay();
-      });
-    </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const loveIcons = document.querySelectorAll(".love-icon");
-
-        loveIcons.forEach((icon) => {
-          icon.addEventListener("click", function () {
-            // 檢查愛心是否已經是實心
-            const isFilled = this.classList.contains("is-filled");
-
-            // 切換 .is-filled 類別
-            this.classList.toggle("is-filled");
-
-            // 根據 isFilled 狀態，切換圖示內容
-            if (isFilled) {
-              // 如果原本是實心，則變回空心
-              this.textContent = "favorite_border";
+            if (icon.textContent.trim() === "favorite_border") {
+              icon.textContent = "favorite";
+              icon.classList.add("active");
             } else {
-              // 如果原本是空心，則變為實心
-              this.textContent = "favorite";
+              icon.textContent = "favorite_border";
+              icon.classList.remove("active");
             }
           });
         });
+
+        // 【其他事件監聽器】
+
+        // 阻止下拉選單點擊後關閉
+        dropdownStayOpenElements.forEach(function (element) {
+          element.addEventListener("click", function (event) {
+            event.stopPropagation();
+          });
+        });
+
+        // 清除篩選
+        clearButton.addEventListener("click", function () {
+          filterRadios.forEach((radio) => (radio.checked = false));
+          updateProductDisplay(true);
+        });
+
+        // 熱門產品按鈕
+        hotProductButton.addEventListener("click", function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+
+          // 清除所有 radio 選擇
+          filterRadios.forEach((radio) => (radio.checked = false));
+
+          // 隱藏所有產品列表
+          allProductLists.forEach((list) => list.classList.add("d-none"));
+
+          const targetList = document.getElementById("product-list-hot");
+          if (targetList) {
+            targetList.classList.remove("d-none");
+          }
+          productTitle.textContent = "熱門產品";
+
+          // 隱藏所有分頁
+          Object.values(PAGINATION_SUFFIX_MAP).forEach((suffix) => {
+            const nav = document.getElementById(`productPagination-${suffix}`);
+            if (nav) nav.closest(".col")?.classList.add("d-none");
+          });
+
+          // 顯示熱門產品的所有卡片
+          if (targetList) {
+            targetList
+              .querySelectorAll("[data-page-content]")
+              .forEach((card) => {
+                card.classList.remove("d-none");
+              });
+          }
+
+          scrollToListMain(false);
+
+          // 【AOS 修正 - 熱門產品/Swiper】：列表顯示後，等待 100ms 再強制 AOS 重新計算
+          if (typeof AOS !== "undefined") {
+            setTimeout(() => {
+              AOS.refreshHard();
+            }, 100);
+          }
+        });
+
+        // 確定篩選按鈕
+        applyButton.addEventListener("click", function () {
+          updateProductDisplay(true);
+        });
+
+        // Radio 變更事件
+        filterRadios.forEach((radio) => {
+          radio.addEventListener("change", () => {
+            updateProductDisplay(true);
+          });
+        });
+
+        // --- 初始載入設定 ---
+        updateProductDisplay(false);
+
+        // 【AOS 最終修正】：確保首次載入時的第一頁動畫也能正常觸發
+        // 頁面初次載入完成，等待 100ms 確保所有圖片和 CSS 都已渲染
+        if (typeof AOS !== "undefined") {
+          setTimeout(() => {
+            AOS.refreshHard();
+          }, 100);
+        }
+
+        // 頁面初次載入完成，將標誌設為 false
+        isInitialLoad = false;
       });
     </script>
     <!-- swiper -->
