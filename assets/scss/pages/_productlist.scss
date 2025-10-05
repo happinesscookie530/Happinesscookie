@@ -117,7 +117,7 @@
     transition: color 0.3s ease;
 
     // 當愛心被點擊，新增 .is-filled 類別後會套用
-    &.is-filled {
+    &.active {
       color: $primary !important;
     }
   }
