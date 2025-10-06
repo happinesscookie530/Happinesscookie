@@ -74,7 +74,7 @@
   }
 }
 
-.product-list {
+.product-list-main {
   .product-item {
     display: flex;
     justify-content: center;
@@ -117,9 +117,19 @@
     transition: color 0.3s ease;
 
     // 當愛心被點擊，新增 .is-filled 類別後會套用
-    &.is-filled {
+    &.active {
       color: $primary !important;
     }
+  }
+  .product-list-navigation {
+    .page-item.active .page-link {
+      background-color: $primary !important;
+      color: $white !important;
+    }
+  }
+
+  .page-link {
+    border: 0px;
   }
 }
 
@@ -144,6 +154,9 @@
     }
     .vertical-text {
       writing-mode: vertical-rl;
+    }
+    .product-list-hot-title {
+      letter-spacing: 0.5rem;
     }
 
     .text-line {
