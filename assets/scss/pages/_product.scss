@@ -73,3 +73,318 @@
   --bs-gutter-x: 12px; /* 左右間距 */
   --bs-gutter-y: 12px; /* 上下間距 */
 }
+
+/*口味按鈕*/
+.taste {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 8px;
+  justify-content: flex-start; /* 讓最後一排靠左對齊 */
+}
+
+.taste .btn {
+  display: flex;                /* 讓文字可用 flex 對齊 */
+  justify-content: center;      /* 水平置中 */
+  align-items: center;          /* 垂直置中 */
+  flex: 1 1 calc((100% - 16px) / 3);
+  max-width: calc((100% - 16px) / 3);
+  padding: 12px 0;               /* 統一上下間距 */
+  white-space: nowrap;
+}
+
+@media (min-width: 992px) {
+
+.taste{
+    gap:0 6px;
+  }
+  .taste .btn{
+    flex: 1 1 calc((100% - 24px) / 5);
+    max-width: calc((100% - 24px) / 5);
+     padding: 16px 0;  
+}
+}
+/*產品詳情*/
+#custom-tab .nav-link {
+  position: relative;
+  font-weight: 600;
+  color: var(--bs-neutral-80);
+  transition: color 0.3s ease;
+  padding-bottom: 8px; /* 預留底線空間 */
+}
+
+
+/* 底線的初始狀態 */
+#custom-tab .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 1px;
+  background-color: var(--bs-primary);
+  transition: width 0.3s ease;
+}
+
+/* 滑鼠移入時底線滑出 */
+#custom-tab .nav-link:hover::after {
+  width: 100%;
+}
+
+/* 點擊啟用(active)的狀態保持底線 */
+#custom-tab .nav-link.active::after {
+  width: 100%;
+}
+
+/* hover 或 active 時改變文字顏色 */
+#custom-tab .nav-link:hover,
+#custom-tab .nav-link.active {
+  color: var(--bs-primary);
+}
+
+/*你可能喜歡*/
+  .product-item {
+    display: flex;
+    justify-content: center;
+
+    .product-item-overlay {
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    &:hover .product-item-overlay {
+      opacity: 1;
+    }
+  }
+  img {
+    max-width: 100%;
+    object-fit: cover;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+
+
+  }
+  a {
+    color: $neutral-80;
+  }
+  .product-link {
+    :hover {
+      color: $primary;
+    }
+  }
+  // 愛心圖示樣式
+  .love-icon {
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    // 當愛心被點擊，新增 .is-filled 類別後會套用
+    &.active {
+      color: $primary !important;
+    }
+  }
+  .product-list-navigation {
+    .page-item.active .page-link {
+      background-color: $primary !important;
+      color: $white !important;
+    }
+  }
+
+  .page-link {
+    border: 0px;
+  }
+.mask{
+    position: relative;
+    
+    &::before{
+        position: absolute;
+        content: "more detail";
+        color: $light;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: all .4s;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        font-size: 12px;
+        font-family: 'Noto Serif TC', serif;
+        letter-spacing: 4px;
+    }
+        @media (min-width: 992px) {
+      &::before{font-size: 16px;}
+    }
+    &:hover{
+        &::before{
+        opacity: 0.7;
+        letter-spacing: 2px;
+        }
+    }
+}
+
+.evaluate{
+.evaluate-list-hot {
+  h3 {
+    letter-spacing: 0.2em;
+  }
+  .vertical-text {
+    writing-mode: horizontal-tb;
+  }
+
+  .text-line {
+    display: inline-block;
+    background-color: $primary;
+    height: 1px;
+    width: 30px;
+  }
+
+  @media (min-width: 992px) {
+    h3 {
+      letter-spacing: 0em;
+    }
+    .vertical-text {
+      writing-mode: vertical-rl;
+    }
+    .evaluate-list-hot-title {
+      letter-spacing: 0.5rem;
+    }
+
+    .text-line {
+      display: inline-block;
+      background-color: $primary;
+      height: 60px;
+      width: 1px;
+    }
+  }
+
+  .evaluate-list-hot-container {
+    max-width: 1608px;
+    margin-left: auto;
+    padding: 0px 0px 0px 10px;
+  }
+
+  .evaluate-list-hot-swiper {
+    .swiper-slide {
+      max-width: 220px;
+      max-height: 303px;
+
+      @media (min-width: 767px) {
+        max-width: 473px;
+        max-height: 400px;
+      }
+
+      img {
+        object-fit: cover;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+
+      }
+    }
+  }
+  .evaluate-list-hot-background {
+    display: none;
+    @media (min-width: 992px) {
+      display: inline-flex;
+      height: 460px;
+      width: 1750px;
+      background-color: $secondary-5;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 78.6%;
+      left: 55%;
+    }
+  }
+}
+
+// swiper（手機優先版本）
+.share {
+  background-color: $primary;
+  height: auto; // 手機版預設自適應高度
+
+  @media (min-width: 992px) {
+    height: auto;
+  }
+}
+
+.swiper-slide {
+  width: 100%;
+  height: auto; // 手機版
+
+  @media (min-width: 992px) {
+    height: 300px;
+  }
+
+  
+  &-img {
+    position: relative;
+    width: 100%;
+    height: 213px;
+    margin-bottom: 88px;
+
+    img {
+      width: calc(100% - 8px);
+      height: 100%;
+      margin-left: 8px;
+      object-fit: cover;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 1px solid $primary;
+      top: 8px;
+      left: 0;
+      border-radius: 4px;
+      z-index: -1;
+    }
+
+    @media (min-width: 992px) {
+      position: absolute;
+      width: 65%;
+      top: 0;
+      left: 0;
+
+      img {
+        width: 100%;
+        margin-left: 0;
+      }
+    }
+  }
+
+  .share__card {
+    position: relative;
+    width: 100%;
+    color: $dark;
+    padding: 32px;
+    border-radius: 0px 12px 12px 12px;
+    border: 1px solid $primary;
+
+    @media (min-width: 992px) {
+      position: absolute;
+      width: 90%;
+      right: 0;
+      bottom: 24px;
+    }
+
+    &__img {
+      object-fit: cover;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      position: absolute;
+      right: 16px;
+      top: -40px;
+
+      @media (min-width: 992px) {
+        width: 170px;
+        height: 170px;
+        right: 10px;
+        top: -90px;
+      }
+    }
+  }
+}}
