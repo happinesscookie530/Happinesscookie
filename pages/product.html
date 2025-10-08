@@ -585,43 +585,76 @@
               <div class="swiper evaluate-list-hot-swiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <div class="share__card bg-light p-20">
+                    <div class="swiper-img">
                       <img
-                        class="share__card__img"
-                        src="/assets/images/evaluate-1.png"
+                        class="rounded-4"
+                        src="/assets/images/evaluate-2.png"
                         alt=""
                       />
-                      <p class="mb-2">顧先生</p>
-                      <p class="fw-bold mb-4 h3">蛋黃酥</p>
-                      <p class="mb-0 fs-5">
+                    </div>
+                    <div class="share__card bg-light p-lg-10 p-7">
+                      <div
+                        class="d-flex align-items-center justify-content-between mb-lg-4 mb-2"
+                      >
+                        <p>顧先生</p>
+                        <img
+                          src="/assets/images/star5.png"
+                          alt="五星"
+                          class="star"
+                        />
+                      </div>
+                      <p class="fw-bold mb-lg-4 mb-2 h5 text-primary">蛋黃酥</p>
+                      <p class="mb-0 fs-lg-6 fs-14">
                         之前網路訂購蛋黃酥，超級好吃，包裝又漂亮，送禮自用都很棒
                       </p>
                     </div>
                   </div>
                   <div class="swiper-slide">
-                    <div class="share__card bg-light p-20">
+                    <div class="swiper-img">
                       <img
-                        class="share__card__img"
-                        src="/assets/images/evaluate-1.png"
+                        class="rounded-4"
+                        src="/assets/images/evaluate-2.png"
                         alt=""
                       />
-                      <p class="mb-2">顧先生</p>
-                      <p class="fw-bold mb-4 h3">蛋黃酥</p>
-                      <p class="mb-0 fs-5">
+                    </div>
+                    <div class="share__card bg-light p-lg-10 p-7">
+                      <div
+                        class="d-flex align-items-center justify-content-between mb-lg-4 mb-2"
+                      >
+                        <p>顧先生</p>
+                        <img
+                          src="/assets/images/star5.png"
+                          alt="五星"
+                          class="star"
+                        />
+                      </div>
+                      <p class="fw-bold mb-lg-4 mb-2 h5 text-primary">蛋黃酥</p>
+                      <p class="mb-0 fs-lg-6 fs-14">
                         之前網路訂購蛋黃酥，超級好吃，包裝又漂亮，送禮自用都很棒
                       </p>
                     </div>
                   </div>
                   <div class="swiper-slide">
-                    <div class="share__card bg-light p-20">
+                    <div class="swiper-img">
                       <img
-                        class="share__card__img"
-                        src="/assets/images/evaluate-1.png"
+                        class="rounded-4"
+                        src="/assets/images/evaluate-2.png"
                         alt=""
                       />
-                      <p class="mb-2">顧先生</p>
-                      <p class="fw-bold mb-4 h3">蛋黃酥</p>
-                      <p class="mb-0 fs-5">
+                    </div>
+                    <div class="share__card bg-light p-lg-10 p-7">
+                      <div
+                        class="d-flex align-items-center justify-content-between mb-lg-4 mb-2"
+                      >
+                        <p>顧先生</p>
+                        <img
+                          src="/assets/images/star5.png"
+                          alt="五星"
+                          class="star"
+                        />
+                      </div>
+                      <p class="fw-bold mb-lg-4 mb-2 h5 text-primary">蛋黃酥</p>
+                      <p class="mb-0 fs-lg-6 fs-14">
                         之前網路訂購蛋黃酥，超級好吃，包裝又漂亮，送禮自用都很棒
                       </p>
                     </div>
@@ -696,7 +729,6 @@
     </script>
 
     <script>
-      //詳細內容tab:hover切換
       // 詳細內容 tab:hover 切換
       document.addEventListener("DOMContentLoaded", function () {
         const tabTriggers = document.querySelectorAll("#custom-tab .nav-link");
@@ -722,16 +754,16 @@
         });
       });
     </script>
+    <!-- swiper -->
     <script>
-      var swiper = new Swiper(".product-list-hot-swiper", {
-        slidesPerView: "auto", // 將 slidesPerView 設為 "auto"
-        spaceBetween: 24,
-        freeMode: true, // 啟用 freeMode
-        watchSlidesProgress: true, // 監控投影片進度
-        // 斷點設定
+      var swiper = new Swiper(".evaluate-list-hot-swiper", {
+        slidesPerView: "auto",
+        spaceBetween: 20,
+        freeMode: true,
+        watchSlidesProgress: true,
         breakpoints: {
           375: {
-            spaceBetween: 16, // 將間距設定為 16px
+            spaceBetween: 40,
           },
         },
       });
