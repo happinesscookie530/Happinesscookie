@@ -428,12 +428,19 @@
     <!--你可能喜歡 -->
     <div class="bg-secondary-5 product-like">
       <div class="container py-lg-60 py-20">
-        <div class="d-flex align-items-center mb-28">
-          <h2>你可能喜歡</h2>
-          <span></span>
-          <p>You May Also Like</p>
+        <div class="d-flex mb-8 mb-lg-28">
+          <h3
+            class="evaluate-list-hot-title fs-lg-2 fs-5 fw-bold m-0 me-4 me-lg-6"
+          >
+            你可能喜歡
+          </h3>
+          <div class="d-flex align-items-center">
+            <span class="me-4 me-lg-4 mt-lg-4 text-line"></span>
+            <p class="fs-lg-5 text-primary fw-bold vertical-text m-0 mt-lg-4">
+              Customer Reviews
+            </p>
+          </div>
         </div>
-
         <div id="product-list-all" class="product-list row d-flex">
           <div
             class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
@@ -588,7 +595,7 @@
                     <div class="swiper-img">
                       <img
                         class="rounded-4"
-                        src="/assets/images/evaluate-2.png"
+                        src="/assets/images/evaluate-5.png"
                         alt=""
                       />
                     </div>
@@ -596,7 +603,7 @@
                       <div
                         class="d-flex align-items-center justify-content-between mb-lg-4 mb-2"
                       >
-                        <p>顧先生</p>
+                        <p>張先生</p>
                         <img
                           src="/assets/images/star5.png"
                           alt="五星"
@@ -604,13 +611,14 @@
                         />
                       </div>
                       <p class="fw-bold mb-lg-4 mb-2 fs-lg-5 fs-6 text-primary">
-                        蛋黃酥
+                        曲奇餅乾
                       </p>
                       <p class="mb-0 fs-lg-6 fs-14 text-neutral-60">
-                        之前網路訂購蛋黃酥，超級好吃，包裝又漂亮，送禮自用都很棒
+                        曲奇口味很多又好吃， 店貓真的很可愛，生為貓奴大大的加分
                       </p>
                     </div>
                   </div>
+
                   <div class="swiper-slide">
                     <div class="swiper-img">
                       <img
@@ -661,7 +669,34 @@
                         曲奇餅乾
                       </p>
                       <p class="mb-0 fs-lg-6 fs-14 text-neutral-60">
-                        老闆娘親切 餅乾也好吃😋
+                        老闆娘親切熱心介紹，餅乾也好吃，先生跟小孩也都很喜歡😋
+                      </p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="swiper-img">
+                      <img
+                        class="rounded-4"
+                        src="/assets/images/evaluate-2.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="share__card bg-light p-lg-10 p-7">
+                      <div
+                        class="d-flex align-items-center justify-content-between mb-lg-4 mb-2"
+                      >
+                        <p>顧先生</p>
+                        <img
+                          src="/assets/images/star5.png"
+                          alt="五星"
+                          class="star"
+                        />
+                      </div>
+                      <p class="fw-bold mb-lg-4 mb-2 fs-lg-5 fs-6 text-primary">
+                        蛋黃酥
+                      </p>
+                      <p class="mb-0 fs-lg-6 fs-14 text-neutral-60">
+                        之前網路訂購蛋黃酥，超級好吃，包裝又漂亮，送禮自用都很棒
                       </p>
                     </div>
                   </div>
@@ -764,12 +799,15 @@
     <script>
       var swiper = new Swiper(".evaluate-list-hot-swiper", {
         slidesPerView: "auto",
-        spaceBetween: 0,
+        spaceBetween: 20, // ✅ 建議改為固定間距
         freeMode: true,
         watchSlidesProgress: true,
+        centeredSlidesBounds: true,
+        slidesOffsetAfter: 250,
         breakpoints: {
-          375: {
+          768: {
             spaceBetween: 40,
+            slidesOffsetAfter: 100,
           },
         },
       });
