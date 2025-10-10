@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const header = document.querySelector(".header-main");
   const offcanvas = document.querySelector(".offcanvas");
   const headerLinks = document.querySelectorAll(
-    ".header-list a, .material-icons-outlined"
+    ".header-list a, .header-material-icon-scroll"
   );
 
   window.addEventListener("scroll", function () {

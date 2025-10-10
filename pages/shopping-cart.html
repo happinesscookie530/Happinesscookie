@@ -43,6 +43,70 @@
     </div>
     <!-- stepbar-end -->
 
+    <!-- offcanvas-a -->
+    <div class="d-md-none">
+      <div class="booking-wrapper container py-6">
+        <div class="booking-btn-flex">
+          <div class="booking-a-wrapper">
+            <div class="booking-a mb-4">
+              <h3 class="h6 text-neutral-80">總計</h3>
+
+              <a class="fs-12 text-neutral-60" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">查看詳情<span class="material-icons-outlined"> keyboard_arrow_up </span></a>
+            </div>
+
+            <p class="h5 text-primary">NT$ 5,000</p>
+          </div>
+          <!-- offcanvas-btn -->
+          <div class="booking-btn-wrapper">
+            <button class="btn btn-primary booking-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">前往付款</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 從底部滑上的 Offcanvas -->
+
+      <div class="offcanvas offcanvas-bottom rounded-bottom rounded-4" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title h5" id="offcanvasLabel">訂單明細</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <hr class="my-0" />
+        <div class="offcanvas-body d-flex flex-column justify-content-between">
+          <div>
+            <div class="d-flex justify-content-between align-items-center mb-8">
+              <span>小計</span>
+              <span class="h6">NT$ 5,000</span>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mb-8">
+              <span>運費</span>
+              <span class="h6">NT$ 100</span>
+            </div>
+            <hr class="my-0 mb-8" />
+            <div class="d-flex justify-content-between align-items-center">
+              <span>總計</span>
+              <span class="h5 text-primary">NT$ 5,000</span>
+            </div>
+          </div>
+
+          <div class="booking-wrapper-two">
+            <div class="booking-btn-flex-two">
+              <div class="booking-a-wrapper-two">
+                <div class="booking-a-two mb-4">
+                  <h3 class="h6 text-neutral-80">總計</h3>
+                  <a class="fs-12 text-neutral-60" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">收合詳情<span class="material-icons-outlined"> keyboard_arrow_down </span></a>
+                </div>
+                <p class="h5 text-primary">NT$ 5,000</p>
+              </div>
+
+              <div class="booking-btn-wrapper-two">
+                <button class="btn btn-primary booking-btn-two" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">前往付款</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script type="module" src="../main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
