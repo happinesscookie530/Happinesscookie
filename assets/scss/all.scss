@@ -6,6 +6,21 @@
 
 @import "bootstrap/scss/bootstrap";
 
+$utilities: map-merge(
+  $utilities,
+  (
+    "font-size":
+      map-merge(
+        map-get($utilities, "font-size"),
+        (
+          responsive: true,
+        )
+      ),
+  )
+);
+
+@import "bootstrap/scss/utilities/api";
+
 // @import "./base/base";
 
 @import "./layout/header";
@@ -16,3 +31,4 @@
 
 @import "./pages/index";
 @import "./pages/shopping-cart";
+@import "./pages/productlist";
