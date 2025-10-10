@@ -1,0 +1,65 @@
+
+      section.container {
+        margin-top: 120px !important;
+      }
+
+      /* 側邊欄位樣式 */
+      aside.sidebar .list-group {
+        border: none;
+        background-color: transparent;
+      }
+      aside.sidebar .list-group-item {
+        border: none;
+        padding: 8px 0;
+        background-color: transparent;
+      }
+      aside.sidebar .list-group-item.active {
+        color: #00a0a0;
+        font-weight: 600;
+        background-color: transparent;
+      }
+
+      /* 表單間距與欄位 */
+      form .mb-3 {
+      margin-top: 1.5rem; /* 24px */
+      margin-bottom: 1.75rem; /* 保留原本底部間距 */
+      }
+      .form-label {
+        font-weight: 500;
+        margin-bottom: 0;
+      }
+      .form-label + .form-control {
+        margin-top: 12px;
+      }
+      .form-control {
+        border: 1px solid #ced4da;
+        border-radius: 4px;
+        padding: 10px 12px;
+        box-shadow: none;
+      }
+
+      /* 收件地址卡片樣式（新版） */
+      .address-card {
+        border: 1px solid #e9ecef !important;
+        border-radius: 4px;
+        padding: 1.25rem !important;
+        background-color: #fff;
+      }
+
+      /* 統一 radio 欄位間距 */
+      .form-check {
+        margin-right: 1.5rem;
+      }
+
+      /* RWD 手機版調整 */
+      @media (max-width: 767.98px) {
+        .form-label {
+          display: block;
+        }
+        .form-control {
+          width: 100%;
+        }
+        aside.sidebar {
+          border: none;
+        }
+      }
