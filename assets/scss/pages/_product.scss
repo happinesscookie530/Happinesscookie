@@ -100,7 +100,7 @@
   .taste .btn{
     flex: 1 1 calc((100% - 24px) / 5);
     max-width: calc((100% - 24px) / 5);
-     padding: 16px 0;  
+     padding: 12px 0;  
 }
 }
 /*產品詳情*/
@@ -113,7 +113,7 @@
 }
 
 
-/* 底線的初始狀態 */
+/* 產品詳情底線的初始狀態 */
 #custom-tab .nav-link::after {
   content: "";
   position: absolute;
@@ -125,17 +125,17 @@
   transition: width 0.3s ease;
 }
 
-/* 滑鼠移入時底線滑出 */
+/* 產品詳情滑鼠移入時底線滑出 */
 #custom-tab .nav-link:hover::after {
   width: 100%;
 }
 
-/* 點擊啟用(active)的狀態保持底線 */
+/* 產品詳情點擊啟用(active)的狀態保持底線 */
 #custom-tab .nav-link.active::after {
   width: 100%;
 }
 
-/* hover 或 active 時改變文字顏色 */
+/* 產品詳情hover 或 active 時改變文字顏色 */
 #custom-tab .nav-link:hover,
 #custom-tab .nav-link.active {
   color: var(--bs-primary);
@@ -143,24 +143,51 @@
 
 /*你可能喜歡*/
 .product-like{
-  h3 {
-    letter-spacing: 0.2em;
-  }
-  .evaluate-list-hot-title {
-      letter-spacing: 0rem;
+  .like-list-hot-title {
+      letter-spacing: 0.3rem;
  @media (min-width: 992px) { 
-   .evaluate-list-hot-title {
-      letter-spacing: 0.5rem;
-    }
-  } }
+      letter-spacing: 0.2rem;
+  }
+ }
    
 
   .text-line {
     display: inline-block;
     background-color: $primary;
     height: 1px;
-    width: 60px;
+    width: 30px;
+     @media (min-width: 992px) {
+       width: 60px;
+      }
   }
+  
+    /*產品文字連結*/
+  .product-link {
+     a {
+    color: $neutral-80;
+  }
+    :hover {
+      color: $primary;
+    }
+  }
+  /*愛心圖示樣式*/
+  .love-icon {
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    /*當愛心被點擊，新增 .is-filled 類別後會套用*/
+    &.active {
+      color: $primary !important;
+    }
+  }
+  .product-list-navigation {
+    .page-item.active .page-link {
+      background-color: $primary !important;
+      color: $white !important;
+    }
+  }
+
+  /*滑鼠移入商品圖效果*/
   .product-item {
     display: flex;
     justify-content: center;
@@ -183,38 +210,9 @@
   }
  
   }
-  
-  .product-link {
-     a {
-    color: $neutral-80;
-  }
-    :hover {
-      color: $primary;
-    }
-  }
-  // 愛心圖示樣式
-  .love-icon {
-    cursor: pointer;
-    transition: color 0.3s ease;
 
-    // 當愛心被點擊，新增 .is-filled 類別後會套用
-    &.active {
-      color: $primary !important;
-    }
-  }
-  .product-list-navigation {
-    .page-item.active .page-link {
-      background-color: $primary !important;
-      color: $white !important;
-    }
-  }
-
-  .page-link {
-    border: 0px;
-  }
 .mask{
     position: relative;
-    
     &::before{
         position: absolute;
         content: "more detail";
@@ -242,6 +240,7 @@
         }
     }
 }}
+
 /*好評推薦*/
 .evaluate{
 .evaluate-list-hot {
@@ -267,7 +266,7 @@
       writing-mode: vertical-rl;
     }
     .evaluate-list-hot-title {
-      letter-spacing: 0.5rem;
+      letter-spacing: 0.3rem;
     }
 
     .text-line {
