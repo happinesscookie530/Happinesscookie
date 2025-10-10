@@ -5,22 +5,3157 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>晴天餅乾・Happinesscookie</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=home" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=home"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
-    <%- include('./layout/header'); -%>
+    <%- include('./layout/header-bg-white'); -%>
 
-    <h1 class="index-title text-primary">hi</h1>
-    <span class="material-icons-outlined"> area_chart </span>
+    <div class="container-fluid product-list-hero">
+      <div class="container product-list-hero-type">
+        <h1
+          class="text-white fw-bold"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        >
+          Bring A Little <br />
+          Happiness For You
+        </h1>
+      </div>
+    </div>
+
+    <div
+      class="product-list-main container py-20 py-lg-60"
+      data-aos="fade-down"
+      data-aos-duration="1000"
+    >
+      <div class="row d-flex flex-wrap align-items-center mb-12 mb-lg-24">
+        <div class="col-lg-8 mb-8 mb-lg-0">
+          <h3 class="fw-bold w-100 w-lg-50 me-auto">所有商品</h3>
+        </div>
+        <div
+          class="col-lg-4 d-flex justify-content-between justify-content-lg-end align-items-center position-relative"
+        >
+          <div class="d-flex">
+            <button
+              class="btn btn-text-white fw-bold fs-lg-5 border-0 p-5 me-lg-12"
+              type="button"
+              id="product-list-filter"
+              data-bs-toggle="dropdown"
+              data-bs-target="#product-list-dropdown"
+              aria-expanded="false"
+            >
+              篩選條件<span
+                class="material-icons-outlined align-bottom ms-4 fs-20"
+              >
+                keyboard_arrow_down
+              </span>
+            </button>
+            <ul
+              class="dropdown-menu rounded-4 product-list-filter p-0"
+              id="product-list-dropdown"
+              aria-labelledby="product-list-filter"
+            >
+              <section
+                class="d-flex justify-content-between align-items-center p-lg-16 p-8"
+              >
+                <p class="py-2 fw-bold fs-lg-5 mb-0">篩選條件</p>
+                <button
+                  type="button"
+                  class="btn p-2 border-0"
+                  data-bs-dismiss="dropdown"
+                  aria-label="Close"
+                >
+                  <span class="material-icons-outlined align-bottom">
+                    close
+                  </span>
+                </button>
+              </section>
+              <hr class="dropdown-divider" />
+              <div
+                class="accordion dropdown-stay-open px-10 py-5 px-lg-20 py-lg-16"
+                id="accordion-productlist"
+              >
+                <div
+                  class="accordion-item accordion-item-hot border-0 border-bottom rounded-0 mb-10 mb-lg-16"
+                >
+                  <h2 class="accordion-header me-auto" id="headingHot">
+                    <button
+                      class="accordion-button dropdown-stay-open p-0 mb-5 mb-lg-16 fw-bold fs-lg-5 filter-btn collapsed accordion-item-hot"
+                      type="button"
+                      data-filter="hot"
+                    >
+                      熱門產品
+                    </button>
+                  </h2>
+                </div>
+
+                <div
+                  class="accordion-item border-0 border-bottom rounded-0 mb-10 mb-lg-16"
+                >
+                  <h2 class="accordion-header me-auto" id="headingGift">
+                    <button
+                      class="accordion-button dropdown-stay-open p-0 mb-5 mb-lg-16 fw-bold fs-lg-5 collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseGift"
+                      aria-expanded="false"
+                      aria-controls="collapseGift"
+                    >
+                      禮盒
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseGift"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingGift"
+                    data-bs-parent="#accordion-productlist"
+                  >
+                    <div class="accordion-body p-0">
+                      <ul class="list-group pb-5 pb-lg-10 pb-lg-16">
+                        <li class="list-group-item border-0 p-0 mb-5 mb-lg-8">
+                          <div class="form-check d-flex align-items-center">
+                            <input
+                              class="form-check-input filter-radio me-4"
+                              type="radio"
+                              value="gift-festival"
+                              name="main-filter"
+                              id="gift-festival-checkbox"
+                            />
+                            <label
+                              class="form-check-label fs-14 fs-lg-5"
+                              for="gift-festival-checkbox"
+                              >節慶禮盒</label
+                            >
+                          </div>
+                        </li>
+                        <li class="list-group-item border-0 p-0 mb-5 mb-lg-8">
+                          <div class="form-check d-flex align-items-center">
+                            <input
+                              class="form-check-input filter-radio me-4"
+                              type="radio"
+                              value="gift-baby"
+                              name="main-filter"
+                              id="gift-baby-checkbox"
+                            />
+                            <label
+                              class="form-check-label fs-14 fs-lg-5"
+                              for="gift-baby-checkbox"
+                              >彌月禮盒</label
+                            >
+                          </div>
+                        </li>
+                        <li class="list-group-item border-0 p-0">
+                          <div class="form-check d-flex align-items-center">
+                            <input
+                              class="form-check-input filter-radio me-4"
+                              type="radio"
+                              value="gift-small"
+                              name="main-filter"
+                              id="gift-small-checkbox"
+                            />
+                            <label
+                              class="form-check-label fs-14 fs-lg-5"
+                              for="gift-small-checkbox"
+                              >送禮小物</label
+                            >
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="accordion-item border-0 border-bottom rounded-0 mb-10 mb-lg-16"
+                >
+                  <h2 class="accordion-header me-auto" id="headingVeg">
+                    <button
+                      class="accordion-button dropdown-stay-open p-0 mb-5 mb-lg-16 fw-bold fs-lg-5 collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseVeg"
+                      aria-expanded="false"
+                      aria-controls="collapseVeg"
+                    >
+                      我吃素
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseVeg"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingVeg"
+                    data-bs-parent="#accordion-productlist"
+                  >
+                    <div class="accordion-body p-0">
+                      <ul class="list-group pb-5 pb-lg-10 pb-lg-16">
+                        <li class="list-group-item border-0 p-0 mb-5 mb-lg-8">
+                          <div class="form-check d-flex align-items-center">
+                            <input
+                              class="form-check-input filter-radio me-4"
+                              type="radio"
+                              value="veg-egg"
+                              name="main-filter"
+                              id="veg-egg-checkbox"
+                            />
+                            <label
+                              class="form-check-label fs-14 fs-lg-5"
+                              for="veg-egg-checkbox"
+                              >蛋素</label
+                            >
+                          </div>
+                        </li>
+                        <li class="list-group-item border-0 p-0 mb-5 mb-lg-8">
+                          <div class="form-check d-flex align-items-center">
+                            <input
+                              class="form-check-input filter-radio me-4"
+                              type="radio"
+                              value="veg-milk"
+                              name="main-filter"
+                              id="veg-milk-checkbox"
+                            />
+                            <label
+                              class="form-check-label fs-14 fs-lg-5"
+                              for="veg-milk-checkbox"
+                              >奶素</label
+                            >
+                          </div>
+                        </li>
+                        <li class="list-group-item border-0 p-0 mb-5 mb-lg-8">
+                          <div class="form-check d-flex align-items-center">
+                            <input
+                              class="form-check-input filter-radio me-4"
+                              type="radio"
+                              value="veg-both"
+                              name="main-filter"
+                              id="veg-both-checkbox"
+                            />
+                            <label
+                              class="form-check-label fs-14 fs-lg-5"
+                              for="veg-both-checkbox"
+                              >蛋奶素</label
+                            >
+                          </div>
+                        </li>
+                        <li class="list-group-item border-0 p-0">
+                          <div class="form-check d-flex align-items-center">
+                            <input
+                              class="form-check-input filter-radio me-4"
+                              type="radio"
+                              value="veg-egg-alcohol"
+                              name="main-filter"
+                              id="veg-egg-alcohol-checkbox"
+                            />
+                            <label
+                              class="form-check-label fs-14 fs-lg-5"
+                              for="veg-egg-alcohol-checkbox"
+                              >蛋奶素含酒</label
+                            >
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item border-0 rounded-0">
+                  <h2 class="accordion-header me-auto" id="headingPrice">
+                    <button
+                      class="accordion-button dropdown-stay-open p-0 mb-5 mb-lg-16 fw-bold fs-lg-5 collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapsePrice"
+                      aria-expanded="false"
+                      aria-controls="collapsePrice"
+                    >
+                      價格
+                    </button>
+                  </h2>
+                  <div
+                    id="collapsePrice"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingPrice"
+                    data-bs-parent="#accordion-productlist"
+                  >
+                    <div class="accordion-body p-0">
+                      <ul class="list-group">
+                        <li
+                          class="list-group-item border-0 p-0 mb-5 mb-lg-8 d-flex align-items-center"
+                        >
+                          <div class="form-check d-flex align-items-center">
+                            <input
+                              class="form-check-input filter-radio me-4"
+                              type="radio"
+                              value="price-low-to-high"
+                              name="main-filter"
+                              id="price-low-to-high-checkbox"
+                            />
+                            <label
+                              class="form-check-label fs-14 fs-lg-5"
+                              for="price-low-to-high-checkbox"
+                              >由低至高</label
+                            >
+                          </div>
+                        </li>
+                        <li class="list-group-item border-0 p-0">
+                          <div class="form-check d-flex align-items-center">
+                            <input
+                              class="form-check-input filter-radio me-4"
+                              type="radio"
+                              value="price-high-to-low"
+                              name="main-filter"
+                              id="price-high-to-low-checkbox"
+                            />
+                            <label
+                              class="form-check-label fs-14 fs-lg-5"
+                              for="price-high-to-low-checkbox"
+                              >由高至低</label
+                            >
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <hr class="dropdown-divider" />
+              <div
+                class="d-flex flex-wrap flex-xl-nowrap justify-content-between p-8 p-lg-16"
+              >
+                <button
+                  class="btn btn-outline-primary rounded-pill w-100 me-xl-12 mb-8 mb-xl-0 fs-14 fs-lg-5"
+                  id="clear-filters"
+                >
+                  清除篩選
+                </button>
+                <button
+                  class="btn btn-primary rounded-pill w-100 ms-2 fs-14 fs-lg-5"
+                  id="apply-filters"
+                >
+                  確定篩選
+                </button>
+              </div>
+            </ul>
+          </div>
+          <button
+            class="btn btn-text-white py-4 fs-5 p-5"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#productlist-search"
+            aria-expanded="false"
+            aria-controls="productlist-search"
+          >
+            <span class="material-icons-outlined align-bottom"> search </span>
+          </button>
+          <div class="position-absolute z-1 start-0 end-0 px-5 px-lg-0 py-2">
+            <div class="collapse bg-white" id="productlist-search">
+              <div class="d-flex align-items-center">
+                <form class="position-relative w-100">
+                  <span
+                    class="material-icons-outlined align-bottom position-absolute top-50 start-0 translate-middle-y ps-6"
+                  >
+                    search
+                  </span>
+                  <input
+                    type="search"
+                    class="form-control search-lineheight rounded-pill py-4 ps-20 bg-primary-10 border-0"
+                    id="exampleFormControlInput1"
+                  />
+                </form>
+                <button
+                  type="button"
+                  class="btn p-2 border-0 text-neutral-80"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#productlist-search"
+                  aria-expanded="true"
+                >
+                  <span class="material-icons-outlined align-bottom">
+                    close
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="product-list-all" class="product-list row d-flex">
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/珍珠糖泡芙.png" alt="珍珠糖泡芙" />
+            <span
+              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+              >熱銷 No. 1</span
+            >
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">珍珠糖泡芙</p>
+              <p class="fs-14 fs-lg-6">NT$ 70 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/11.可麗露.png" alt="可麗露" />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">迷你可麗露 單入</p>
+              <p class="fs-14 fs-lg-6">NT$ 30</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/7.布列塔尼酥.png" alt="布列塔尼酥" />
+            <span
+              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+              >推薦商品</span
+            >
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">布列塔尼酥 單入</p>
+              <p class="fs-14 fs-lg-6">NT$ 55 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/4.義大利脆餅.png" alt="義大利脆餅" />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">義大利脆餅</p>
+              <p class="fs-14 fs-lg-6">NT$ 75 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/12.可可杏仁餅乾.png" alt="可可杏仁餅乾" />
+            <span
+              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+              >推薦商品</span
+            >
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">可可杏仁餅乾</p>
+              <p class="fs-14 fs-lg-6">NT$ 70</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/6-1.鑽石沙布列-可可.png" alt="鑽石餅乾" />
+
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">鑽石餅乾</p>
+              <p class="fs-14 fs-lg-6">NT$ 75 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/5.雪球餅乾.png" alt="雪球餅乾" />
+
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">雪球餅乾</p>
+              <p class="fs-14 fs-lg-6">NT$ 70 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/3.起司脆棒.png" alt="起司脆棒" />
+            <span
+              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+              >熱銷 No. 2</span
+            >
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">起士脆棒</p>
+              <p class="fs-14 fs-lg-6">NT$ 70 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/9-1.曲奇餅乾原味.png" alt="曲奇餅乾" />
+            <span
+              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+              >熱銷 No. 3</span
+            >
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">曲奇餅乾</p>
+              <p class="fs-14 fs-lg-6">NT$ 70 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/1.椰香杏脆餅.png" alt="椰香杏脆餅" />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">椰香杏脆餅</p>
+              <p class="fs-14 fs-lg-6">NT$ 70 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/中秋月餅.png" alt="中秋月餅" />
+            <span
+              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+              >熱銷 No. 1</span
+            >
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">中秋禮盒</p>
+              <p class="fs-14 fs-lg-6">季節性商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img
+              src="/assets/images/LINE_ALBUM_星之彌月_250801_1.jpg"
+              alt="彌月禮盒"
+            />
+
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">彌月禮盒</p>
+              <p class="fs-14 fs-lg-6">客製化商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card d-none"
+          data-page-content="2"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/13.韓國麵包.png" alt="韓國麵包" />
+
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">韓國麵包</p>
+              <p class="fs-14 fs-lg-6">限定商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card d-none"
+          data-page-content="2"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/14.蝴蝶酥.png" alt="蝴蝶酥" />
+
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">蝴蝶酥</p>
+              <p class="fs-14 fs-lg-6">限定商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card d-none"
+          data-page-content="2"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/8.楓糖造型餅乾-客製.png" alt="楓糖餅乾" />
+
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">楓糖餅乾</p>
+              <p class="fs-14 fs-lg-6">限定商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card d-none"
+          data-page-content="2"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img
+              src="/assets/images/LINE_ALBUM_餅乾包裝照們_250524_19.jpg"
+              alt="禮輕情意重"
+            />
+
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">禮輕情意重</p>
+              <p class="fs-14 fs-lg-6">客製化商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card d-none"
+          data-page-content="2"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img
+              src="/assets/images/LINE_ALBUM_餅乾包裝照們_250524_28.jpg"
+              alt="送到心坎裡"
+            />
+
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">送到心坎裡</p>
+              <p class="fs-14 fs-lg-6">客製化商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div class="col-12 mt-10 mt-lg-28 d-flex justify-content-center">
+          <nav aria-label="Page navigation example" id="productPagination-1">
+            <ul class="pagination product-list-navigation">
+              <li class="page-item">
+                <a
+                  class="page-link"
+                  href="#"
+                  aria-label="Previous"
+                  id="prevPage-1"
+                >
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#" data-page="1">1</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#" data-page="2">2</a>
+              </li>
+
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next" id="nextPage-1">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div id="product-list-hot" class="product-list row d-flex">
+        <div class="col-6 col-lg-3 mb-10 mb-lg-12 product-card">
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/中秋月餅.png" alt="中秋月餅" />
+            <span
+              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+              >季節限定</span
+            >
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">中秋禮盒</p>
+              <p class="fs-14 fs-lg-6">NT$ 499</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3 mb-10 mb-lg-12 product-card">
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/珍珠糖泡芙.png" alt="珍珠糖泡芙" />
+            <span
+              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+              >熱銷 No. 1</span
+            >
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">珍珠糖泡芙</p>
+              <p class="fs-14 fs-lg-6">NT$ 70 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3 mb-10 mb-lg-12 product-card">
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/3.起司脆棒.png" alt="起司脆棒" />
+            <span
+              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+              >熱銷 No. 2</span
+            >
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">起士脆棒</p>
+              <p class="fs-14 fs-lg-6">NT$ 70 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3 mb-10 mb-lg-12 product-card">
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/9-1.曲奇餅乾原味.png" alt="曲奇餅乾" />
+            <span
+              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+              >熱銷 No. 3</span
+            >
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">曲奇餅乾</p>
+              <p class="fs-14 fs-lg-6">NT$ 70 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3 mb-10 mb-lg-12 product-card">
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/7.布列塔尼酥.png" alt="布列塔尼酥" />
+            <span
+              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+              >推薦商品</span
+            >
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">布列塔尼酥 單入</p>
+              <p class="fs-14 fs-lg-6">NT$ 55 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3 mb-10 mb-lg-12 product-card">
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/12.可可杏仁餅乾.png" alt="可可杏仁餅乾" />
+            <span
+              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+              >推薦商品</span
+            >
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">可可杏仁餅乾</p>
+              <p class="fs-14 fs-lg-6">NT$ 70</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        id="product-list-gift-festival"
+        class="product-list row d-flex d-none"
+      >
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/中秋月餅.png" alt="中秋禮盒" />
+
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">中秋禮盒</p>
+              <p class="fs-14 fs-lg-6">季節性商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/婚禮禮盒.jpg" alt="婚禮禮盒" />
+
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">婚禮禮盒</p>
+              <p class="fs-14 fs-lg-6">客製化商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+      </div>
+      <div id="product-list-gift-baby" class="product-list row d-flex d-none">
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img
+              src="/assets/images/LINE_ALBUM_星之彌月_250801_1.jpg"
+              alt="彌月禮盒"
+            />
+
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">彌月禮盒</p>
+              <p class="fs-14 fs-lg-6">客製化商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+      </div>
+      <div id="product-list-gift-small" class="product-list row d-flex d-none">
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img
+              src="/assets/images/LINE_ALBUM_餅乾包裝照們_250524_19.jpg"
+              alt="禮輕情意重"
+            />
+
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">禮輕情意重</p>
+              <p class="fs-14 fs-lg-6">客製化商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img
+              src="/assets/images/LINE_ALBUM_餅乾包裝照們_250524_28.jpg"
+              alt="送到心坎裡"
+            />
+
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">送到心坎裡</p>
+              <p class="fs-14 fs-lg-6">客製化商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div id="product-list-veg-egg" class="product-list row d-flex d-none">
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/4.義大利脆餅.png" alt="義大利脆餅" />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">義大利脆餅</p>
+              <p class="fs-14 fs-lg-6">NT$ 75 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div id="product-list-veg-milk" class="product-list row d-flex d-none">
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/6-1.鑽石沙布列-可可.png" alt="鑽石餅乾" />
+
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">鑽石餅乾</p>
+              <p class="fs-14 fs-lg-6">NT$ 75 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        id="product-list-veg-egg-alcohol"
+        class="product-list row d-flex d-none"
+      >
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/11.可麗露.png" alt="可麗露" />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">迷你可麗露 單入</p>
+              <p class="fs-14 fs-lg-6">NT$ 30</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+      </div>
+      <div id="product-list-veg-both" class="product-list row d-flex d-none">
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/7.布列塔尼酥.png" alt="布列塔尼酥" />
+            <span
+              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+              >推薦商品</span
+            >
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">布列塔尼酥 單入</p>
+              <p class="fs-14 fs-lg-6">NT$ 55 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/12.可可杏仁餅乾.png" alt="可可杏仁餅乾" />
+            <span
+              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+              >推薦商品</span
+            >
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">可可杏仁餅乾</p>
+              <p class="fs-14 fs-lg-6">NT$ 70</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="product-list-price-low-to-high"
+        class="product-list row d-flex d-none"
+      >
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/11.可麗露.png" alt="可麗露" />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">迷你可麗露 單入</p>
+              <p class="fs-14 fs-lg-6">NT$ 30</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/7.布列塔尼酥.png" alt="布列塔尼酥" />
+            <span
+              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+              >推薦商品</span
+            >
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">布列塔尼酥 單入</p>
+              <p class="fs-14 fs-lg-6">NT$ 55 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/珍珠糖泡芙.png" alt="珍珠糖泡芙" />
+            <span
+              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+              >熱銷 No. 1</span
+            >
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">珍珠糖泡芙</p>
+              <p class="fs-14 fs-lg-6">NT$ 70 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/12.可可杏仁餅乾.png" alt="可可杏仁餅乾" />
+            <span
+              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+              >推薦商品</span
+            >
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">可可杏仁餅乾</p>
+              <p class="fs-14 fs-lg-6">NT$ 70</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/5.雪球餅乾.png" alt="雪球餅乾" />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">雪球餅乾</p>
+              <p class="fs-14 fs-lg-6">NT$ 70 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/3.起司脆棒.png" alt="起司脆棒" />
+            <span
+              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+              >熱銷 No. 2</span
+            >
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">起士脆棒</p>
+              <p class="fs-14 fs-lg-6">NT$ 70 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/9-1.曲奇餅乾原味.png" alt="曲奇餅乾" />
+            <span
+              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+              >熱銷 No. 3</span
+            >
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">曲奇餅乾</p>
+              <p class="fs-14 fs-lg-6">NT$ 70 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/1.椰香杏脆餅.png" alt="椰香杏脆餅" />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">椰香杏脆餅</p>
+              <p class="fs-14 fs-lg-6">NT$ 70 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/4.義大利脆餅.png" alt="義大利脆餅" />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">義大利脆餅</p>
+              <p class="fs-14 fs-lg-6">NT$ 75 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/6-1.鑽石沙布列-可可.png" alt="鑽石餅乾" />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">鑽石餅乾</p>
+              <p class="fs-14 fs-lg-6">NT$ 75 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/中秋月餅.png" alt="中秋月餅" />
+            <span
+              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+              >熱銷 No. 1</span
+            >
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">中秋禮盒</p>
+              <p class="fs-14 fs-lg-6">季節性商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img
+              src="/assets/images/LINE_ALBUM_星之彌月_250801_1.jpg"
+              alt="彌月禮盒"
+            />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">彌月禮盒</p>
+              <p class="fs-14 fs-lg-6">客製化商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card d-none d-none"
+          data-page-content="2"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/13.韓國麵包.png" alt="韓國麵包" />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">韓國麵包</p>
+              <p class="fs-14 fs-lg-6">限定商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card d-none d-none"
+          data-page-content="2"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/14.蝴蝶酥.png" alt="蝴蝶酥" />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">蝴蝶酥</p>
+              <p class="fs-14 fs-lg-6">限定商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card d-none d-none"
+          data-page-content="2"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/8.楓糖造型餅乾-客製.png" alt="楓糖餅乾" />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">楓糖餅乾</p>
+              <p class="fs-14 fs-lg-6">限定商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card d-none d-none"
+          data-page-content="2"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img
+              src="/assets/images/LINE_ALBUM_餅乾包裝照們_250524_19.jpg"
+              alt="禮輕情意重"
+            />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">禮輕情意重</p>
+              <p class="fs-14 fs-lg-6">客製化商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card d-none d-none"
+          data-page-content="2"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img
+              src="/assets/images/LINE_ALBUM_餅乾包裝照們_250524_28.jpg"
+              alt="送到心坎裡"
+            />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">送到心坎裡</p>
+              <p class="fs-14 fs-lg-6">客製化商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div class="col-12 mt-10 mt-lg-28 d-flex justify-content-center">
+          <nav aria-label="Page navigation example" id="productPagination-2">
+            <ul class="pagination product-list-navigation">
+              <li class="page-item">
+                <a
+                  class="page-link"
+                  href="#"
+                  aria-label="Previous"
+                  id="prevPage-2"
+                >
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li class="page-item active">
+                <a class="page-link" href="#" data-page="1">1</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#" data-page="2">2</a>
+              </li>
+
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next" id="nextPage-2">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div
+        id="product-list-price-high-to-low"
+        class="product-list row d-flex d-none"
+      >
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/中秋月餅.png" alt="中秋月餅" />
+            <span
+              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+              >熱銷 No. 1</span
+            >
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">中秋禮盒</p>
+              <p class="fs-14 fs-lg-6">季節性商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img
+              src="/assets/images/LINE_ALBUM_星之彌月_250801_1.jpg"
+              alt="彌月禮盒"
+            />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">彌月禮盒</p>
+              <p class="fs-14 fs-lg-6">客製化商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/13.韓國麵包.png" alt="韓國麵包" />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">韓國麵包</p>
+              <p class="fs-14 fs-lg-6">限定商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/14.蝴蝶酥.png" alt="蝴蝶酥" />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">蝴蝶酥</p>
+              <p class="fs-14 fs-lg-6">限定商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/8.楓糖造型餅乾-客製.png" alt="楓糖餅乾" />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">楓糖餅乾</p>
+              <p class="fs-14 fs-lg-6">限定商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img
+              src="/assets/images/LINE_ALBUM_餅乾包裝照們_250524_19.jpg"
+              alt="禮輕情意重"
+            />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">禮輕情意重</p>
+              <p class="fs-14 fs-lg-6">客製化商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img
+              src="/assets/images/LINE_ALBUM_餅乾包裝照們_250524_28.jpg"
+              alt="送到心坎裡"
+            />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">送到心坎裡</p>
+              <p class="fs-14 fs-lg-6">客製化商品請聯絡店家</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/4.義大利脆餅.png" alt="義大利脆餅" />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">義大利脆餅</p>
+              <p class="fs-14 fs-lg-6">NT$ 75 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/6-1.鑽石沙布列-可可.png" alt="鑽石餅乾" />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">鑽石餅乾</p>
+              <p class="fs-14 fs-lg-6">NT$ 75 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/珍珠糖泡芙.png" alt="珍珠糖泡芙" />
+            <span
+              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+              >熱銷 No. 1</span
+            >
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">珍珠糖泡芙</p>
+              <p class="fs-14 fs-lg-6">NT$ 70 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/12.可可杏仁餅乾.png" alt="可可杏仁餅乾" />
+            <span
+              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+              >推薦商品</span
+            >
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">可可杏仁餅乾</p>
+              <p class="fs-14 fs-lg-6">NT$ 70</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
+          data-page-content="1"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/5.雪球餅乾.png" alt="雪球餅乾" />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">雪球餅乾</p>
+              <p class="fs-14 fs-lg-6">NT$ 70 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card d-none d-none"
+          data-page-content="2"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/3.起司脆棒.png" alt="起司脆棒" />
+            <span
+              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+              >熱銷 No. 2</span
+            >
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">起士脆棒</p>
+              <p class="fs-14 fs-lg-6">NT$ 70 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card d-none d-none"
+          data-page-content="2"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/9-1.曲奇餅乾原味.png" alt="曲奇餅乾" />
+            <span
+              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+              >熱銷 No. 3</span
+            >
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">曲奇餅乾</p>
+              <p class="fs-14 fs-lg-6">NT$ 70 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card d-none d-none"
+          data-page-content="2"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/1.椰香杏脆餅.png" alt="椰香杏脆餅" />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">椰香杏脆餅</p>
+              <p class="fs-14 fs-lg-6">NT$ 70 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card d-none d-none"
+          data-page-content="2"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/7.布列塔尼酥.png" alt="布列塔尼酥" />
+            <span
+              class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+              >推薦商品</span
+            >
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">布列塔尼酥 單入</p>
+              <p class="fs-14 fs-lg-6">NT$ 55 以上</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-3 mb-10 mb-lg-12 product-card d-none d-none"
+          data-page-content="2"
+        >
+          <div class="product-item position-relative bg-secondary-5 mb-8">
+            <img src="/assets/images/11.可麗露.png" alt="可麗露" />
+            <div
+              class="product-item-overlay position-absolute top-0 start-0 d-flex flex-column align-items-end"
+            >
+              <a href="product.html" class="d-block w-100 h-100"></a>
+              <button
+                class="btn btn-primary rounded-0 w-100 p-6 p-lg-10 fw-bold fs-14 fs-lg-6"
+              >
+                加入購物車
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-star mb-4 product-link">
+            <a class="me-auto" href="product.html">
+              <p class="fs-lg-5 fw-bold">迷你可麗露 單入</p>
+              <p class="fs-14 fs-lg-6">NT$ 30</p>
+            </a>
+            <span
+              class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+            >
+              favorite_border
+            </span>
+          </div>
+        </div>
+        <div class="col-12 mt-10 mt-lg-28 d-flex justify-content-center">
+          <nav aria-label="Page navigation example" id="productPagination-3">
+            <ul class="pagination product-list-navigation">
+              <li class="page-item">
+                <a
+                  class="page-link"
+                  href="#"
+                  aria-label="Previous"
+                  id="prevPage-3"
+                >
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li class="page-item active">
+                <a class="page-link" href="#" data-page="1">1</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#" data-page="2">2</a>
+              </li>
+
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next" id="nextPage-3">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="container-fluid product-list-hot py-20 py-lg-60 overflow-x-hidden"
+    >
+      <div class="row position-relative">
+        <div class="product-list-hot-container d-flex flex-wrap z-1">
+          <div
+            class="col-lg-2 mb-20 mb-lg-0"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
+            <div class="d-flex mb-8 mb-lg-0">
+              <h3
+                class="product-list-hot-title fs-lg-2 fs-5 fw-bold vertical-text m-0 me-4 me-lg-6"
+              >
+                大家都在吃
+              </h3>
+              <div
+                class="d-flex align-items-center flex-lg-column flex-row-reverse flex-lg-row"
+              >
+                <p
+                  class="fs-lg-5 text-primary fw-bold vertical-text m-0 mt-lg-4"
+                >
+                  Popular Now
+                </p>
+                <span class="me-4 me-lg-0 mt-lg-8 text-line"></span>
+              </div>
+            </div>
+            <p class="text-neutral-80 d-lg-none">
+              每一塊晴天餅乾，都有一段溫暖的小故事。看看大家今天選了哪一款，一起分享甜甜的好心情！
+            </p>
+          </div>
+          <div class="col-lg-10">
+            <div class="d-none d-lg-block">
+              <p class="text-neutral-80 fs-lg-5 mb-4">
+                每一塊晴天餅乾，都有一段溫暖的小故事。
+              </p>
+              <p class="text-neutral-80 fs-lg-5 mb-28">
+                看看大家今天選了哪一款，一起分享甜甜的好心情！
+              </p>
+            </div>
+            <div
+              class="swiper product-list-hot-swiper"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-anchor-placement="top-bottom"
+              data-aos-delay="100"
+            >
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a
+                    href="product.html"
+                    class="d-flex flex-column text-decoration-none"
+                  >
+                    <div class="product-image-container mb-8">
+                      <img
+                        src="/assets/images/珍珠糖泡芙ps.png"
+                        alt="珍珠糖泡芙ps"
+                      />
+                    </div>
+
+                    <p class="fw-bold fs-lg-5 text-neutral-80 mb-4">
+                      珍珠糖泡芙
+                    </p>
+                    <p class="fw-bold fs-lg-5 text-neutral-80">NT$ 70 以上</p>
+
+                    <span
+                      class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+                      >熱銷 No. 1</span
+                    >
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a
+                    href="product.html"
+                    class="d-flex flex-column text-decoration-none"
+                  >
+                    <div class="product-image-container mb-8">
+                      <img
+                        src="/assets/images/珍珠糖泡芙ps.png"
+                        alt="珍珠糖泡芙ps"
+                      />
+                    </div>
+
+                    <p class="fw-bold fs-lg-5 text-neutral-80 mb-4">
+                      珍珠糖泡芙
+                    </p>
+                    <p class="fw-bold fs-lg-5 text-neutral-80">NT$ 70 以上</p>
+
+                    <span
+                      class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+                      >熱銷 No. 1</span
+                    >
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a
+                    href="product.html"
+                    class="d-flex flex-column text-decoration-none"
+                  >
+                    <div class="product-image-container mb-8">
+                      <img
+                        src="/assets/images/珍珠糖泡芙ps.png"
+                        alt="珍珠糖泡芙ps"
+                      />
+                    </div>
+
+                    <p class="fw-bold fs-lg-5 text-neutral-80 mb-4">
+                      珍珠糖泡芙
+                    </p>
+                    <p class="fw-bold fs-lg-5 text-neutral-80">NT$ 70 以上</p>
+
+                    <span
+                      class="fs-14 fs-lg-6 py-4 px-6 bg-primary text-white d-inline-block position-absolute top-0 start-0"
+                      >熱銷 No. 1</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product-list-hot-background"></div>
+      </div>
+    </div>
 
     <%-include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // 【追蹤首次載入旗標】: 用於阻止頁面初始載入時自動滾動
+        let isInitialLoad = true;
+
+        // --- 產品篩選邏輯變數 ---
+        const dropdownStayOpenElements = document.querySelectorAll(
+          ".dropdown-stay-open"
+        );
+        const filterRadios = document.querySelectorAll(".filter-radio");
+        const clearButton = document.getElementById("clear-filters");
+        const applyButton = document.getElementById("apply-filters");
+        const allProductLists = document.querySelectorAll(".product-list");
+        const hotProductButton = document.querySelector('[data-filter="hot"]');
+        const productTitle = document.querySelector("h3");
+        const productListMain = document.querySelector(".product-list-main");
+
+        // 【關鍵對應】：列表 ID 後綴 與 分頁 ID 後綴 的對應表
+        const PAGINATION_SUFFIX_MAP = {
+          all: "1",
+          new: "2",
+          sale: "3",
+          "price-high-to-low": "3",
+          "price-low-to-high": "2",
+        };
+
+        // 【關鍵】：為每個分頁區塊獨立追蹤當前頁碼
+        let currentPages = {
+          1: 1,
+          2: 1,
+          3: 1,
+        };
+
+        // --- 輔助函數：執行滾動 ---
+        function scrollToListMain(isInitial = false) {
+          if (isInitial) {
+            return;
+          }
+          if (productListMain) {
+            productListMain.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        }
+
+        // --- 輔助函數：動態取得當前可見列表中的所有相關元件 ---
+        function getActiveElements() {
+          const activeList = document.querySelector(
+            ".product-list:not(.d-none)"
+          );
+          if (!activeList) return null;
+
+          const listIdSuffix = activeList.id.split("-").slice(2).join("-");
+          const paginationNumSuffix = PAGINATION_SUFFIX_MAP[listIdSuffix];
+
+          if (!paginationNumSuffix) {
+            return {
+              productCards: activeList.querySelectorAll("[data-page-content]"),
+              paginationContainer: null,
+              totalPages: 0,
+              pageItems: [],
+              prevButton: null,
+              nextButton: null,
+              currentSuffix: null,
+            };
+          }
+
+          const paginationId = `productPagination-${paginationNumSuffix}`;
+          const prevId = `prevPage-${paginationNumSuffix}`;
+          const nextId = `nextPage-${paginationNumSuffix}`;
+
+          const paginationContainer = document.getElementById(paginationId);
+          const productCards = activeList.querySelectorAll(
+            "[data-page-content]"
+          );
+
+          if (!paginationContainer) {
+            console.error(`找不到分頁導航容器: ID 為 ${paginationId}`);
+            return null;
+          }
+
+          const pageItems = paginationContainer.querySelectorAll("[data-page]");
+          const prevButton = document.getElementById(prevId);
+          const nextButton = document.getElementById(nextId);
+          const totalPages = pageItems.length;
+
+          return {
+            activeList,
+            productCards,
+            paginationContainer,
+            totalPages,
+            pageItems,
+            prevButton,
+            nextButton,
+            currentSuffix: paginationNumSuffix,
+          };
+        }
+
+        // --- 核心函數：切換內容可見性 ---
+        function updateContentVisibility(paginationNumSuffix) {
+          const elements = getActiveElements();
+
+          if (
+            !elements ||
+            elements.currentSuffix !== paginationNumSuffix ||
+            elements.productCards.length === 0
+          ) {
+            if (elements && !elements.currentSuffix) {
+              elements.productCards.forEach((card) =>
+                card.classList.remove("d-none")
+              );
+            }
+            return;
+          }
+
+          const currentPage = currentPages[paginationNumSuffix];
+
+          elements.productCards.forEach((card) => {
+            const cardPage = parseInt(card.dataset.pageContent);
+
+            if (cardPage === currentPage) {
+              card.classList.remove("d-none");
+            } else {
+              card.classList.add("d-none");
+            }
+          });
+        }
+
+        // --- 分頁狀態函數：更新按鈕 active 狀態 ---
+        function updatePaginationState(paginationNumSuffix) {
+          const elements = getActiveElements();
+          if (
+            !elements ||
+            !elements.paginationContainer ||
+            elements.currentSuffix !== paginationNumSuffix
+          )
+            return;
+
+          const currentPage = currentPages[paginationNumSuffix];
+
+          // 數字分頁按鈕的 active 狀態
+          elements.pageItems.forEach((link) => {
+            link.closest(".page-item").classList.remove("active");
+            if (parseInt(link.dataset.page) === currentPage) {
+              link.closest(".page-item").classList.add("active");
+            }
+          });
+
+          if (elements.prevButton) {
+            elements.prevButton
+              .closest(".page-item")
+              ?.classList.remove("disabled");
+          }
+          if (elements.nextButton) {
+            elements.nextButton
+              .closest(".page-item")
+              ?.classList.remove("disabled");
+          }
+        }
+
+        // --- 核心函數：在切換列表時，重新設定分頁事件監聽器 ---
+        function setupPaginationHandlers() {
+          const elements = getActiveElements();
+          if (!elements || !elements.paginationContainer) return;
+
+          elements.paginationContainer.onclick = null;
+          const paginationNumSuffix = elements.currentSuffix;
+
+          // 綁定新的委派事件
+          elements.paginationContainer.onclick = function (e) {
+            e.preventDefault();
+            const target = e.target.closest("a");
+            if (!target) return;
+
+            let page = currentPages[paginationNumSuffix];
+            let pageChanged = false;
+
+            if (target.dataset.page) {
+              // 1. 數字分頁按鈕
+              const newPage = parseInt(target.dataset.page);
+              if (newPage !== page) {
+                page = newPage;
+                pageChanged = true;
+              }
+            } else if (target.id.startsWith("prevPage")) {
+              // 2. 上一頁按鈕
+              const newPage = page > 1 ? page - 1 : 1;
+              if (newPage !== page) {
+                page = newPage;
+                pageChanged = true;
+              }
+            } else if (target.id.startsWith("nextPage")) {
+              // 3. 下一頁按鈕
+              const newPage =
+                page < elements.totalPages ? page + 1 : elements.totalPages;
+              if (newPage !== page) {
+                page = newPage;
+                pageChanged = true;
+              }
+            }
+
+            if (pageChanged) {
+              currentPages[paginationNumSuffix] = page;
+              updatePaginationState(paginationNumSuffix);
+              updateContentVisibility(paginationNumSuffix);
+              scrollToListMain(false); // 分頁點擊，執行滾動
+
+              // 【AOS 修正 - 分頁】：分頁內容切換後，使用延遲強制 AOS 重新計算
+              if (typeof AOS !== "undefined") {
+                setTimeout(() => {
+                  AOS.refreshHard();
+                }, 100);
+              }
+            }
+          };
+        }
+
+        // --- 產品篩選核心函數：更新產品顯示和標題 ---
+        function updateProductDisplay(isUserAction = false) {
+          let checkedRadio = null;
+          filterRadios.forEach((radio) => {
+            if (radio.checked) {
+              checkedRadio = radio;
+            }
+          });
+
+          // 1. 隱藏所有產品列表
+          allProductLists.forEach((list) => list.classList.add("d-none"));
+
+          // 2. 預設隱藏所有分頁區塊
+          Object.values(PAGINATION_SUFFIX_MAP).forEach((suffix) => {
+            const nav = document.getElementById(`productPagination-${suffix}`);
+            if (nav) nav.closest(".col")?.classList.add("d-none");
+          });
+
+          let targetList = null;
+          let listIdSuffix = "all";
+
+          if (checkedRadio) {
+            const checkedValue = checkedRadio.value;
+            const targetId = `product-list-${checkedValue}`;
+            targetList = document.getElementById(targetId);
+            listIdSuffix = checkedValue;
+
+            if (targetList) {
+              targetList.classList.remove("d-none");
+              const label = document.querySelector(
+                `label[for="${checkedRadio.id}"]`
+              );
+              productTitle.textContent = label ? label.textContent : "篩選商品";
+            }
+          } else {
+            // 預設列表「所有商品」
+            targetList = document.getElementById("product-list-all");
+            if (targetList) {
+              targetList.classList.remove("d-none");
+            }
+            productTitle.textContent = "所有商品";
+            listIdSuffix = "all";
+          }
+
+          // --- 統一處理分頁邏輯 ---
+          const targetPaginationNumSuffix = PAGINATION_SUFFIX_MAP[listIdSuffix];
+
+          if (targetPaginationNumSuffix) {
+            // 顯示該列表的分頁
+            const targetPaginationContainer = document.getElementById(
+              `productPagination-${targetPaginationNumSuffix}`
+            );
+            const targetPaginationParentCol = targetPaginationContainer
+              ? targetPaginationContainer.closest(".col")
+              : null;
+
+            if (targetPaginationParentCol) {
+              targetPaginationParentCol.classList.remove("d-none");
+            }
+
+            // 綁定事件並顯示該區塊的當前頁面
+            setupPaginationHandlers();
+            updatePaginationState(targetPaginationNumSuffix);
+            updateContentVisibility(targetPaginationNumSuffix);
+          } else {
+            // 沒有分頁的列表 (如 hot)，則顯示所有卡片
+            if (targetList) {
+              targetList
+                .querySelectorAll("[data-page-content]")
+                .forEach((card) => {
+                  card.classList.remove("d-none");
+                });
+            }
+          }
+
+          // 【滾動修正邏輯】：判斷是否為用戶操作 AND 判斷是否為首次載入
+          if (isUserAction) {
+            scrollToListMain(false);
+
+            // 【AOS 修正 - 篩選/Radio】：切換列表後，使用延遲強制 AOS 重新計算
+            if (typeof AOS !== "undefined") {
+              setTimeout(() => {
+                AOS.refreshHard();
+              }, 100);
+            }
+          } else if (isInitialLoad) {
+            scrollToListMain(true);
+          }
+        }
+
+        // 【愛心收藏（點擊填滿）功能】
+        const favoriteIcons = document.querySelectorAll(".love-icon");
+
+        favoriteIcons.forEach((icon) => {
+          icon.addEventListener("click", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            if (icon.textContent.trim() === "favorite_border") {
+              icon.textContent = "favorite";
+              icon.classList.add("active");
+            } else {
+              icon.textContent = "favorite_border";
+              icon.classList.remove("active");
+            }
+          });
+        });
+
+        // 【其他事件監聽器】
+
+        // 阻止下拉選單點擊後關閉
+        dropdownStayOpenElements.forEach(function (element) {
+          element.addEventListener("click", function (event) {
+            event.stopPropagation();
+          });
+        });
+
+        // 清除篩選
+        clearButton.addEventListener("click", function () {
+          filterRadios.forEach((radio) => (radio.checked = false));
+          updateProductDisplay(true);
+        });
+
+        // 熱門產品按鈕
+        hotProductButton.addEventListener("click", function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+
+          // 清除所有 radio 選擇
+          filterRadios.forEach((radio) => (radio.checked = false));
+
+          // 隱藏所有產品列表
+          allProductLists.forEach((list) => list.classList.add("d-none"));
+
+          const targetList = document.getElementById("product-list-hot");
+          if (targetList) {
+            targetList.classList.remove("d-none");
+          }
+          productTitle.textContent = "熱門產品";
+
+          // 隱藏所有分頁
+          Object.values(PAGINATION_SUFFIX_MAP).forEach((suffix) => {
+            const nav = document.getElementById(`productPagination-${suffix}`);
+            if (nav) nav.closest(".col")?.classList.add("d-none");
+          });
+
+          // 顯示熱門產品的所有卡片
+          if (targetList) {
+            targetList
+              .querySelectorAll("[data-page-content]")
+              .forEach((card) => {
+                card.classList.remove("d-none");
+              });
+          }
+
+          scrollToListMain(false);
+
+          // 【AOS 修正 - 熱門產品/Swiper】：列表顯示後，等待 100ms 再強制 AOS 重新計算
+          if (typeof AOS !== "undefined") {
+            setTimeout(() => {
+              AOS.refreshHard();
+            }, 100);
+          }
+        });
+
+        // 確定篩選按鈕
+        applyButton.addEventListener("click", function () {
+          updateProductDisplay(true);
+        });
+
+        // Radio 變更事件
+        filterRadios.forEach((radio) => {
+          radio.addEventListener("change", () => {
+            updateProductDisplay(true);
+          });
+        });
+
+        // --- 初始載入設定 ---
+        updateProductDisplay(false);
+
+        // 【AOS 最終修正】：確保首次載入時的第一頁動畫也能正常觸發
+        // 頁面初次載入完成，等待 100ms 確保所有圖片和 CSS 都已渲染
+        if (typeof AOS !== "undefined") {
+          setTimeout(() => {
+            AOS.refreshHard();
+          }, 100);
+        }
+
+        // 頁面初次載入完成，將標誌設為 false
+        isInitialLoad = false;
+      });
+    </script>
+    <!-- swiper -->
+    <script>
+      var swiper = new Swiper(".product-list-hot-swiper", {
+        slidesPerView: "auto", // 將 slidesPerView 設為 "auto"
+        spaceBetween: 24,
+        freeMode: true, // 啟用 freeMode
+        watchSlidesProgress: true, // 監控投影片進度
+        // 斷點設定
+        breakpoints: {
+          375: {
+            spaceBetween: 16, // 將間距設定為 16px
+          },
+        },
+      });
+    </script>
   </body>
 </html>

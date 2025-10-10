@@ -1,0 +1,216 @@
+.product-list-hero {
+  background-image: url(/assets/images/productlist-hero.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: scaleX(-1);
+
+  .product-list-hero-type {
+    padding: 119px 0px 119px 0px;
+    transform: scaleX(-1);
+    h1 {
+      font-size: 28px;
+    }
+    @media (min-width: 992px) {
+      padding: 284px 0px 284px 0px;
+      h1 {
+        font-size: 58px;
+      }
+    }
+  }
+}
+
+.product-list-filter {
+  margin-top: 50px !important;
+  left: 40% !important;
+  transform: translateX(-50%) !important;
+  width: 280px;
+  @media (min-width: 768px) {
+    left: 20% !important;
+  }
+  @media (min-width: 1200px) {
+    width: 500px;
+    left: 40% !important;
+  }
+
+  a {
+    color: $neutral-80;
+  }
+
+  .accordion-button:not(.collapsed) {
+    color: $primary;
+    background-color: white;
+    box-shadow: none;
+  }
+
+  .accordion-item-hot.accordion-button::after {
+    display: none;
+  }
+
+  .form-check-input {
+    // 正常狀態下的邊框顏色
+    border-color: $neutral-80;
+    font-size: 14px;
+    @media (min-width: 992px) {
+      font-size: 16px;
+    }
+    &:checked {
+      // 當核取方塊被勾選時，將背景色和邊框色設定為你的 $primary 顏色
+      background-color: $primary;
+      border-color: $primary;
+    }
+
+    // 確保勾選狀態下的圖示顏色為白色
+    &:checked[type="checkbox"] {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3 6-6'/%3e%3c/svg%3e");
+    }
+
+    // 移除焦點時的陰影
+    &:focus {
+      box-shadow: none;
+      outline: 0;
+      border-color: $primary;
+    }
+  }
+}
+
+.product-list-main {
+  .product-item {
+    display: flex;
+    justify-content: center;
+    height: 184px;
+
+    .product-item-overlay {
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    &:hover .product-item-overlay {
+      opacity: 1;
+    }
+
+    @media (min-width: 992px) {
+      height: 370px;
+    }
+  }
+  img {
+    max-width: 160px;
+    object-fit: contain;
+
+    @media (min-width: 992px) {
+      max-width: 220px;
+    }
+  }
+  a {
+    color: $neutral-80;
+  }
+  .product-link {
+    :hover {
+      color: $primary;
+    }
+  }
+  // 愛心圖示樣式
+  .love-icon {
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    // 當愛心被點擊，新增 .is-filled 類別後會套用
+    &.active {
+      color: $primary !important;
+    }
+  }
+  .product-list-navigation {
+    .page-item.active .page-link {
+      background-color: $primary !important;
+      color: $white !important;
+    }
+  }
+
+  .page-link {
+    border: 0px;
+  }
+}
+
+.product-list-hot {
+  h3 {
+    letter-spacing: 0.2em;
+  }
+  .vertical-text {
+    writing-mode: horizontal-tb;
+  }
+
+  .text-line {
+    display: inline-block;
+    background-color: $primary;
+    height: 1px;
+    width: 30px;
+  }
+
+  @media (min-width: 992px) {
+    h3 {
+      letter-spacing: 0em;
+    }
+    .vertical-text {
+      writing-mode: vertical-rl;
+    }
+    .product-list-hot-title {
+      letter-spacing: 0.5rem;
+    }
+
+    .text-line {
+      display: inline-block;
+      background-color: $primary;
+      height: 60px;
+      width: 1px;
+    }
+  }
+
+  .product-list-hot-container {
+    max-width: 1608px;
+    margin-left: auto;
+    padding: 0px 0px 0px 12px;
+  }
+
+  .product-list-hot-swiper {
+    .swiper-slide {
+      max-width: 220px;
+      max-height: 303px;
+
+      @media (min-width: 767px) {
+        max-width: 473px;
+        max-height: 400px;
+      }
+
+      .product-image-container {
+        width: 100%;
+        height: 231px;
+
+        @media (min-width: 767px) {
+          height: 319px;
+        }
+      }
+
+      img {
+        object-fit: cover;
+        object-position: 50% 75%;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .product-list-hot-background {
+    display: none;
+    @media (min-width: 992px) {
+      display: inline-flex;
+      height: 460px;
+      width: 1750px;
+      background-color: $secondary-5;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 78.6%;
+      left: 55%;
+    }
+  }
+}

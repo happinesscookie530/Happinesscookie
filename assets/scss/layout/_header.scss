@@ -8,9 +8,30 @@
   }
 }
 
+.header-nav-icon {
+  transition: color 0.3s ease;
+
+  &:hover {
+    // 確保 hover 顏色能覆蓋 text-white
+    color: $primary !important;
+  }
+}
+
+// 2. 滾動狀態 (圖示預設為黑色)
+.header-main.scrolled {
+  .header-nav-icon {
+    &:hover {
+      color: $primary !important;
+    }
+  }
+}
+
 .header-list a {
   text-decoration: none;
   transition: color 0.3s ease;
+  &:hover {
+    color: $primary !important;
+  }
 }
 
 .header-mobile-list {

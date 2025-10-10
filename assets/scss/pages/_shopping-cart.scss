@@ -61,3 +61,74 @@
     gap: map-get($spacers, 8);
   }
 }
+// offcanvas
+.booking-wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.booking-btn-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  .booking-a-wrapper {
+    width: 50%;
+    margin-bottom: 8px;
+
+    .booking-a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+  }
+
+  .booking-btn-wrapper {
+    width: 50%;
+
+    .booking-btn {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+.booking-btn-flex-two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  .booking-a-wrapper-two {
+    width: 50%;
+    margin-bottom: 8px;
+
+    .booking-a-two {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+  }
+
+  .booking-btn-wrapper-two {
+    width: 50%;
+
+    .booking-btn-two {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+// 從底部滑上的 Offcanvas
+#offcanvasExample {
+  --bs-offcanvas-height: 60vh;
+}
+#offcanvasExample .offcanvas-body {
+  overflow-y: auto;
+  scrollbar-width: none; // Firefox 隱藏捲軸
+}
+#offcanvasExample .offcanvas-body::-webkit-scrollbar {
+  display: none; // Chrome/Safari/Edge 隱藏捲軸
+}
