@@ -27,7 +27,7 @@
     <%- include('./layout/header-bg-white'); -%>
 
     <div class="container pt-lg-100 pb-lg-40 pt-52 pb-12">
-      <div class="row">
+      <div class="row gy-5">
         <div class="col-12 col-lg-6 mb-4">
           <div class="pe-0 pe-lg-8">
             <div class="swiper mainSwiper">
@@ -104,27 +104,29 @@
         <div class="col-12 col-lg-6">
           <div class="ps-0 ps-lg-8">
             <div class="mb-16">
-              <h1 class="mb-8">曲奇餅乾</h1>
+              <h2 class="mb-8">曲奇餅乾</h2>
               <div class="mb-8">
                 <span
-                  class="badge rounded-pill bg-primary-10 text-primary py-4 px-8 fs-16 me-4"
+                  class="badge rounded-pill bg-primary-10 text-primary py-4 px-8 fs-16 me-4 fw-normal"
                   >蛋奶素</span
                 >
                 <span
-                  class="badge rounded-pill bg-primary-10 text-primary py-4 px-8 fs-16"
+                  class="badge rounded-pill bg-primary-10 text-primary py-4 px-8 fs-16 fw-normal"
                   >含乳製品</span
                 >
               </div>
               <p class="mb-4">
                 酥鬆濃郁，像用奶油寫的一封溫柔情書，一口就能懂的幸福。酥鬆濃郁，像用奶油寫的一封溫柔情書，一口就能懂的幸福。
               </p>
-              <p>＊本產品含有乳製品類，不適合對其過敏者食用。</p>
+              <p class="text-primary fs-14 fs-lg-16">
+                ＊本產品含有乳製品類，不適合對其過敏者食用。
+              </p>
             </div>
             <section
               class="border border-primary rounded-3 p-8 py-lg-12 px-lg-10 border-2 mb-16"
             >
               <div class="mb-12">
-                <p class="mb-6 neutral-80 fw-bold">包裝</p>
+                <p class="mb-6 neutral-80 fw-semibold">包裝</p>
                 <a href="#" class="options text-center me-6">
                   <div class="options-btn mb-3">
                     <img
@@ -146,7 +148,7 @@
                 </a>
               </div>
               <div class="mb-20">
-                <p class="mb-6 neutral-80 fw-bold">口味</p>
+                <p class="mb-6 neutral-80 fw-semibold">口味</p>
                 <div class="d-flex flex-wrap taste">
                   <button
                     type="button"
@@ -183,8 +185,8 @@
               <div
                 class="mb-12 d-flex justify-content-between align-items-center"
               >
-                <p class="neutral-80 fw-bold">價格</p>
-                <p class="h4 fw-bold">NT $ 520</p>
+                <p class="neutral-80 fw-semibold mt-1 mt-lg-2">價格</p>
+                <p class="h4 fw-semibold">NT $ 520</p>
               </div>
 
               <div>
@@ -458,11 +460,11 @@
             </div>
             <div class="d-flex align-items-star mb-4 product-link">
               <a class="me-auto" href="product.html">
-                <p class="fs-lg-5 fw-bold">迷你可麗露-原味 1入</p>
+                <p class="fs-lg-5 fw-bold">迷你可麗露-原味</p>
                 <p class="fs-14 fs-lg-6">NT$ 30</p>
               </a>
               <span
-                class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+                class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-3 mt-lg-1"
               >
                 favorite_border
               </span>
@@ -487,7 +489,7 @@
                 <p class="fs-14 fs-lg-6">NT$ 70 以上</p>
               </a>
               <span
-                class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+                class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-3 mt-lg-1"
               >
                 favorite_border
               </span>
@@ -515,7 +517,7 @@
                 <p class="fs-14 fs-lg-6">NT$ 70 以上</p>
               </a>
               <span
-                class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+                class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-3 mt-lg-1"
               >
                 favorite_border
               </span>
@@ -540,7 +542,7 @@
                 <p class="fs-14 fs-lg-6">NT$ 75 以上</p>
               </a>
               <span
-                class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-1 mt-lg-0"
+                class="material-icons-outlined align-bottom love-icon text-neutral-80 fs-6 fs-lg-5 mt-3 mt-lg-1"
               >
                 favorite_border
               </span>
@@ -713,20 +715,18 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       const thumbSwiper = new Swiper(".thumbSwiper", {
-        slidesPerView: 5, // 4 個縮圖剛好佔滿上方大圖寬度
-        spaceBetween: 16, // 縮圖間距
+        slidesPerView: 5,
+        spaceBetween: 16,
         watchSlidesProgress: true,
         freeMode: true,
         slideToClickedSlide: true,
 
         // 響應式設定
         breakpoints: {
-          // 螢幕寬度小於 768px（手機）
           0: {
-            slidesPerView: 3, // 手機只顯示 3 個
-            spaceBetween: 10, // 可以同時調整間距
+            slidesPerView: 3,
+            spaceBetween: 10,
           },
-          // 平板以上 (>=768px)
           768: {
             slidesPerView: 4,
             spaceBetween: 16,
@@ -739,6 +739,11 @@
         thumbs: {
           swiper: thumbSwiper,
         },
+        autoplay: {
+          delay: 3000, // 每 3 秒自動切換
+          disableOnInteraction: false, // 使用者操作後仍繼續自動播放
+        },
+        loop: true, // 讓輪播循環播放
       });
       //  當主圖切換時，縮圖列同步滑動窗口
       mainSwiper.on("slideChange", function () {
