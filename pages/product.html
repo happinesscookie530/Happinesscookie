@@ -214,6 +214,10 @@
                     <!-- 購物車按鈕 -->
                     <div class="col-8 col-lg-4 d-flex">
                       <button
+                        type="button"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasRight"
+                        aria-controls="offcanvasRight"
                         class="btn btn-primary p-8 rounded-3 d-flex align-items-center justify-content-center w-100 h-100"
                       >
                         <span class="material-icons-outlined me-2"
@@ -222,7 +226,61 @@
                         加入購物車
                       </button>
                     </div>
-
+                    <!-- 購物車側邊展開 -->
+                    <div
+                      class="offcanvas offcanvas-end cart-offcanvas"
+                      tabindex="-1"
+                      id="offcanvasRight"
+                      aria-labelledby="offcanvasRightLabel"
+                    >
+                      <div class="offcanvas-header">
+                        <h5 id="offcanvasRightLabel">購物車</h5>
+                        <button
+                          type="button"
+                          class="btn-close text-reset"
+                          data-bs-dismiss="offcanvas"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="offcanvas-body">
+                        <div class="d-flex align-items-stretch">
+                          <img
+                            src="/assets/images/cart-cookie.png"
+                            class="w-50 rounded-4 me-4"
+                            alt="巧克力曲奇"
+                          />
+                          <div
+                            class="w-50 d-flex flex-column justify-content-between"
+                          >
+                            <div>
+                              <p class="fs-5 mb-1">曲奇餅乾</p>
+                              <p class="text-neutral-60 mb-1">鐵盒250g</p>
+                              <p class="text-neutral-60 mb-0"></p>
+                            </div>
+                            <div>
+                              <h5 class="mb-6">NT$520</h5>
+                              <div
+                                class="d-flex align-items-center justify-content-between"
+                              >
+                                <a href="#" class="quantity-btn">
+                                  <span
+                                    class="material-icons-outlined text-primary"
+                                    >remove</span
+                                  >
+                                </a>
+                                <span class="fw-bold">1</span>
+                                <a href="#" class="quantity-btn">
+                                  <span
+                                    class="material-icons-outlined text-primary"
+                                    >add</span
+                                  >
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                     <!-- 收藏按鈕 -->
                     <div class="col-4 col-lg-2 d-flex">
                       <button
@@ -747,10 +805,8 @@
       });
       //  當主圖切換時，縮圖列同步滑動窗口
       mainSwiper.on("slideChange", function () {
-        const index = mainSwiper.activeIndex;
-
-        // 讓縮圖列「捲到」對應 index
-        thumbSwiper.slideTo(index);
+        const realIndex = mainSwiper.realIndex;
+        thumbSwiper.slideTo(realIndex);
       });
 
       // 【愛心收藏（點擊填滿）功能】

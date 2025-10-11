@@ -103,6 +103,32 @@
      padding: 14px 0;  
 }
 }
+/*購物車滑出*/
+.cart-offcanvas{
+  img{
+    object-fit: cover;
+  }
+  /*數量按鈕*/
+.quantity-btn {
+  color: $primary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  border-radius: 6px;
+  border: 1px solid $primary;
+  font-size: 14px;
+}
+.quantity-btn:hover {
+  background-color: rgba(184, 224, 255, 0.571);
+}
+@media (min-width: 992px) {
+  .quantity-btn {
+    padding: 2px;
+  }
+}
+
+}
 /*產品詳情*/
 #custom-tab .nav-link {
   position: relative;
