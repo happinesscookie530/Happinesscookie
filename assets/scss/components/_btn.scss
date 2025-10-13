@@ -20,9 +20,13 @@ $neutral-80: #333333;
   --bs-btn-hover-border-color: transparent;
   --bs-btn-active-border-color: transparent;
   --bs-btn-disabled-border-color: transparent;
-
   border-radius: 100px;
   font-weight: 700;
+}
+.btn-outline-primary:focus {
+   background-color: #{$primary-40};
+  color: #{$white};
+  border-color: transparent;
 }
 
 .btn-outline-primary {
@@ -39,6 +43,11 @@ $neutral-80: #333333;
   border-width: 3px;
   border-radius: 100px;
   font-weight: 700;
+}
+.btn-outline-primary:focus {
+  background-color: #{$primary-10};
+  color: #{$primary};
+  border-color: #{$primary};
 }
 
 /*白文字按鈕*/

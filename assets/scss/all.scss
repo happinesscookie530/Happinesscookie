@@ -28,7 +28,9 @@ $utilities: map-merge(
 
 @import "./components/btn";
 @import "./components/swiper.scss";
+@import "./components/accordion.scss";
 
 @import "./pages/index";
 @import "./pages/shopping-cart";
 @import "./pages/productlist";
+@import "./pages/product";

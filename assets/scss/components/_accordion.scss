@@ -1,0 +1,75 @@
+/*  移除每個 item 的外框線（只移除整體的外框） */
+.accordion-item {
+  border: none; /* 不要整個框線 */
+}
+
+/*  每個 item 之間加上分隔線（只保留內部線） */
+.accordion-item + .accordion-item {
+  border-top: 1px solid #ddd; /* 你想要的分隔線 */
+}
+
+/* 調整按鈕樣式：展開時不變色、不陰影、不外框 */
+.accordion-button:not(.collapsed) {
+  background-color: transparent;
+  box-shadow: none;
+  color: #6d6d6d;
+  border: none;
+}
+
+/*  移除 focus 藍色外框 */
+.accordion-button:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+/* 隱藏原本 Bootstrap 的箭頭 */
+.accordion-button::after {
+  display: none;
+}
+
+/* 調整箭頭樣式 */
+.accordion-button .material-icons-outlined {
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+/* 展開時旋轉箭頭，變成「向上」 */
+.accordion-button:not(.collapsed) .material-icons-outlined {
+  transform: rotate(180deg);
+}
+
+/* Accordion 未展開狀態 */
+.accordion-button {
+  background-color: transparent;
+  color: #ffcc4d; /* 文字橘色 */
+  box-shadow: none;
+  transition: all 0.3s ease;
+}
+
+/* hover 時略微強調 */
+.accordion-button:hover {
+  background-color: rgba(255, 122, 0, 0.05);
+}
+
+/* 展開（active）狀態 */
+.accordion-button:not(.collapsed) {
+  background-color: var(
+    --bs-secondary-bg-subtle,
+    #f3f3f3
+  ); /* 對應 bg-secondary-5 */
+  border-color: transparent; /* 移除外框 */
+  color: #ffcc4d; /* 文字仍為橘色 */
+  box-shadow: none;
+}
+
+/* 移除 Bootstrap 預設箭頭（你用 material-icons 自訂了） */
+.accordion-button::after {
+  display: none;
+}
+
+/* accordion-item 圓角一致 */
+.accordion-item {
+  border: none;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
