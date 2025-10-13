@@ -27,8 +27,8 @@
 /* 文字選取後變藍 */
 .options:focus .item-text,
 .options:focus .item-text-small,
-.options:active .item-text,
-.options:active .item-text-small {
+.options.active .item-text,
+.options.active .item-text-small {
   color: $primary;
   font-weight: 500;
 }
@@ -41,7 +41,7 @@
 
 /* 選取（focus/active）：圖片恢復原始大小 + 外框 */
 .options:focus img,
-.options:active img {
+.options.active img {
   transform: scale(1); /* 回到原始大小 */
   border-color: $primary-40; /* 顯示外框 */
 }
@@ -103,7 +103,20 @@
   }
 }
 /*購物車滑出*/
+
+ 
 .cart-offcanvas {
+   &.offcanvas.show,
+  &.offcanvas.showing,
+  &.offcanvas.hiding {
+    padding: 0 !important;
+    margin: 0;
+    border: none;
+  }
+  .offcanvas-body{
+    padding: 0;
+  }
+
   img {
     object-fit: cover;
   }
@@ -113,7 +126,16 @@
     height: 90px;
   }
   .cart-item:not(:last-child) {
-    border-bottom: 1px solid $secondary-5;
+    border-bottom: 1px solid $secondary-15;
+  }
+    .cart-body{  
+        height: 100vh;
+        overflow-y: scroll;}
+  .cart-footer{
+        background: $secondary-5;
+    bottom: 0;
+    padding: 24px 32px;
+    position: sticky;
   }
 
   .cart-text {
