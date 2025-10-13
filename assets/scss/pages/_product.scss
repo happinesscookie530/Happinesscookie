@@ -36,14 +36,14 @@
 /* 滑鼠移入：圖片放大 + 外框 */
 .options:hover img {
   transform: scale(1.1);
-  border-color: $primary-40;
+  border-color: $primary-20;
 }
 
 /* 選取（focus/active）：圖片恢復原始大小 + 外框 */
 .options:focus img,
 .options.active img {
   transform: scale(1); /* 回到原始大小 */
-  border-color: $primary-40; /* 顯示外框 */
+  border-color: $primary-20; /* 顯示外框 */
 }
 @media (min-width: 992px) {
   .options {
@@ -61,6 +61,10 @@
 .quantity-btn:hover {
   background-color: rgba(255, 255, 255, 0.571);
   border-radius: 6px;
+}
+.quantity-btn.disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
 }
 @media (min-width: 992px) {
   .quantity-btn {
@@ -104,16 +108,30 @@
 }
 /*購物車滑出*/
 
- 
 .cart-offcanvas {
-   &.offcanvas.show,
+  &.offcanvas.show,
   &.offcanvas.showing,
   &.offcanvas.hiding {
     padding: 0 !important;
     margin: 0;
     border: none;
   }
-  .offcanvas-body{
+  .cart-title {
+    letter-spacing: 1.92px;
+    line-height: 42px;
+  }
+
+  .btn-close.custom-close {
+    --bs-close-color: #0d6efd; /* 設叉叉顏色 */
+    width: 15px;
+    height: 15px;
+    padding: 6px;
+    border-radius: 8px;
+  }
+  .btn-close.custom-close:hover {
+    background-color: $primary-10;
+  }
+  .offcanvas-body {
     padding: 0;
   }
 
@@ -124,15 +142,31 @@
     object-fit: cover;
     width: 90px;
     height: 90px;
+    aspect-ratio: 1 / 1;
   }
   .cart-item:not(:last-child) {
     border-bottom: 1px solid $secondary-15;
   }
-    .cart-body{  
-        height: 100vh;
-        overflow-y: scroll;}
-  .cart-footer{
-        background: $secondary-5;
+
+  .cart-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* 預設靠上 */
+    height: 100%;
+    overflow-y: auto;
+    position: relative;
+  }
+
+  .cart-empty-text {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #666;
+  }
+  .cart-footer {
+    background: $secondary-5;
     bottom: 0;
     padding: 24px 32px;
     position: sticky;
