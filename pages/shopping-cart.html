@@ -12,6 +12,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
+    <div class="mb-61 mb-md-90"><%-include('./layout/header'); -%></div>
     <!-- stepbar-start -->
     <div class="container mb-16">
       <div class="row">
@@ -57,7 +58,7 @@
           </div>
           <!-- 全選 -->
           <!-- 1 -->
-          <div class="shopping-card py-10 px-6">
+          <div class="shopping-card py-10">
             <div class="form-check form-check-inline d-flex align-items-center">
               <input class="form-check-input me-4" type="checkbox" id="inlineCheckbox1" value="option1" />
               <div class="shopping-card-img-wrapper me-6">
@@ -84,7 +85,7 @@
             </div>
           </div>
           <!-- 2 -->
-          <div class="shopping-card py-10 px-6">
+          <div class="shopping-card py-10">
             <div class="form-check form-check-inline d-flex align-items-center">
               <input class="form-check-input me-4" type="checkbox" id="inlineCheckbox1" value="option1" />
               <div class="shopping-card-img-wrapper me-6">
@@ -111,7 +112,7 @@
             </div>
           </div>
           <!-- 3 -->
-          <div class="shopping-card py-10 px-6">
+          <div class="shopping-card py-10">
             <div class="form-check form-check-inline d-flex align-items-center">
               <input class="form-check-input me-4" type="checkbox" id="inlineCheckbox1" value="option1" />
               <div class="shopping-card-img-wrapper me-6">
@@ -138,7 +139,7 @@
             </div>
           </div>
           <!-- 4 -->
-          <div class="shopping-card py-10 px-6">
+          <div class="shopping-card py-10">
             <div class="form-check form-check-inline d-flex align-items-center">
               <input class="form-check-input me-4" type="checkbox" id="inlineCheckbox1" value="option1" />
               <div class="shopping-card-img-wrapper me-6">
@@ -165,7 +166,7 @@
             </div>
           </div>
           <!-- 5 -->
-          <div class="shopping-card py-10 px-6">
+          <div class="shopping-card py-10">
             <div class="form-check form-check-inline d-flex align-items-center">
               <input class="form-check-input me-4" type="checkbox" id="inlineCheckbox1" value="option1" />
               <div class="shopping-card-img-wrapper me-6">
@@ -376,10 +377,10 @@
       <div class="booking-wrapper container py-6">
         <div class="booking-btn-flex">
           <div class="booking-a-wrapper">
-            <div class="booking-a mb-4">
+            <div class="booking-a mb-4 d-flex align-items-center">
               <h3 class="h6 text-neutral-80">總計</h3>
 
-              <a class="fs-12 text-neutral-60" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">查看詳情<span class="material-icons-outlined"> keyboard_arrow_up </span></a>
+              <a class="fs-12 text-neutral-60 d-flex align-items-center" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">查看詳情<span class="material-icons-outlined d-flex align-items-center"> keyboard_arrow_up </span></a>
             </div>
 
             <p class="h5 text-primary">NT$ 5,000</p>
@@ -419,9 +420,9 @@
           <div class="booking-wrapper-two">
             <div class="booking-btn-flex-two">
               <div class="booking-a-wrapper-two">
-                <div class="booking-a-two mb-4">
+                <div class="booking-a-two mb-4 d-flex align-items-center">
                   <h3 class="h6 text-neutral-80">總計</h3>
-                  <a class="fs-12 text-neutral-60" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">收合詳情<span class="material-icons-outlined"> keyboard_arrow_down </span></a>
+                  <a class="fs-12 text-neutral-60 d-flex align-items-center" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">收合詳情<span class="material-icons-outlined d-flex align-items-center"> keyboard_arrow_down </span></a>
                 </div>
                 <p class="h5 text-primary">NT$ 5,000</p>
               </div>
@@ -434,7 +435,7 @@
         </div>
       </div>
     </div>
-
+    <div class="d-none d-md-block"><%-include('./layout/footer'); -%></div>
     <script type="module" src="../main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
