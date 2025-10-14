@@ -26,7 +26,7 @@
     
   </head>
   <body>
-    <%- include('./layout/header-bg-white'); -%>
+    <%- include('./layout/header-login-bg-white'); -%>
     <section class="container py-5 mt-7 pt-7">
   <div class="row">
     <!-- 側邊選單：桌機版顯示 -->
@@ -347,6 +347,88 @@ document.querySelectorAll('#tab-favorite .btn-outline-danger').forEach(btn => {
       alert('地址已儲存！');
       addressEdit.classList.add('d-none');
       addressList.classList.remove('d-none');
+    });
+  }
+
+  function switchTab(targetId) {
+    tabs.forEach(t => t.classList.add('d-none'));
+    document.querySelector(`#${targetId}`).classList.remove('d-none');
+    // 同步側邊欄與手機版按鈕 active 狀態
+    menuLinks.forEach(l => {
+      if (l.getAttribute('data-target') === targetId) {
+        l.classList.add('active');
+      } else {
+        l.classList.remove('active');
+      }
+    });
+    mobileBtns.forEach(b => {
+      if (b.getAttribute('data-target') === targetId) {
+        b.classList.add('active');
+      } else {
+        b.classList.remove('active');
+      }
+    });
+  }
+
+  // 監聽 header 愛心圖示
+  const iconFavorite = document.getElementById('icon-favorite');
+  if (iconFavorite) {
+    iconFavorite.addEventListener('click', (e) => {
+      e.preventDefault();
+      switchTab('tab-favorite');
+    });
+  }
+
+  // 監聽 header 訂單圖示
+  const iconOrders = document.getElementById('icon-orders');
+  if (iconOrders) {
+    iconOrders.addEventListener('click', (e) => {
+      e.preventDefault();
+      switchTab('tab-orders');
+    });
+  }
+
+  // 監聽 header 登出按鈕
+  const iconLogout = document.getElementById('icon-logout');
+  if (iconLogout) {
+    iconLogout.addEventListener('click', async (e) => {
+      e.preventDefault();
+      alert('您已成功登出');
+      // fetch header-bg-white.ejs 並替換 header 內容
+      try {
+        const response = await fetch('./layout/header-bg-white.ejs');
+        if (!response.ok) throw new Error('載入 header 失敗');
+        const headerHtml = await response.text();
+        const headerElement = document.querySelector('header');
+        if (headerElement) {
+          headerElement.outerHTML = headerHtml;
+        }
+        // 登出後切換回會員中心頁面
+        switchTab('tab-profile');
+      } catch (error) {
+        console.error(error);
+      }
+    });
+  }
+
+  // 另外，監聽側邊欄的登出按鈕，改用 id="sidebar-logout" 並同步替換 header
+  const sidebarLogout = document.getElementById('sidebar-logout');
+  if (sidebarLogout) {
+    sidebarLogout.addEventListener('click', async (e) => {
+      e.preventDefault();
+      alert('您已成功登出');
+      try {
+        const response = await fetch('./layout/header-bg-white.ejs');
+        if (!response.ok) throw new Error('載入 header 失敗');
+        const headerHtml = await response.text();
+        const headerElement = document.querySelector('header');
+        if (headerElement) {
+          headerElement.outerHTML = headerHtml;
+        }
+        switchTab('tab-profile');
+      } catch (error) {
+        console.error(error);
+      }
     });
   }
 </script>
