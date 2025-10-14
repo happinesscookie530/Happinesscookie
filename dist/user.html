@@ -21,9 +21,10 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <script type="module" crossorigin src="/Happinesscookie/assets/main-Ck8b3uBI.js"></script>
-    <link rel="stylesheet" crossorigin href="/Happinesscookie/assets/main-C2vL4w0f.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <script type="module" crossorigin src="/Happinesscookie/assets/main-Biq891ER.js"></script>
+    <link rel="stylesheet" crossorigin href="/Happinesscookie/assets/main-CEVOEDnu.css">
     <link rel="stylesheet" crossorigin href="/Happinesscookie/assets/user-tiuoM0QJ.css">
   </head>
   <body>
@@ -157,117 +158,225 @@
     <!-- 側邊選單：桌機版顯示 -->
     <aside class="col-md-3 col-lg-2 mb-4 d-none d-md-block sidebar">
       <nav class="list-group">
-        <a href="#" class="list-group-item list-group-item-action active d-flex align-items-center">
+        <a href="#" class="list-group-item list-group-item-action active d-flex align-items-center" data-target="tab-profile">
           <span class="material-icons-outlined me-2">person</span> 會員中心
         </a>
-        <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+        <a href="#" class="list-group-item list-group-item-action d-flex align-items-center" data-target="tab-orders">
           <span class="material-icons-outlined me-2">shopping_bag</span> 訂單查詢
         </a>
-        <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+        <a href="#" class="list-group-item list-group-item-action d-flex align-items-center" data-target="tab-favorite">
           <span class="material-icons-outlined me-2">favorite_border</span> 收藏清單
+        </a>
+        <a href="#" class="list-group-item list-group-item-action d-flex align-items-center" data-target="tab-address">
+          <span class="material-icons-outlined me-2">home</span> 收件地址
+        </a>
+        <a href="#" class="list-group-item list-group-item-action text-danger d-flex align-items-center" data-target="tab-logout">
+          <span class="material-icons-outlined me-2">logout</span> 會員登出
         </a>
       </nav>
     </aside>
 
     <!-- 手機版選單 -->
     <div class="col-12 mb-4 d-md-none">
-      <div class="btn-group w-100" role="group">
-        <button type="button" class="btn btn-outline-primary active">
+      <div class="btn-group w-100 mobile-menu" role="group">
+        <button type="button" class="btn btn-outline-primary active" data-target="tab-profile">
           <span class="material-icons-outlined align-middle me-1">person</span> 會員中心
         </button>
-        <button type="button" class="btn btn-outline-primary">
+        <button type="button" class="btn btn-outline-primary" data-target="tab-orders">
           <span class="material-icons-outlined align-middle me-1">shopping_bag</span> 訂單查詢
         </button>
-        <button type="button" class="btn btn-outline-primary">
+        <button type="button" class="btn btn-outline-primary" data-target="tab-favorite">
           <span class="material-icons-outlined align-middle me-1">favorite_border</span> 收藏清單
+        </button>
+        <button type="button" class="btn btn-outline-primary" data-target="tab-address">
+        <span class="material-icons-outlined align-middle me-1">home</span> 收件地址
         </button>
       </div>
     </div>
 
     <!-- 右側主要內容 -->
     <div class="col-12 col-md-9 col-lg-10 ps-md-5">
-      <h5 class="fw-bold mb-4 d-flex align-items-center">
-        <i class="bi bi-person-fill me-2"></i> 個人資訊
-      </h5>
-      <form>
-        <!-- 會員名稱 -->
-        <div class="mb-3">
-          <label for="name" class="form-label">會員名稱</label>
-          <input type="text" class="form-control" id="name" value="王美美" />
-        </div>
-
-        <!-- 性別 -->
-        <div class="mb-3">
-          <label class="form-label d-block">性別</label>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="gender" id="male" value="male" />
-            <label class="form-check-label" for="male">男性</label>
+      <!-- 個人資訊 -->
+      <div id="tab-profile" class="tab-content">
+        <h5 class="fw-bold mb-4 d-flex align-items-center">
+          <i class="bi bi-person-fill me-2"></i> 個人資訊
+        </h5>
+        <form>
+          <!-- 會員名稱 -->
+          <div class="mb-3">
+            <label for="name" class="form-label">會員名稱</label>
+            <input type="text" class="form-control" id="name" value="王美美" />
           </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="gender" id="female" value="female" checked />
-            <label class="form-check-label" for="female">女性</label>
+          <!-- 性別 -->
+          <div class="mb-3">
+            <label class="form-label d-block">性別</label>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="gender" id="male" value="male" />
+              <label class="form-check-label" for="male">男性</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="gender" id="female" value="female" checked />
+              <label class="form-check-label" for="female">女性</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="gender" id="other" value="other" />
+              <label class="form-check-label" for="other">不透漏</label>
+            </div>
           </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="gender" id="other" value="other" />
-            <label class="form-check-label" for="other">不透漏</label>
+          <!-- 生日 -->
+          <div class="mb-3">
+            <label for="birthday" class="form-label">生日</label>
+            <input type="date" class="form-control" id="birthday" value="2000-01-01" />
+          </div>
+          <!-- 聯絡電話 -->
+          <div class="mb-3">
+            <label for="phone" class="form-label">聯絡電話</label>
+            <input type="text" class="form-control" id="phone" value="0912345678" />
+          </div>
+          <!-- 電子郵件 -->
+          <div class="mb-3">
+            <label for="email" class="form-label">電子郵件</label>
+            <input type="email" class="form-control" id="email" value="happiness@gmail.com" />
+          </div>
+          <!-- 密碼 -->
+          <div class="mb-3">
+            <label for="password" class="form-label">會員密碼</label>
+            <input type="password" class="form-control" id="password" value="********" />
+          </div>
+          <!-- 按鈕 -->
+          <div class="text-end pt-10">
+            <button type="button" class="btn btn-outline-primary me-4">取消</button>
+            <button type="submit" class="btn btn-primary">確認修改</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- 訂單查詢 -->
+      <div id="tab-orders" class="tab-content d-none">
+        <h5 class="fw-bold mb-4 d-flex align-items-center">
+          <i class="bi bi-bag-check-fill me-2"></i> 訂單查詢
+        </h5>
+        <div class="border rounded p-3 mb-3">
+          <p class="mb-1"><strong>訂單編號：</strong>#20250101-001</p>
+          <p class="mb-1"><strong>訂購日期：</strong>2025/01/01</p>
+          <p class="mb-1"><strong>訂單金額：</strong>$1,280</p>
+          <p class="mb-1"><strong>狀態：</strong><span class="text-success">已出貨</span></p>
+          <div class="text-end">
+            <button class="btn btn-outline-primary btn-sm">查看明細</button>
           </div>
         </div>
-
-        <!-- 生日 -->
-        <div class="mb-3">
-          <label for="birthday" class="form-label">生日</label>
-          <input type="date" class="form-control" id="birthday" value="2000-01-01" />
+        <div class="border rounded p-3 mb-3">
+          <p class="mb-1"><strong>訂單編號：</strong>#20250102-002</p>
+          <p class="mb-1"><strong>訂購日期：</strong>2025/02/15</p>
+          <p class="mb-1"><strong>訂單金額：</strong>$980</p>
+          <p class="mb-1"><strong>狀態：</strong><span class="text-muted">處理中</span></p>
+          <div class="text-end">
+            <button class="btn btn-outline-primary btn-sm">查看明細</button>
+          </div>
         </div>
+      </div>
 
-        <!-- 聯絡電話 -->
-        <div class="mb-3">
-          <label for="phone" class="form-label">聯絡電話</label>
-          <input type="text" class="form-control" id="phone" value="0912345678" />
+      <!-- 收藏清單 -->
+      <div id="tab-favorite" class="tab-content d-none">
+        <h5 class="fw-bold mb-4 d-flex align-items-center">
+          <i class="bi bi-heart-fill me-2 text-danger"></i> 收藏清單
+        </h5>
+        <div class="row">
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100">
+              <img src="https://picsum.photos/300/200?cookie1" class="card-img-top" alt="產品圖片">
+              <div class="card-body">
+                <h6 class="card-title fw-bold">經典奶油餅乾禮盒</h6>
+                <p class="card-text text-muted mb-2">$520</p>
+                <div class="d-flex justify-content-between">
+                  <button class="btn btn-sm btn-outline-primary">加入購物車</button>
+                  <button class="btn btn-sm btn-outline-danger">移除收藏</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100">
+              <img src="https://picsum.photos/300/200?cookie2" class="card-img-top" alt="產品圖片">
+              <div class="card-body">
+                <h6 class="card-title fw-bold">巧克力豆餅乾禮盒</h6>
+                <p class="card-text text-muted mb-2">$680</p>
+                <div class="d-flex justify-content-between">
+                  <button class="btn btn-sm btn-outline-primary">加入購物車</button>
+                  <button class="btn btn-sm btn-outline-danger">移除收藏</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
 
-        <!-- 電子郵件 -->
-        <div class="mb-3">
-          <label for="email" class="form-label">電子郵件</label>
-          <input type="email" class="form-control" id="email" value="happiness@gmail.com" />
-        </div>
+      <!-- 收件地址 -->
+      <div id="tab-address" class="tab-content d-none">
+        <h5 class="fw-bold mb-4 d-flex align-items-center">
+          <i class="bi bi-geo-alt-fill me-2"></i> 收件地址
+        </h5>
 
-        <!-- 密碼 -->
-        <div class="mb-3">
-          <label for="password" class="form-label">會員密碼</label>
-          <input type="password" class="form-control" id="password" value="********" />
-        </div>
-
-        <!-- 收件地址 -->
-        <div class="mb-3">
-          <h6 class="fw-bold mb-2"><i class="bi bi-geo-alt-fill me-2"></i>收件地址</h6>
+        <!-- 地址列表模式 -->
+        <div class="address-list">
           <div class="address-card border rounded p-3 mb-3">
             <p class="mb-1">收件人：王美美</p>
             <p class="mb-1">聯絡電話：0912345678</p>
             <p class="mb-1">收件地址：408 台中市南屯區向上南路一段209號之二</p>
             <div class="text-end">
-              <button type="button" class="btn btn-outline-secondary btn-sm me-2">編輯</button>
-              <button type="button" class="btn btn-outline-danger btn-sm me-2">刪除</button>
-              <button type="button" class="btn btn-outline-primary btn-sm">設為預設</button>
-            </div>
-          </div>
-          <div class="address-card border rounded p-3 mb-3">
-            <p class="mb-1">收件人：陳小明</p>
-            <p class="mb-1">聯絡電話：0912345688</p>
-            <p class="mb-1">收件地址：408 台中市南屯區向上南路一段209號之一</p>
-            <div class="text-end">
-              <button type="button" class="btn btn-outline-secondary btn-sm me-2">編輯</button>
+              <button type="button" class="btn btn-outline-secondary btn-sm me-2 btn-edit-address">編輯</button>
               <button type="button" class="btn btn-outline-danger btn-sm me-2">刪除</button>
               <button type="button" class="btn btn-outline-primary btn-sm">設為預設</button>
             </div>
           </div>
         </div>
 
-        <!-- 按鈕 -->
-        <div class="text-end pt-10">
-          <button type="button" class="btn btn-outline-primary me-4">取消</button>
-          <button type="submit" class="btn btn-primary">確認修改</button>
+        <!-- 地址編輯表單（預設隱藏） -->
+        <div class="address-edit d-none">
+          <form class="border rounded p-4 mb-4">
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label class="form-label">收件人姓名*</label>
+                <input type="text" class="form-control" value="王美美" />
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="form-label">聯絡電話*</label>
+                <input type="text" class="form-control" value="0912345678" />
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="form-label">國家 / 地區*</label>
+                <select class="form-select">
+                  <option selected>台灣</option>
+                </select>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="form-label">縣市*</label>
+                <select class="form-select">
+                  <option selected>台中市</option>
+                </select>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="form-label">鄉鎮市區*</label>
+                <select class="form-select">
+                  <option selected>南屯區</option>
+                </select>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="form-label">郵遞區號*</label>
+                <input type="text" class="form-control" value="408" />
+              </div>
+              <div class="col-12 mb-3">
+                <label class="form-label">地址*</label>
+                <input type="text" class="form-control" value="向上南路一段209號之二" />
+              </div>
+            </div>
+            <div class="text-end">
+              <button type="button" class="btn btn-outline-primary me-3 btn-cancel-edit">取消</button>
+              <button type="submit" class="btn btn-primary btn-save-address">儲存</button>
+            </div>
+          </form>
         </div>
-      </form>
+      </div>
     </div>
   </div>
 </section>
@@ -326,11 +435,94 @@
     </div>
   </div>
 </footer>
-
+
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>
+<script>
+  // 左側選單切換
+  const menuLinks = document.querySelectorAll('.sidebar a');
+  const tabs = document.querySelectorAll('.tab-content');
+
+  menuLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      menuLinks.forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
+      const targetId = link.getAttribute('data-target');
+      tabs.forEach(t => t.classList.add('d-none'));
+      document.querySelector(`#${targetId}`).classList.remove('d-none');
+    });
+  });
+// 收藏清單 - 移除收藏功能
+document.querySelectorAll('#tab-favorite .btn-outline-danger').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    const card = e.target.closest('.col-md-6, .col-lg-4');
+    if (card) {
+      card.remove(); // 直接移除該商品卡片
+    }
+  });
+});
+
+
+  // 模擬登出功能
+  const logoutBtn = document.querySelector('[data-target="tab-logout"]');
+  if (logoutBtn) {
+    logoutBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      alert('您已成功登出');
+      logoutBtn.classList.add('d-none'); // 登出按鈕消失
+      // 可選擇回到會員中心
+      tabs.forEach(t => t.classList.add('d-none'));
+      document.querySelector('#tab-profile').classList.remove('d-none');
+      menuLinks.forEach(l => l.classList.remove('active'));
+      document.querySelector('[data-target="tab-profile"]').classList.add('active');
+    });
+  }
+
+  // 手機版按鈕切換功能
+  const mobileBtns = document.querySelectorAll('.mobile-menu button');
+  mobileBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      mobileBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const targetId = btn.getAttribute('data-target');
+      tabs.forEach(t => t.classList.add('d-none'));
+      document.querySelector(`#${targetId}`).classList.remove('d-none');
+    });
+  });
+
+  // 收件地址編輯模式切換
+  const editBtn = document.querySelector('.btn-edit-address');
+  const addressList = document.querySelector('.address-list');
+  const addressEdit = document.querySelector('.address-edit');
+  const cancelBtn = document.querySelector('.btn-cancel-edit');
+  const saveBtn = document.querySelector('.btn-save-address');
+
+  if (editBtn) {
+    editBtn.addEventListener('click', () => {
+      addressList.classList.add('d-none');
+      addressEdit.classList.remove('d-none');
+    });
+  }
+  if (cancelBtn) {
+    cancelBtn.addEventListener('click', () => {
+      addressEdit.classList.add('d-none');
+      addressList.classList.remove('d-none');
+    });
+  }
+  if (saveBtn) {
+    saveBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      alert('地址已儲存！');
+      addressEdit.classList.add('d-none');
+      addressList.classList.remove('d-none');
+    });
+  }
+</script>
   </body>
 </html>
