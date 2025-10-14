@@ -26,10 +26,12 @@
   <body>
     <%- include('./layout/header-bg-white'); -%>
 
-    <div class="container pt-lg-100 pb-lg-40 pt-52 pb-12">
+    <div class="container pt-lg-100 pb-lg-40 pt-50 pb-12">
       <div class="row gy-5">
+        <!-- 左側輪播 -->
         <div class="col-12 col-lg-6 mb-4">
           <div class="pe-0 pe-lg-8">
+            <!-- 主輪播 -->
             <div class="swiper mainSwiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -64,6 +66,7 @@
                 </div>
               </div>
             </div>
+
             <!-- 縮圖輪播 -->
             <div class="swiper thumbSwiper">
               <div class="swiper-wrapper">
@@ -101,10 +104,13 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-lg-6">
+
+        <!-- 右側商品資訊 -->
+        <div class="col-12 col-lg-6 d-flex flex-column">
           <div class="ps-0 ps-lg-8">
+            <!-- 標題與描述 -->
             <div class="mb-16">
-              <h2 class="mb-8">曲奇餅乾</h2>
+              <h3 class="mb-8">曲奇餅乾</h3>
               <div class="mb-8">
                 <span
                   class="badge rounded-pill bg-primary-10 text-primary py-4 px-8 fs-16 me-4 fw-normal"
@@ -122,9 +128,12 @@
                 ＊本產品含有乳製品類，不適合對其過敏者食用。
               </p>
             </div>
+
+            <!-- 包裝與口味選項 -->
             <section
-              class="border border-primary rounded-3 p-8 py-lg-12 px-lg-10 border-2 mb-16"
+              class="border border-primary rounded-4 p-8 py-lg-12 px-lg-12 border-2 mb-16"
             >
+              <!-- 包裝 -->
               <div class="mb-12">
                 <p class="mb-6 neutral-80 fw-semibold">包裝</p>
                 <a href="#" class="options text-center me-6">
@@ -138,7 +147,7 @@
                     小方盒<span class="item-text-small">/ 100g</span>
                   </p>
                 </a>
-                <a href="#" class="options text-center">
+                <a href="#" class="options text-center active">
                   <div class="options-btn mb-3">
                     <img src="/assets/images/bigBox.png" alt="鐵盒/100g" />
                   </div>
@@ -147,12 +156,14 @@
                   </p>
                 </a>
               </div>
-              <div class="mb-20">
+
+              <!-- 口味 -->
+              <section>
                 <p class="mb-6 neutral-80 fw-semibold">口味</p>
-                <div class="d-flex flex-wrap taste">
+                <div class="d-flex flex-wrap taste mb-24">
                   <button
                     type="button"
-                    class="btn btn-outline-primary rounded-3 fw-normal border-2"
+                    class="btn btn-outline-primary rounded-3 fw-normal border-2 active"
                   >
                     原味
                   </button>
@@ -172,70 +183,107 @@
                     type="button"
                     class="btn btn-outline-primary rounded-3 fw-normal border-2"
                   >
-                    起士
+                    伯爵
                   </button>
                   <button
                     type="button"
                     class="btn btn-outline-primary rounded-3 fw-normal border-2"
                   >
-                    伯爵茶
+                    起司
                   </button>
                 </div>
+              </section>
+
+              <div class="mt-auto">
+                <!-- 價格與數量購物車 -->
+                <div
+                  class="mb-12 d-flex justify-content-between align-items-center"
+                >
+                  <p class="neutral-80 fw-semibold mt-1 mt-lg-2">價格</p>
+                  <p class="fw-semibold fs-24">NT $ 520</p>
+                </div>
+
+                <div class="row align-items-stretch g-custom">
+                  <!-- 數量控制 -->
+                  <div class="col-12 col-lg-6">
+                    <div
+                      class="bg-primary-10 p-8 d-flex justify-content-between align-items-center rounded-3 w-100 h-100"
+                    >
+                      <a href="#" class="quantity-btn"
+                        ><span class="material-icons-outlined">remove</span></a
+                      >
+                      <span class="fw-bold">1</span>
+                      <a href="#" class="quantity-btn"
+                        ><span class="material-icons-outlined">add</span></a
+                      >
+                    </div>
+                  </div>
+
+                  <!-- 購物車按鈕 -->
+                  <div class="col-8 col-lg-4 d-flex">
+                    <button
+                      type="button"
+                      data-bs-toggle="offcanvas"
+                      data-bs-target="#offcanvasRight"
+                      aria-controls="offcanvasRight"
+                      class="btn btn-primary p-8 rounded-3 d-flex align-items-center justify-content-center w-100 h-100"
+                    >
+                      <span class="material-icons-outlined me-2"
+                        >shopping_cart</span
+                      >加入購物車
+                    </button>
+                  </div>
+
+                  <!-- 收藏按鈕 -->
+                  <div class="col-4 col-lg-2 d-flex">
+                    <button
+                      class="btn btn-outline-primary p-8 border-2 rounded-3 d-flex align-items-center justify-content-center w-100 h-100"
+                    >
+                      <span class="material-icons-outlined">favorite</span>
+                    </button>
+                  </div>
+                </div>
               </div>
+
+              <!-- 購物車側邊展開 -->
               <div
-                class="mb-12 d-flex justify-content-between align-items-center"
+                class="offcanvas offcanvas-end cart-offcanvas"
+                tabindex="-1"
+                id="offcanvasRight"
+                aria-labelledby="offcanvasRightLabel"
               >
-                <p class="neutral-80 fw-semibold mt-1 mt-lg-2">價格</p>
-                <p class="h4 fw-semibold">NT $ 520</p>
-              </div>
-
-              <div>
-                <div class="container-full">
-                  <div class="row align-items-stretch g-custom">
-                    <!-- 數量控制 -->
-                    <div class="col-12 col-lg-6">
-                      <div
-                        class="bg-primary-10 p-8 d-flex justify-content-between align-items-center rounded-3 w-100 h-100"
-                      >
-                        <a href="#" class="quantity-btn">
-                          <span class="material-icons-outlined text-primary"
-                            >remove</span
-                          >
-                        </a>
-                        <span class="fw-bold">1</span>
-                        <a href="#" class="quantity-btn">
-                          <span class="material-icons-outlined text-primary"
-                            >add</span
-                          >
-                        </a>
-                      </div>
+                <div
+                  class="offcanvas-header d-flex align-items-center pt-16 px-16"
+                >
+                  <h5 id="offcanvasRightLabel" class="cart-title fs-24">
+                    購物車
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close text-reset custom-close text-primary"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="offcanvas-body d-flex flex-column">
+                  <div class="cart-body px-16">
+                    <div class="cart-list"></div>
+                  </div>
+                  <div class="cart-footer">
+                    <div
+                      class="d-flex justify-content-between cart-text fw-bold mb-10"
+                    >
+                      <span>小計</span><span>NT$ 0</span>
                     </div>
-
-                    <!-- 購物車按鈕 -->
-                    <div class="col-8 col-lg-4 d-flex">
-                      <button
-                        class="btn btn-primary p-8 rounded-3 d-flex align-items-center justify-content-center w-100 h-100"
-                      >
-                        <span class="material-icons-outlined me-2"
-                          >shopping_cart</span
-                        >
-                        加入購物車
-                      </button>
-                    </div>
-
-                    <!-- 收藏按鈕 -->
-                    <div class="col-4 col-lg-2 d-flex">
-                      <button
-                        class="btn btn-outline-primary p-8 border-2 rounded-3 d-flex align-items-center justify-content-center w-100 h-100"
-                      >
-                        <span class="material-icons-outlined">favorite</span>
-                      </button>
-                    </div>
+                    <button type="button" class="btn btn-primary w-100">
+                      去結帳
+                    </button>
                   </div>
                 </div>
               </div>
             </section>
-            <!-- 產品詳情 -->
+
+            <!-- 產品詳情 Tabs -->
             <section class="mb-20 px-lg-12 px-6">
               <ul
                 class="nav nav-underline mb-6 d-flex justify-content-between"
@@ -320,17 +368,14 @@
                     伯爵 : 奶油 / 椰子糖 / 麵粉 / 玉米粉 / 伯爵茶粉
                   </p>
                 </div>
-
                 <div class="tab-pane fade" id="pane-storage" role="tabpanel">
                   <p class="fs-14">
                     常溫保存，請放置陰涼乾燥處，避免陽光直射。常溫未開封可保存21天，開封後請儘速食用完畢，避免受潮影響口感。
                   </p>
                 </div>
-
                 <div class="tab-pane fade" id="pane-delivery" role="tabpanel">
                   <p class="fs-14">常溫配送</p>
                 </div>
-
                 <div class="tab-pane fade" id="pane-notice" role="tabpanel">
                   <p class="fs-14">
                     奶油香氣濃郁，酥鬆易碎，運送過程可能有部分碎裂，敬請理解。餅乾屬於脆弱商品，配送過程中可能會有輕微碎裂、掉屑屬正常現象，不影響食用。如無法接受破損風險，歡迎加入LINE官方帳號預約門市取貨。
@@ -338,7 +383,8 @@
                 </div>
               </div>
             </section>
-            <!-- 常見問題 -->
+
+            <!-- 常見問題 Accordion -->
             <div class="accordion" id="accordionPanelsStayOpenExample">
               <div class="accordion-item bg-secondary-5 rounded-3">
                 <h2 class="accordion-header" id="panelsStayOpen-headingOne">
@@ -372,31 +418,25 @@
                     <div class="mb-10">
                       <p class="mb-2">Q2. 收到產品要怎麼保存？</p>
                       <p class="fs-14">
-                        A： 常溫商品請放置於乾燥陰涼處，避免日照與濕氣。<br />
-                        冷藏商品（如奶酪、可麗露）請儘快冷藏保存。<br />
-                        任何商品開封後，請密封保存避免回潮。<br />
+                        A：常溫商品請放置於乾燥陰涼處，避免日照與濕氣。冷藏商品（如奶酪、可麗露）請儘快冷藏保存。任何商品開封後，請密封保存避免回潮。
                       </p>
                     </div>
                     <div class="mb-10">
                       <p class="mb-2">Q4. 商品會附上成分與保存資訊嗎？</p>
                       <p class="fs-14">
-                        A：大部分常溫餅乾不建議冷凍，會影響口感。
-                        但像是可麗露、韓國麵包可以冷凍保存，食用前回烤即可恢復口感。
+                        A：大部分常溫餅乾不建議冷凍，會影響口感。但像是可麗露、韓國麵包可以冷凍保存，食用前回烤即可恢復口感。
                       </p>
                     </div>
                     <div class="mb-10">
                       <p class="mb-2">Q3. 請問可以冷凍嗎？</p>
                       <p class="fs-14">
-                        A：每項商品都有貼上簡易標籤，包含：<br />
-                        保存期限、保存方式、過敏原提示。如需詳細配方或完整成分表，歡迎私訊我們。
+                        A：每項商品都有貼上簡易標籤，包含：保存期限、保存方式、過敏原提示。如需詳細配方或完整成分表，歡迎私訊我們。
                       </p>
                     </div>
                     <div class="mb-10">
                       <p class="mb-2">Q5. 請問可以訂製造型餅乾嗎？</p>
                       <p class="fs-14">
-                        A：目前有少量手工造型餅乾，接受
-                        節慶／禮盒／企業客製訂製。<br />
-                        客製需提前21天預約，可提供字母圖樣，歡迎私訊討論細節。
+                        A：目前有少量手工造型餅乾，接受節慶／禮盒／企業客製訂製。客製需提前21天預約，可提供字母圖樣，歡迎私訊討論細節。
                       </p>
                     </div>
                     <div class="mb-10">
@@ -408,15 +448,14 @@
                     <div class="mb-10">
                       <p class="mb-2">Q7. 可以當彌月禮／伴手禮嗎？</p>
                       <p class="fs-14">
-                        A：當然可以🎁<br />
+                        A：當然可以🎁
                         我們提供「禮盒搭配」、「卡片加購」、「大量訂購」等客製服務，適合婚禮、彌月、企業禮盒，歡迎提前私訊討論安排！
                       </p>
                     </div>
                     <div>
                       <p class="mb-10">Q8. 你們的出貨時間是？</p>
                       <p class="fs-14">
-                        A：我們是小量手工製作，每週固定排單出貨。一般為
-                        付款完成後3～5個工作天內出貨（不含例假日），急單或大量訂購請私訊確認製作與到貨時間。
+                        A：我們是小量手工製作，每週固定排單出貨。一般為付款完成後3～5個工作天內出貨（不含例假日），急單或大量訂購請私訊確認製作與到貨時間。
                       </p>
                     </div>
                   </div>
@@ -424,9 +463,13 @@
               </div>
             </div>
           </div>
+          <!-- ps-0 ps-lg-8 -->
         </div>
+        <!-- col-12 col-lg-6 -->
       </div>
+      <!-- row -->
     </div>
+    <!-- container -->
     <!--你可能喜歡 -->
     <div class="bg-secondary-5 product-like">
       <div class="container py-lg-60 py-20">
@@ -747,10 +790,8 @@
       });
       //  當主圖切換時，縮圖列同步滑動窗口
       mainSwiper.on("slideChange", function () {
-        const index = mainSwiper.activeIndex;
-
-        // 讓縮圖列「捲到」對應 index
-        thumbSwiper.slideTo(index);
+        const realIndex = mainSwiper.realIndex;
+        thumbSwiper.slideTo(realIndex);
       });
 
       // 【愛心收藏（點擊填滿）功能】
@@ -813,6 +854,342 @@
             slidesOffsetAfter: 100,
           },
         },
+      });
+    </script>
+    <!--產品加入購物車計算功能-->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // 1. 價格資料
+        const prices = {
+          "原味-小方盒": 70,
+          "原味-鐵盒": 520,
+          "可可-小方盒": 75,
+          "可可-鐵盒": 540,
+          "抹茶-小方盒": 85,
+          "抹茶-鐵盒": 560,
+          "伯爵-小方盒": 75,
+          "伯爵-鐵盒": 540,
+          "起司-小方盒": 80,
+          "起司-鐵盒": 550,
+          "珍珠糖泡芙-泡芙花": 70,
+          "起司脆棒-小罐": 85,
+          "義大利脆餅-小方盒": 75,
+          "迷你可麗露-原味": 30,
+        };
+
+        // 2. 圖片資料
+        const productImages = {
+          曲奇餅乾: {
+            "原味-鐵盒": "/Happinesscookie/assets/images/bigBox-original.png",
+            "原味-小方盒": "/Happinesscookie/assets/images/smallBox-2.png",
+            "可可-鐵盒": "/Happinesscookie/assets/images/bigBox-chocolate.png",
+            "可可-小方盒":
+              "/Happinesscookie/assets/images/smallBox-chocolate.png",
+            "抹茶-鐵盒": "/Happinesscookie/assets/images/bigBox-matcha.png",
+            "抹茶-小方盒": "/Happinesscookie/assets/images/smallBox-matcha.png",
+            "伯爵-鐵盒": "/Happinesscookie/assets/images/bigBox-earlGrey.png",
+            "伯爵-小方盒":
+              "/Happinesscookie/assets/images/smallBox-earlGrey.png",
+            "起司-鐵盒": "/Happinesscookie/assets/images/bigBox-cheese.png",
+            "起司-小方盒": "/Happinesscookie/assets/images/smallBox-cheese.png",
+          },
+          珍珠糖泡芙: {
+            泡芙花: "/Happinesscookie/assets/images/product-Puffs-2.png",
+          },
+          起司脆棒: {
+            小罐: "/Happinesscookie/assets/images/product-CheeseStraw.png",
+          },
+          義大利脆餅: {
+            小方盒: "/Happinesscookie/assets/images/product-Biscotti.png",
+          },
+          迷你可麗露: {
+            原味: "/Happinesscookie/assets/images/product-Kelilu.png",
+          },
+        };
+
+        // 3. 預設選擇
+        let selectedFlavor = "原味";
+        let selectedPack = "鐵盒";
+        let quantity = 1;
+
+        const flavorButtons = document.querySelectorAll(".taste button");
+        const packOptions = document.querySelectorAll(".options");
+        const quantityDisplay = document.querySelector(
+          ".quantity-btn + span, .quantity-btn ~ span"
+        );
+        const priceDisplay = document.querySelector(".h4");
+        const cartBody = document.querySelector(".cart-body");
+        const cartFooterTotal = document.querySelector(
+          ".cart-footer .cart-text span:last-child"
+        );
+        const addCartBtn = document.querySelector(
+          '[data-bs-target="#offcanvasRight"]'
+        );
+        const quantityBtns = document.querySelectorAll(".quantity-btn");
+
+        // 空購物車提示
+        const cartEmptyText = document.createElement("p");
+        cartEmptyText.classList.add("text-center", "py-12");
+        cartEmptyText.textContent = "目前購物車是空的";
+        cartBody.appendChild(cartEmptyText);
+
+        // 初始化選擇
+        function initSelection() {
+          quantity = 1;
+          quantityDisplay.textContent = quantity;
+
+          flavorButtons.forEach((b) => b.classList.remove("active"));
+          flavorButtons.forEach((b) => {
+            if (b.textContent.trim() === "原味") b.classList.add("active");
+          });
+
+          packOptions.forEach((o) => o.classList.remove("active"));
+          packOptions.forEach((o) => {
+            const text = o.querySelector(".item-text").textContent.trim();
+            if (text.includes("鐵盒")) o.classList.add("active");
+          });
+
+          updatePrice();
+          updateQuantityBtns();
+        }
+
+        // 更新價格
+        function updatePrice() {
+          const key = `${selectedFlavor}-${selectedPack}`;
+          const total = prices[key] ? prices[key] * quantity : 0;
+          priceDisplay.textContent = `NT $ ${total}`;
+        }
+
+        // 更新購物車小計
+        function updateCartTotal() {
+          const cartItems = cartBody.querySelectorAll(".cart-item");
+          if (cartItems.length === 0) {
+            cartEmptyText.style.display = "block";
+            cartFooterTotal.textContent = "NT$ 0";
+          } else {
+            cartEmptyText.style.display = "none";
+            let total = 0;
+            cartItems.forEach((item) => {
+              const priceText = item.querySelector(".cart-text p").textContent;
+              const match = priceText.match(/NT\$(\d+)\s*X\s*(\d+)/);
+              if (match) total += Number(match[1]) * Number(match[2]);
+            });
+            cartFooterTotal.textContent = `NT$ ${total}`;
+          }
+        }
+
+        // 數量按鈕控制
+        function updateQuantityBtns() {
+          quantityBtns.forEach((btn) => {
+            const icon = btn.querySelector("span")?.textContent.trim();
+            if (icon === "remove") {
+              if (quantity <= 1) {
+                btn.classList.add("disabled");
+              } else {
+                btn.classList.remove("disabled");
+              }
+            }
+          });
+        }
+
+        quantityBtns.forEach((btn) => {
+          btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            if (btn.classList.contains("disabled")) return; // 禁止操作
+
+            const icon = btn.querySelector("span")?.textContent.trim();
+            if (icon === "remove" && quantity > 1) {
+              quantity--;
+            } else if (icon === "add") {
+              quantity++;
+            }
+
+            quantityDisplay.textContent = quantity;
+            updatePrice();
+            updateQuantityBtns();
+          });
+        });
+
+        // 新增商品至購物車(合併相同品項)
+        function addItemToCart(item) {
+          const existingItem = Array.from(
+            cartBody.querySelectorAll(".cart-item")
+          ).find((cartItem) => {
+            const name = cartItem
+              .querySelector(".cart-product-name")
+              .textContent.trim();
+            const flavor = cartItem
+              .querySelectorAll(".cart-text")[0]
+              .textContent.trim();
+            const pack =
+              cartItem.querySelectorAll(".cart-text")[1]?.textContent.trim() ||
+              "";
+            return (
+              name === item.name &&
+              flavor === item.flavor &&
+              pack.includes(item.pack)
+            );
+          });
+
+          if (existingItem) {
+            const priceText = existingItem.querySelector(".cart-text p");
+            const match = priceText.textContent.match(/NT\$(\d+)\s*X\s*(\d+)/);
+            if (match) {
+              const unitPrice = item.price;
+              const oldQty = Number(match[2]);
+              const newQty = oldQty + item.qty;
+              const newTotal = unitPrice * newQty;
+              priceText.textContent = `NT$${newTotal} X ${newQty}`;
+            }
+            updateCartTotal();
+            return;
+          }
+
+          const totalPrice = item.price * item.qty;
+          const cartItem = document.createElement("div");
+          cartItem.classList.add(
+            "d-flex",
+            "align-items-stretch",
+            "py-12",
+            "cart-item"
+          );
+
+          cartItem.innerHTML = `
+      <a href="product.html" class="me-10 d-block">
+        <img src="${item.img}" class="rounded-3 cart-img" alt="${item.name}">
+      </a>
+      <div class="d-flex flex-column justify-content-evenly w-100">
+        <div>
+          <a href="product.html" class="text-decoration-none text-dark">
+            <p class="cart-product-name fw-bold mb-0">${item.name}</p>
+          </a>
+          <span class="text-neutral-60 fs-14 cart-text d-block">${
+            item.flavor
+          }</span>
+          <span class="text-neutral-60 fs-14 cart-text d-block">
+            ${item.pack}${
+            item.pack === "小方盒" ? "100g" : item.pack === "鐵盒" ? "250g" : ""
+          }
+          </span>
+        </div>
+        <div class="cart-text d-flex justify-content-between fs-14 fw-semibold">
+          <p>NT$${totalPrice} X ${item.qty}</p>
+          <i class="bi bi-trash text-neutral-60 bi-trash-btn"></i>
+        </div>
+      </div>
+    `;
+          cartBody.appendChild(cartItem);
+
+          cartItem
+            .querySelector(".bi-trash-btn")
+            .addEventListener("click", () => {
+              cartItem.remove();
+              updateCartTotal();
+            });
+
+          updateCartTotal();
+        }
+
+        // 載入預設商品
+        const defaultCartItems = [
+          {
+            name: "曲奇餅乾",
+            flavor: "原味",
+            pack: "鐵盒",
+            qty: 1,
+            img: productImages["曲奇餅乾"]["原味-鐵盒"],
+            price: prices["原味-鐵盒"],
+          },
+          {
+            name: "珍珠糖泡芙",
+            flavor: "原味",
+            pack: "泡芙花",
+            qty: 1,
+            img: productImages["珍珠糖泡芙"]["泡芙花"],
+            price: prices["珍珠糖泡芙-泡芙花"],
+          },
+          {
+            name: "起司脆棒",
+            flavor: "小罐",
+            pack: "",
+            qty: 1,
+            img: productImages["起司脆棒"]["小罐"],
+            price: prices["起司脆棒-小罐"],
+          },
+          {
+            name: "義大利脆餅",
+            flavor: "小方盒",
+            pack: "",
+            qty: 1,
+            img: productImages["義大利脆餅"]["小方盒"],
+            price: prices["義大利脆餅-小方盒"],
+          },
+          {
+            name: "迷你可麗露",
+            flavor: "原味",
+            pack: "",
+            qty: 1,
+            img: productImages["迷你可麗露"]["原味"],
+            price: prices["迷你可麗露-原味"],
+          },
+        ];
+        defaultCartItems.forEach((item) => addItemToCart(item));
+
+        // 口味按鈕
+        flavorButtons.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            flavorButtons.forEach((b) => b.classList.remove("active"));
+            btn.classList.add("active");
+            selectedFlavor = btn.textContent.trim();
+            updatePrice();
+          });
+        });
+
+        // 包裝按鈕
+        packOptions.forEach((option) => {
+          option.addEventListener("click", (e) => {
+            e.preventDefault();
+            packOptions.forEach((o) => o.classList.remove("active"));
+            option.classList.add("active");
+            const text = option.querySelector(".item-text").textContent.trim();
+            selectedPack = text.includes("小方盒")
+              ? "小方盒"
+              : text.includes("鐵盒")
+              ? "鐵盒"
+              : "";
+            updatePrice();
+          });
+        });
+
+        // 加入購物車按鈕
+        addCartBtn.addEventListener("click", () => {
+          const itemName = "曲奇餅乾";
+          const key = `${selectedFlavor}-${selectedPack}`;
+          const img =
+            productImages[itemName] && productImages[itemName][key]
+              ? productImages[itemName][key]
+              : "/assets/images/cart-cookie.png";
+          const price = prices[key] || 0;
+          const item = {
+            name: itemName,
+            flavor: selectedFlavor,
+            pack: selectedPack,
+            qty: quantity,
+            img: img,
+            price: price,
+          };
+          addItemToCart(item);
+
+          // 重置數量並更新按鈕狀態
+          quantity = 1;
+          quantityDisplay.textContent = quantity;
+          updatePrice();
+          updateQuantityBtns(); // 關鍵:確保重置後更新按鈕狀態
+        });
+
+        // 初始化頁面
+        initSelection();
+        updateCartTotal();
       });
     </script>
   </body>
