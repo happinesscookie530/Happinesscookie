@@ -61,11 +61,74 @@
     gap: map-get($spacers, 8);
   }
 }
+// shopping-cart
+
+.shopping-cart-all-shadow {
+  box-shadow: 0px 3px 0px 3px rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 768px) {
+  .shopping-cart-all-shadow {
+    box-shadow: -1px 4px 18px 0px rgba(0, 0, 0, 0.1);
+  }
+}
+.shopping-card {
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.1);
+}
+.shopping-cart-all input[type="checkbox"] {
+  width: 24px;
+  height: 24px;
+}
+.shopping-card-img-wrapper {
+  max-width: 100px;
+  max-width: 100px;
+}
+.shopping-card-md-img-wrapper {
+  max-width: 142px;
+  max-width: 107px;
+}
+.shopping-card-img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.shopping-card-contents {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .delete {
+    font-size: 24px;
+    cursor: pointer;
+  }
+}
+.shopping-card-counter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border: 1px solid #ddd; /* 邊框 */
+  border-radius: 8px; /* 圓角 */
+  background-color: #fff; /* 白底 */
+  .remove {
+    cursor: pointer;
+  }
+  .add {
+    cursor: pointer;
+  }
+}
+.booking-btn-md-wrapper {
+  .booking-md-btn {
+    width: 100%;
+  }
+}
 // offcanvas
 .booking-wrapper {
   position: fixed;
   bottom: 0;
   left: 0;
+  background-color: #ffffff;
 }
 .booking-btn-flex {
   display: flex;
