@@ -37,7 +37,7 @@
         box-shadow: none;
       }
 
-      /* 收件地址卡片樣式（新版） */
+      /* 收件地址卡片樣式 */
       .address-card {
         border: 1px solid #e9ecef !important;
         border-radius: 4px;
@@ -60,5 +60,19 @@
         }
         aside.sidebar {
           border: none;
+        }
+      }
+
+
+      .mobile-menu button {
+        flex: 1 1 auto;
+        font-size: 14px;
+        padding: 6px 8px;
+        white-space: nowrap;
+      }
+      @media (max-width: 576px) {
+        .mobile-menu button {
+          font-size: 12px;
+          padding: 4px 6px;
         }
       }
