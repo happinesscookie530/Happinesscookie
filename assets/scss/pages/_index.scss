@@ -1,0 +1,90 @@
+.brand-story {
+  .box-1 {
+    background-image: url(/assets/images/brand-story-1.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    width: 100%;
+    max-width: 220px;
+    height: 314px;
+    max-height: 314px;
+    @media (min-width: 376px) {
+      width: 100%;
+      max-width: 416px;
+      height: 664px;
+      max-height: 664px;
+    }
+  }
+  .vertical-text {
+    writing-mode: vertical-rl;
+  }
+
+  .box-2 {
+    background-image: url(/assets/images/brand-story-2.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    width: 100%;
+    max-width: 271px;
+    height: 193px;
+    max-height: 193px;
+    @media (min-width: 376px) {
+      width: 100%;
+      max-width: 636px;
+      height: 436px;
+      max-height: 436px;
+    }
+  }
+
+  .box-3 {
+    background-image: url(/assets/images/brand-story-3.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    width: 100%;
+    max-width: 351px;
+    height: 225px;
+    max-height: 225px;
+
+    @media (min-width: 376px) {
+      width: 100%;
+      max-width: 856px;
+      height: 556px;
+      max-height: 556px;
+    }
+  }
+
+  .box-4 {
+    margin-top: 68px;
+    background-color: $secondary-10;
+    width: 100%;
+    max-width: 297px;
+    height: 943px;
+    max-height: 943px;
+    @media (min-width: 376px) {
+      margin-top: 212px;
+      width: 100%;
+      max-width: 915px;
+      height: 1694px;
+      max-height: 1694px;
+      left: -25%;
+    }
+  }
+  .text-line {
+    display: inline-block;
+    background-color: $primary;
+    height: 1px;
+    width: 30px;
+  }
+
+  .text-60 {
+    font-size: 30px;
+    letter-spacing: 0.2em;
+    @media (min-width: 375px) {
+      font-size: 45px;
+    }
+    @media (min-width: 768px) {
+      font-size: 60px;
+    }
+  }
+}
