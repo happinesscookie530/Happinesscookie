@@ -50,28 +50,44 @@
     width: 25%;
   }
 }
+
 /*數量按鈕*/
+/* 數量按鈕 */
 .quantity-btn {
-  color: $primary;
+  color: #02B5D4; /* 你的主色 */
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2px;
+  transition: all 0.2s ease;
 }
-.quantity-btn:hover {
+
+.quantity-btn .material-icons-outlined {
+  color: inherit;
+}
+
+.quantity-btn:hover:not(.disabled) {
   background-color: rgba(255, 255, 255, 0.571);
   border-radius: 6px;
 }
-.quantity-btn.disabled {
-  cursor: not-allowed;
-  opacity: 0.4;
+
+/* 禁用狀態 */
+.quantity-btn.disabled,
+.quantity-btn.disabled .material-icons-outlined {
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+  color: #9ca3af !important;
 }
+
+.quantity-btn.disabled:hover {
+  background-color: transparent !important;
+}
+
 @media (min-width: 992px) {
   .quantity-btn {
     padding: 4px;
   }
 }
-
 /*購物車.喜好按鈕.數量格線間距*/
 .row.g-custom {
   --bs-gutter-x: 12px; /* 左右間距 */
@@ -121,13 +137,16 @@
     line-height: 42px;
   }
 
-  .btn-close.custom-close {
-    --bs-close-color: #0d6efd; /* 設叉叉顏色 */
-    width: 15px;
-    height: 15px;
-    padding: 6px;
-    border-radius: 8px;
-  }
+.custom-close {
+  background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' stroke='%2302B5D4' stroke-width='2' stroke-linecap='round'><line x1='2' y1='2' x2='14' y2='14'/><line x1='14' y1='2' x2='2' y2='14'/></svg>")
+    center/15px 15px no-repeat;
+  width: 15px;
+  height: 15px;
+  opacity: 1;
+  background-color: transparent;
+  border: none;
+}
+
   .btn-close.custom-close:hover {
     background-color: $primary-10;
   }
