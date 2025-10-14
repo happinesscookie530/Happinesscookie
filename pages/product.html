@@ -275,9 +275,9 @@
                     >
                       <span>小計</span><span>NT$ 0</span>
                     </div>
-                    <button type="button" class="btn btn-primary w-100">
+                    <a href="shopping-cart.html" class="btn btn-primary w-100">
                       去結帳
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -473,7 +473,11 @@
     <!--你可能喜歡 -->
     <div class="bg-secondary-5 product-like">
       <div class="container py-lg-60 py-20">
-        <div class="d-flex mb-8 mb-lg-28">
+        <div
+          class="d-flex mb-8 mb-lg-28"
+          data-aos="fade-right"
+          data-aos-duration="500"
+        >
           <h3 class="like-list-hot-title fs-lg-2 fs-5 fw-bold m-0 me-4 me-lg-6">
             你可能喜歡
           </h3>
@@ -484,7 +488,13 @@
             </p>
           </div>
         </div>
-        <div id="product-list-all" class="product-list row d-flex">
+        <div
+          id="product-list-all"
+          class="product-list row d-flex"
+          class="d-flex mb-8 mb-lg-28"
+          data-aos="fade-right"
+          data-aos-duration="500"
+        >
           <div
             class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
             data-page-content="1"
@@ -601,7 +611,11 @@
       >
         <div class="row position-relative">
           <div class="evaluate-list-hot-container d-flex flex-wrap z-1">
-            <div class="col-lg-2 mb-20 mb-lg-0">
+            <div
+              class="col-lg-2 mb-20 mb-lg-0"
+              data-aos="fade-right"
+              data-aos-duration="500"
+            >
               <div class="d-flex mb-8 mb-lg-0">
                 <h3
                   class="evaluate-list-hot-title fs-lg-2 fs-5 fw-bold vertical-text m-0 me-4 me-lg-6"
@@ -632,7 +646,13 @@
                   看看大家今天選了哪一款，一起分享甜甜的好心情！
                 </p>
               </div>
-              <div class="swiper evaluate-list-hot-swiper">
+              <div
+                class="swiper evaluate-list-hot-swiper"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-anchor-placement="top-bottom"
+                data-aos-delay="100"
+              >
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
                     <div class="swiper-img">
@@ -1190,6 +1210,15 @@
         // 初始化頁面
         initSelection();
         updateCartTotal();
+      });
+    </script>
+    <script>
+      AOS.init({
+        offset: 200, // 觸發點距離（px）
+        duration: 500, // 動畫時間
+        easing: "ease-in-out",
+        delay: 0, // 預設延遲
+        once: true, // 是否只執行一次（滾出再回來不再重播）
       });
     </script>
   </body>
