@@ -23,8 +23,8 @@
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     
-    <script type="module" crossorigin src="/Happinesscookie/assets/main-BuDcwYhh.js"></script>
-    <link rel="stylesheet" crossorigin href="/Happinesscookie/assets/main-DHV6KVbi.css">
+    <script type="module" crossorigin src="/Happinesscookie/assets/main-CPdl_BfJ.js"></script>
+    <link rel="stylesheet" crossorigin href="/Happinesscookie/assets/main-BqPOguhS.css">
     <link rel="stylesheet" crossorigin href="/Happinesscookie/assets/user-QNXNalH5.css">
   </head>
   <body>
@@ -69,24 +69,62 @@
       </li>
     </ul>
     <div class="d-flex align-items-center">
-      <a href="shopping-cart.html" class="text-neutral-80 p-4 me-lg-8">
-        <span
-          class="material-icons-outlined header-material-icon-scroll align-bottom fs-lg-3 header-nav-icon"
+      <a href="shopping-cart.html" class="text-neutral-80 p-4 me-lg-8"
+        ><span
+          class="material-icons-outlined header-material-icon-scroll align-bottom header-nav-icon"
         >
           shopping_cart
-        </span>
-      </a>
-      <a
-        class="btn btn-primary text-white py-6 px-16 rounded-pill d-none d-xl-flex"
-        href="user.html"
-        >登入 / 註冊</a
+        </span></a
       >
+      <a href="user.html#tab-favorite" id="header-favorite" class="text-neutral-80 p-4 me-lg-8 d-none d-lg-flex">
+        <span class="material-icons-outlined header-material-icon-scroll align-bottom header-nav-icon">favorite_border</span>
+      </a>
+      <div class="dropdown">
+        <a
+          href="user.html"
+          role="button"
+          id="dropdown-header-menu"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+          data-bs-display="static"
+          class="p-4 me-lg-8 text-neutral-80"
+          ><span
+            class="material-icons-outlined header-material-icon-scroll align-bottom header-nav-icon"
+          >
+            person_3
+          </span></a
+        >
+        <ul
+          class="dropdown-menu header-dropdown-menu p-4 mt-18 border-0"
+          aria-labelledby="dropdown-header-menu"
+        >
+          <li>
+            <a class="dropdown-item py-4 px-6 d-flex align-items-center" href="user.html">
+              <span class="material-icons-outlined header-material-icon-scroll align-bottom me-4">person_3</span>
+              會員中心
+            </a>
+          </li>
+          <li>
+            <a href="user.html#tab-orders" id="header-orders" class="dropdown-item py-4 px-6 d-flex align-items-center">
+              <span class="material-icons-outlined header-material-icon-scroll align-bottom me-4">shopping_bag</span>
+              訂單查詢
+            </a>
+          </li>
+          <li>
+            <a href="#" id="header-logout" class="dropdown-item py-4 px-6 d-flex align-items-center">
+              <span class="material-icons-outlined header-material-icon-scroll align-bottom me-4">logout</span>
+              會員登出
+            </a>
+          </li>
+        </ul>
+      </div>
+
       <button
         class="btn border-0 p-4 d-xl-none"
         type="button"
         data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvas-header-notlogin"
-        aria-controls="offcanvas-header-notlogin"
+        data-bs-target="#offcanvas-header-login"
+        aria-controls="offcanvas-header-login"
       >
         <span
           class="material-icons-outlined header-material-icon-scroll align-bottom fs-lg-3 text-neutral-80"
@@ -97,8 +135,8 @@
       <div
         class="offcanvas offcanvas-end bg-primary d-xl-none"
         tabindex="-1"
-        id="offcanvas-header-notlogin"
-        aria-labelledby="offcanvas-header-notlogin"
+        id="offcanvas-header-login"
+        aria-labelledby="offcanvas-header-login"
       >
         <div class="offcanvas-header px-20 pt-20">
           <button
@@ -108,46 +146,95 @@
             aria-label="Close"
           ></button>
         </div>
-        <div class="px-20 pb-20 d-flex flex-column h-100">
+        <div class="offcanvas-body px-20 pb-20 d-flex flex-column">
           <div class="d-flex flex-column align-items-center mb-auto">
             <img
               src="/Happinesscookie/assets/Logo-white-iz3NZ-WI.png"
               alt="logo-white"
-              class="img-fluid mobile-logo-white mb-16"
+              class="img-fluid mobile-logo-white mb-10"
             />
             <ul
-              class="header-mobile-list d-flex flex-column align-items-center list-unstyled m-0 w-100"
+              class="header-mobile-list d-flex flex-column align-items-center list-unstyled w-100 m-0 mb-4 pb-4 border-bottom"
             >
-              <li class="w-100 text-center py-5 mb-4">
-                <a class="text-white fs-5 d-block" href="index.html#topsale"
+              <li class="py-5 w-100 w-100">
+                <a
+                  class="text-white fs-6 d-block text-center"
+                  href="index.html#topsale"
                   >推薦商品</a
                 >
               </li>
-              <li class="w-100 text-center py-5 mb-4">
-                <a class="text-white fs-5 d-block" href="index.html#news"
+              <li class="py-5 w-100">
+                <a
+                  class="text-white fs-6 d-block text-center"
+                  href="index.html#news"
                   >最新消息</a
                 >
               </li>
-              <li class="w-100 text-center py-5 mb-4">
-                <a class="text-white fs-5 d-block" href="index.html#brandstory"
+              <li class="py-5 w-100">
+                <a
+                  class="text-white fs-6 d-block text-center"
+                  href="index.html#brandstory"
                   >品牌故事</a
                 >
               </li>
-              <li class="w-100 text-center py-5 mb-4">
-                <a class="text-white fs-5 d-block" href="productlist.html"
+              <li class="py-5 w-100">
+                <a
+                  class="text-white fs-6 d-block text-center"
+                  href="productlist.html"
                   >我們的商品</a
                 >
               </li>
-              <li class="w-100 text-center py-5 mb-4">
-                <a class="text-white fs-5 d-block" href="#footer">聯絡我們</a>
+              <li class="py-5 w-100">
+                <a class="text-white fs-6 d-block text-center" href="#footer"
+                  >聯絡我們</a
+                >
               </li>
             </ul>
           </div>
-          <a
-            class="py-8 border-top w-100 d-inline-block text-white text-decoration-none text-center fs-5"
-            href="user.html"
-            >登入 / 註冊</a
+          <ul
+            class="list-unstyled d-flex flex-column align-items-center header-mobile-list m-0"
           >
+            <li class="py-5 w-100 d-flex justify-content-center">
+              <a class="fs-6" href="user.html">
+                <span
+                  class="material-icons-outlined header-material-icon-scroll align-bottom me-4"
+                >
+                  person_3
+                </span>
+                會員中心</a
+              >
+            </li>
+            <li class="py-5 w-100 d-flex justify-content-center">
+              <a class="text-white fs-6" href="checkout.html">
+                <span
+                  class="material-icons-outlined header-material-icon-scroll align-bottom me-4"
+                >
+                  shopping_bag
+                </span>
+                訂單查詢</a
+              >
+            </li>
+            <li class="py-5 w-100 d-flex justify-content-center">
+              <a class="text-white fs-6" href="user.html">
+                <span
+                  class="material-icons-outlined header-material-icon-scroll align-bottom me-4"
+                >
+                  favorite_border
+                </span>
+                收藏清單</a
+              >
+            </li>
+            <li class="py-5 w-100 d-flex justify-content-center">
+              <a class="text-white fs-6" href="#">
+                <span
+                  class="material-icons-outlined header-material-icon-scroll align-bottom me-4"
+                >
+                  logout
+                </span>
+                會員登出</a
+              >
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -322,6 +409,7 @@
         </h5>
 
         <!-- 地址列表模式 -->
+        
         <div class="address-list">
           <div class="address-card border rounded p-3 mb-3 d-flex align-items-center justify-content-between flex-wrap">
             <div>
@@ -336,7 +424,7 @@
             </div>
           </div>
         </div>
-
+        
         <!-- 地址編輯表單（預設隱藏） -->
         <div class="address-edit d-none">
           <form class="border rounded p-4 mb-4">
@@ -526,6 +614,63 @@ document.querySelectorAll('#tab-favorite .btn-outline-danger').forEach(btn => {
       alert('地址已儲存！');
       addressEdit.classList.add('d-none');
       addressList.classList.remove('d-none');
+    });
+  }
+
+  function switchTab(targetId) {
+    tabs.forEach(t => t.classList.add('d-none'));
+    document.querySelector(`#${targetId}`).classList.remove('d-none');
+    // 同步側邊欄與手機版按鈕 active 狀態
+    menuLinks.forEach(l => {
+      if (l.getAttribute('data-target') === targetId) {
+        l.classList.add('active');
+      } else {
+        l.classList.remove('active');
+      }
+    });
+    mobileBtns.forEach(b => {
+      if (b.getAttribute('data-target') === targetId) {
+        b.classList.add('active');
+      } else {
+        b.classList.remove('active');
+      }
+    });
+  }
+
+  // header icon 功能
+  const headerFavorite = document.getElementById('header-favorite');
+  if (headerFavorite) {
+    headerFavorite.addEventListener('click', (e) => {
+      e.preventDefault();
+      switchTab('tab-favorite');
+    });
+  }
+
+  const headerOrders = document.getElementById('header-orders');
+  if (headerOrders) {
+    headerOrders.addEventListener('click', (e) => {
+      e.preventDefault();
+      switchTab('tab-orders');
+    });
+  }
+
+  const headerLogout = document.getElementById('header-logout');
+  if (headerLogout) {
+    headerLogout.addEventListener('click', async (e) => {
+      e.preventDefault();
+      alert('您已成功登出');
+      try {
+        const response = await fetch('./layout/header-bg-white.ejs');
+        if (!response.ok) throw new Error('載入 header 失敗');
+        const headerHtml = await response.text();
+        const headerElement = document.querySelector('header');
+        if (headerElement) headerElement.outerHTML = headerHtml;
+        const sidebarLogout = document.querySelector('[data-target="tab-logout"]');
+        if (sidebarLogout) sidebarLogout.classList.add('d-none');
+        switchTab('tab-profile');
+      } catch (error) {
+        console.error(error);
+      }
     });
   }
 </script>
