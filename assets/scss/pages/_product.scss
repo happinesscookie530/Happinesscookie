@@ -101,15 +101,27 @@
   gap: 12px 8px;
   justify-content: flex-start; /* 讓最後一排靠左對齊 */
 }
-
 .taste .btn {
-  display: flex; /* 讓文字可用 flex 對齊 */
-  justify-content: center; /* 水平置中 */
-  align-items: center; /* 垂直置中 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex: 1 1 calc((100% - 16px) / 3);
   max-width: calc((100% - 16px) / 3);
-  padding: 12px 0; /* 統一上下間距 */
+  padding: 12px 0;
   white-space: nowrap;
+  border-width: 1px;
+  border-color: $primary;
+  color: $primary;
+  background-color: transparent;
+}
+
+.taste .btn:hover,
+.taste .btn:focus,
+.taste .btn:active,
+.taste .btn.active {
+  border-color: $primary;
+  color: $white;
+  background-color: $primary;
 }
 
 @media (min-width: 992px) {
@@ -120,6 +132,7 @@
     flex: 1 1 calc((100% - 24px) / 5);
     max-width: calc((100% - 24px) / 5);
     padding: 14px 0;
+     border-width: 2px;
   }
 }
 /*購物車滑出*/
@@ -220,41 +233,55 @@
     }
   }
 }
-/*產品詳情*/
+/* 產品詳情 */
 #custom-tab .nav-link {
   position: relative;
   font-weight: 600;
   color: var(--bs-neutral-80);
   transition: color 0.3s ease;
   padding-bottom: 8px; /* 預留底線空間 */
+  border: none; /* 🔸移除 Bootstrap nav-underline 預設的下邊線 */
 }
 
-/* 產品詳情底線的初始狀態 */
+/* 🔹關閉 Bootstrap 原生的黑線效果 */
+.nav-underline .nav-link.active,
+.nav-underline .show > .nav-link {
+  border-bottom-color: transparent !important;
+  border: none !important;
+}
+
+/* 自訂底線動畫 */
 #custom-tab .nav-link::after {
   content: "";
   position: absolute;
   left: 0;
   bottom: 0;
   width: 0%;
-  height: 1px;
+  height: 2px;
   background-color: var(--bs-primary);
   transition: width 0.3s ease;
 }
 
-/* 產品詳情滑鼠移入時底線滑出 */
+/* 滑入時底線滑出 */
 #custom-tab .nav-link:hover::after {
   width: 100%;
 }
 
-/* 產品詳情點擊啟用(active)的狀態保持底線 */
+/* active 狀態保持底線 */
 #custom-tab .nav-link.active::after {
   width: 100%;
 }
 
-/* 產品詳情hover 或 active 時改變文字顏色 */
+/* hover 或 active 時改變文字顏色 */
 #custom-tab .nav-link:hover,
 #custom-tab .nav-link.active {
   color: var(--bs-primary);
+}
+
+/* 🔹取消點擊聚焦時的外框（避免有藍框或黑框） */
+#custom-tab .nav-link:focus {
+  outline: none;
+  box-shadow: none;
 }
 
 /*你可能喜歡*/

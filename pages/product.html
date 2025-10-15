@@ -158,36 +158,36 @@
               </div>
 
               <!-- 口味 -->
-              <section>
+              <section class="mb-12 mb-lg-31">
                 <p class="mb-6 neutral-80 fw-semibold">口味</p>
-                <div class="d-flex flex-wrap taste mb-24">
+                <div class="d-flex flex-wrap taste">
                   <button
                     type="button"
-                    class="btn btn-outline-primary rounded-3 fw-normal border-2 active"
+                    class="btn btn-outline-primary rounded-3 fw-normal active"
                   >
                     原味
                   </button>
                   <button
                     type="button"
-                    class="btn btn-outline-primary rounded-3 fw-normal border-2"
+                    class="btn btn-outline-primary rounded-3 fw-normal"
                   >
                     可可
                   </button>
                   <button
                     type="button"
-                    class="btn btn-outline-primary rounded-3 fw-normal border-2"
+                    class="btn btn-outline-primary rounded-3 fw-normal"
                   >
                     抹茶
                   </button>
                   <button
                     type="button"
-                    class="btn btn-outline-primary rounded-3 fw-normal border-2"
+                    class="btn btn-outline-primary rounded-3 fw-normal"
                   >
                     伯爵
                   </button>
                   <button
                     type="button"
-                    class="btn btn-outline-primary rounded-3 fw-normal border-2"
+                    class="btn btn-outline-primary rounded-3 fw-normal"
                   >
                     起司
                   </button>
@@ -347,7 +347,6 @@
                   </button>
                 </li>
               </ul>
-
               <div class="tab-content" id="custom-tab-content">
                 <div
                   class="tab-pane fade show active"
@@ -834,28 +833,35 @@
     </script>
 
     <script>
-      // 詳細內容 tab:hover 切換
       document.addEventListener("DOMContentLoaded", function () {
         const tabTriggers = document.querySelectorAll("#custom-tab .nav-link");
+        const panes = document.querySelectorAll(".tab-pane");
+
+        function activateTab(tab) {
+          // 移除其他 active 樣式
+          tabTriggers.forEach((t) => t.classList.remove("active"));
+          tab.classList.add("active");
+
+          // 顯示對應的內容
+          const targetSelector = tab.getAttribute("data-bs-target");
+          const targetPane = document.querySelector(targetSelector);
+          panes.forEach((pane) => pane.classList.remove("active", "show"));
+          targetPane.classList.add("active", "show");
+        }
 
         tabTriggers.forEach((tab) => {
-          tab.addEventListener("mouseenter", function () {
-            // 移除其他 active 樣式
-            tabTriggers.forEach((t) => t.classList.remove("active"));
-            tab.classList.add("active");
+          // 滑鼠移入
+          tab.addEventListener("mouseenter", () => activateTab(tab));
 
-            // 取得對應的內容區塊 ID
-            const targetSelector = tab.getAttribute("data-bs-target");
-            const targetPane = document.querySelector(targetSelector);
-
-            // 移除所有內容的 active/show
-            document.querySelectorAll(".tab-pane").forEach((pane) => {
-              pane.classList.remove("active", "show");
-            });
-
-            // 顯示對應的內容
-            targetPane.classList.add("active", "show");
+          // 🔹 手機觸控支援
+          tab.addEventListener("touchstart", (e) => {
+            e.preventDefault(); // 阻止雙重點擊放大或 hover 殘留
+            activateTab(tab);
           });
+
+          // 🔹 手指放開後移除 focus，防止底線卡住
+          tab.addEventListener("touchend", () => tab.blur());
+          tab.addEventListener("mousedown", () => tab.blur());
         });
       });
     </script>
@@ -879,7 +885,7 @@
     <!--產品加入購物車計算功能-->
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        // 1. 價格資料
+        // 1. 價格資料（單價）
         const prices = {
           "原味-小方盒": 70,
           "原味-鐵盒": 520,
@@ -900,30 +906,28 @@
         // 2. 圖片資料
         const productImages = {
           曲奇餅乾: {
-            "原味-鐵盒": "/Happinesscookie/assets/images/bigBox-original.png",
-            "原味-小方盒": "/Happinesscookie/assets/images/smallBox-2.png",
-            "可可-鐵盒": "/Happinesscookie/assets/images/bigBox-chocolate.png",
-            "可可-小方盒":
-              "/Happinesscookie/assets/images/smallBox-chocolate.png",
-            "抹茶-鐵盒": "/Happinesscookie/assets/images/bigBox-matcha.png",
-            "抹茶-小方盒": "/Happinesscookie/assets/images/smallBox-matcha.png",
-            "伯爵-鐵盒": "/Happinesscookie/assets/images/bigBox-earlGrey.png",
-            "伯爵-小方盒":
-              "/Happinesscookie/assets/images/smallBox-earlGrey.png",
-            "起司-鐵盒": "/Happinesscookie/assets/images/bigBox-cheese.png",
-            "起司-小方盒": "/Happinesscookie/assets/images/smallBox-cheese.png",
+            "原味-鐵盒": "/assets/images/bigBox-original.png",
+            "原味-小方盒": "/assets/images/smallBox-2.png",
+            "可可-鐵盒": "/assets/images/bigBox-chocolate.png",
+            "可可-小方盒": "/assets/images/smallBox-chocolate.png",
+            "抹茶-鐵盒": "/assets/images/bigBox-matcha.png",
+            "抹茶-小方盒": "/assets/images/smallBox-matcha.png",
+            "伯爵-鐵盒": "/assets/images/bigBox-earlGrey.png",
+            "伯爵-小方盒": "/assets/images/smallBox-earlGrey.png",
+            "起司-鐵盒": "/assets/images/bigBox-cheese.png",
+            "起司-小方盒": "/assets/images/smallBox-cheese.png",
           },
           珍珠糖泡芙: {
-            泡芙花: "/Happinesscookie/assets/images/product-Puffs-2.png",
+            泡芙花: "/assets/images/product-Puffs-2.png",
           },
           起司脆棒: {
-            小罐: "/Happinesscookie/assets/images/product-CheeseStraw.png",
+            小罐: "/assets/images/product-CheeseStraw.png",
           },
           義大利脆餅: {
-            小方盒: "/Happinesscookie/assets/images/product-Biscotti.png",
+            小方盒: "/assets/images/product-Biscotti.png",
           },
           迷你可麗露: {
-            原味: "/Happinesscookie/assets/images/product-Kelilu.png",
+            原味: "/assets/images/product-Kelilu.png",
           },
         };
 
@@ -947,7 +951,7 @@
         );
         const quantityBtns = document.querySelectorAll(".quantity-btn");
 
-        // 空購物車提示
+        // 空購物車提示（先加入，後續 updateCartTotal 會顯示或隱藏）
         const cartEmptyText = document.createElement("p");
         cartEmptyText.classList.add("text-center", "py-12");
         cartEmptyText.textContent = "目前購物車是空的";
@@ -956,7 +960,7 @@
         // 初始化選擇
         function initSelection() {
           quantity = 1;
-          quantityDisplay.textContent = quantity;
+          if (quantityDisplay) quantityDisplay.textContent = quantity;
 
           flavorButtons.forEach((b) => b.classList.remove("active"));
           flavorButtons.forEach((b) => {
@@ -973,32 +977,40 @@
           updateQuantityBtns();
         }
 
-        // 更新價格
+        // 更新頁面顯示價格（商品頁面價格顯示）
         function updatePrice() {
           const key = `${selectedFlavor}-${selectedPack}`;
-          const total = prices[key] ? prices[key] * quantity : 0;
-          priceDisplay.textContent = `NT $ ${total}`;
+          const unit = prices[key] || 0;
+          const total = unit * quantity;
+          if (priceDisplay) priceDisplay.textContent = `NT $ ${total}`;
         }
 
-        // 更新購物車小計
+        // 更新購物車總金額（以單價 × 數量）
         function updateCartTotal() {
           const cartItems = cartBody.querySelectorAll(".cart-item");
           if (cartItems.length === 0) {
             cartEmptyText.style.display = "block";
-            cartFooterTotal.textContent = "NT$ 0";
+            if (cartFooterTotal) cartFooterTotal.textContent = "NT$ 0";
           } else {
             cartEmptyText.style.display = "none";
             let total = 0;
             cartItems.forEach((item) => {
               const priceText = item.querySelector(".cart-text p").textContent;
-              const match = priceText.match(/NT\$(\d+)\s*X\s*(\d+)/);
-              if (match) total += Number(match[1]) * Number(match[2]);
+              // 解析格式 NT$<單價> X <數量>
+              const match = priceText.match(
+                /NT\$\s*(\d+(?:\.\d+)?)\s*X\s*(\d+)/
+              );
+              if (match) {
+                const unitPrice = Number(match[1]);
+                const qty = Number(match[2]);
+                total += unitPrice * qty;
+              }
             });
-            cartFooterTotal.textContent = `NT$ ${total}`;
+            if (cartFooterTotal) cartFooterTotal.textContent = `NT$ ${total}`;
           }
         }
 
-        // 數量按鈕控制
+        // 數量按鈕控制（頁面上的 + / -）
         function updateQuantityBtns() {
           quantityBtns.forEach((btn) => {
             const icon = btn.querySelector("span")?.textContent.trim();
@@ -1015,7 +1027,7 @@
         quantityBtns.forEach((btn) => {
           btn.addEventListener("click", (e) => {
             e.preventDefault();
-            if (btn.classList.contains("disabled")) return; // 禁止操作
+            if (btn.classList.contains("disabled")) return;
 
             const icon = btn.querySelector("span")?.textContent.trim();
             if (icon === "remove" && quantity > 1) {
@@ -1024,14 +1036,15 @@
               quantity++;
             }
 
-            quantityDisplay.textContent = quantity;
+            if (quantityDisplay) quantityDisplay.textContent = quantity;
             updatePrice();
             updateQuantityBtns();
           });
         });
 
-        // 新增商品至購物車(合併相同品項)
+        // 新增商品至購物車（合併相同品項）
         function addItemToCart(item) {
+          // 以 名稱、口味、包裝 為 key 判斷是否相同
           const existingItem = Array.from(
             cartBody.querySelectorAll(".cart-item")
           ).find((cartItem) => {
@@ -1052,20 +1065,24 @@
           });
 
           if (existingItem) {
-            const priceText = existingItem.querySelector(".cart-text p");
-            const match = priceText.textContent.match(/NT\$(\d+)\s*X\s*(\d+)/);
+            // 解析現有的單價與數量（格式：NT$<單價> X <數量>）
+            const priceTextElem = existingItem.querySelector(".cart-text p");
+            const match = priceTextElem.textContent.match(
+              /NT\$\s*(\d+(?:\.\d+)?)\s*X\s*(\d+)/
+            );
             if (match) {
-              const unitPrice = item.price;
+              const unitPrice = Number(match[1]); // 現在顯示的單價
               const oldQty = Number(match[2]);
               const newQty = oldQty + item.qty;
-              const newTotal = unitPrice * newQty;
-              priceText.textContent = `NT$${newTotal} X ${newQty}`;
+              // 新的顯示：單價仍為 unitPrice（或用 item.price 作檢查）
+              const displayUnitPrice = item.price || unitPrice;
+              priceTextElem.textContent = `NT$${displayUnitPrice} X ${newQty}`;
             }
             updateCartTotal();
             return;
           }
 
-          const totalPrice = item.price * item.qty;
+          // 新增一列（顯示單價 X 數量）
           const cartItem = document.createElement("div");
           cartItem.classList.add(
             "d-flex",
@@ -1074,32 +1091,36 @@
             "cart-item"
           );
 
+          const packLabel = item.pack
+            ? item.pack +
+              (item.pack === "小方盒"
+                ? " 100g"
+                : item.pack === "鐵盒"
+                ? " 250g"
+                : "")
+            : "";
+
           cartItem.innerHTML = `
-      <a href="product.html" class="me-10 d-block">
-        <img src="${item.img}" class="rounded-3 cart-img" alt="${item.name}">
-      </a>
-      <div class="d-flex flex-column justify-content-evenly w-100">
-        <div>
-          <a href="product.html" class="text-decoration-none text-dark">
-            <p class="cart-product-name fw-bold mb-0">${item.name}</p>
-          </a>
-          <span class="text-neutral-60 fs-14 cart-text d-block">${
-            item.flavor
-          }</span>
-          <span class="text-neutral-60 fs-14 cart-text d-block">
-            ${item.pack}${
-            item.pack === "小方盒" ? "100g" : item.pack === "鐵盒" ? "250g" : ""
-          }
-          </span>
+        <a href="product.html" class="me-10 d-block">
+          <img src="${item.img}" class="rounded-3 cart-img" alt="${item.name}">
+        </a>
+        <div class="d-flex flex-column justify-content-evenly w-100">
+          <div>
+            <a href="product.html" class="text-decoration-none text-dark">
+              <p class="cart-product-name fw-bold mb-0">${item.name}</p>
+            </a>
+            <span class="text-neutral-60 fs-14 cart-text d-block">${item.flavor}</span>
+            <span class="text-neutral-60 fs-14 cart-text d-block">${packLabel}</span>
+          </div>
+          <div class="cart-text d-flex justify-content-between fs-14 fw-semibold">
+            <p>NT$${item.price} X ${item.qty}</p>
+            <i class="bi bi-trash text-neutral-60 bi-trash-btn"></i>
+          </div>
         </div>
-        <div class="cart-text d-flex justify-content-between fs-14 fw-semibold">
-          <p>NT$${totalPrice} X ${item.qty}</p>
-          <i class="bi bi-trash text-neutral-60 bi-trash-btn"></i>
-        </div>
-      </div>
-    `;
+      `;
           cartBody.appendChild(cartItem);
 
+          // 刪除功能
           cartItem
             .querySelector(".bi-trash-btn")
             .addEventListener("click", () => {
@@ -1110,7 +1131,7 @@
           updateCartTotal();
         }
 
-        // 載入預設商品
+        // 載入預設商品（示範）
         const defaultCartItems = [
           {
             name: "曲奇餅乾",
@@ -1181,7 +1202,7 @@
           });
         });
 
-        // 加入購物車按鈕
+        // 加入購物車按鈕（從頁面選擇的 flavor、pack、quantity 新增）
         addCartBtn.addEventListener("click", () => {
           const itemName = "曲奇餅乾";
           const key = `${selectedFlavor}-${selectedPack}`;
@@ -1202,16 +1223,17 @@
 
           // 重置數量並更新按鈕狀態
           quantity = 1;
-          quantityDisplay.textContent = quantity;
+          if (quantityDisplay) quantityDisplay.textContent = quantity;
           updatePrice();
-          updateQuantityBtns(); // 關鍵:確保重置後更新按鈕狀態
+          updateQuantityBtns();
         });
 
-        // 初始化頁面
+        // 初始化
         initSelection();
         updateCartTotal();
       });
     </script>
+
     <script>
       AOS.init({
         offset: 200, // 觸發點距離（px）
