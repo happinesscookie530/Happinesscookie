@@ -200,7 +200,7 @@
                   class="mb-12 d-flex justify-content-between align-items-center"
                 >
                   <p class="neutral-80 fw-semibold mt-1 mt-lg-2">價格</p>
-                  <p class="fw-semibold fs-24">NT $ 520</p>
+                  <p class="fw-semibold fs-24 product-price">NT $ 520</p>
                 </div>
 
                 <div class="row align-items-stretch g-custom">
@@ -943,7 +943,9 @@
         const quantityDisplay = document.querySelector(
           ".quantity-btn + span, .quantity-btn ~ span"
         );
-        const priceDisplay = document.querySelector(".h4");
+        const priceDisplay =
+          document.querySelector(".product-price") ||
+          document.querySelector(".fs-24");
         const cartBody = document.querySelector(".cart-body");
         const cartFooterTotal = document.querySelector(
           ".cart-footer .cart-text span:last-child"
