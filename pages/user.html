@@ -26,7 +26,7 @@
     
   </head>
   <body>
-    <%- include('./layout/header-bg-white'); -%>
+    <%- include('./layout/header-login-bg-white'); -%>
     <section class="container py-5 mt-7 pt-7">
   <div class="row">
     <!-- 側邊選單：桌機版顯示 -->
@@ -196,6 +196,7 @@
         </h5>
 
         <!-- 地址列表模式 -->
+        
         <div class="address-list">
           <div class="address-card border rounded p-3 mb-3 d-flex align-items-center justify-content-between flex-wrap">
             <div>
@@ -210,7 +211,7 @@
             </div>
           </div>
         </div>
-
+        
         <!-- 地址編輯表單（預設隱藏） -->
         <div class="address-edit d-none">
           <form class="border rounded p-4 mb-4">
@@ -347,6 +348,63 @@ document.querySelectorAll('#tab-favorite .btn-outline-danger').forEach(btn => {
       alert('地址已儲存！');
       addressEdit.classList.add('d-none');
       addressList.classList.remove('d-none');
+    });
+  }
+
+  function switchTab(targetId) {
+    tabs.forEach(t => t.classList.add('d-none'));
+    document.querySelector(`#${targetId}`).classList.remove('d-none');
+    // 同步側邊欄與手機版按鈕 active 狀態
+    menuLinks.forEach(l => {
+      if (l.getAttribute('data-target') === targetId) {
+        l.classList.add('active');
+      } else {
+        l.classList.remove('active');
+      }
+    });
+    mobileBtns.forEach(b => {
+      if (b.getAttribute('data-target') === targetId) {
+        b.classList.add('active');
+      } else {
+        b.classList.remove('active');
+      }
+    });
+  }
+
+  // header icon 功能
+  const headerFavorite = document.getElementById('header-favorite');
+  if (headerFavorite) {
+    headerFavorite.addEventListener('click', (e) => {
+      e.preventDefault();
+      switchTab('tab-favorite');
+    });
+  }
+
+  const headerOrders = document.getElementById('header-orders');
+  if (headerOrders) {
+    headerOrders.addEventListener('click', (e) => {
+      e.preventDefault();
+      switchTab('tab-orders');
+    });
+  }
+
+  const headerLogout = document.getElementById('header-logout');
+  if (headerLogout) {
+    headerLogout.addEventListener('click', async (e) => {
+      e.preventDefault();
+      alert('您已成功登出');
+      try {
+        const response = await fetch('./layout/header-bg-white.ejs');
+        if (!response.ok) throw new Error('載入 header 失敗');
+        const headerHtml = await response.text();
+        const headerElement = document.querySelector('header');
+        if (headerElement) headerElement.outerHTML = headerHtml;
+        const sidebarLogout = document.querySelector('[data-target="tab-logout"]');
+        if (sidebarLogout) sidebarLogout.classList.add('d-none');
+        switchTab('tab-profile');
+      } catch (error) {
+        console.error(error);
+      }
     });
   }
 </script>
