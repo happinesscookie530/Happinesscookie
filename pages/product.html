@@ -1109,8 +1109,10 @@
             <a href="product.html" class="text-decoration-none text-dark">
               <p class="cart-product-name fw-bold mb-0">${item.name}</p>
             </a>
-            <span class="text-neutral-60 fs-14 cart-text d-block">${item.flavor}</span>
-            <span class="text-neutral-60 fs-14 cart-text d-block">${packLabel}</span>
+          <div class="d-flex gap-1">
+  <span class="text-neutral-60 fs-14 cart-text">${item.flavor}</span>
+  <span class="text-neutral-60 fs-14 cart-text">${packLabel}</span>
+</div>
           </div>
           <div class="cart-text d-flex justify-content-between fs-14 fw-semibold">
             <p>NT$${item.price} X ${item.qty}</p>
@@ -1151,16 +1153,16 @@
           },
           {
             name: "起司脆棒",
-            flavor: "小罐",
-            pack: "",
+            flavor: "",
+            pack: "小罐",
             qty: 1,
             img: productImages["起司脆棒"]["小罐"],
             price: prices["起司脆棒-小罐"],
           },
           {
             name: "義大利脆餅",
-            flavor: "小方盒",
-            pack: "",
+            flavor: "",
+            pack: "小方盒",
             qty: 1,
             img: productImages["義大利脆餅"]["小方盒"],
             price: prices["義大利脆餅-小方盒"],
