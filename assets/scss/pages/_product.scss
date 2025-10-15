@@ -27,8 +27,8 @@
 /* 文字選取後變藍 */
 .options:focus .item-text,
 .options:focus .item-text-small,
-.options:active .item-text,
-.options:active .item-text-small {
+.options.active .item-text,
+.options.active .item-text-small {
   color: $primary;
   font-weight: 500;
 }
@@ -36,38 +36,58 @@
 /* 滑鼠移入：圖片放大 + 外框 */
 .options:hover img {
   transform: scale(1.1);
-  border-color: $primary-40;
+  border-color: $primary-20;
 }
 
 /* 選取（focus/active）：圖片恢復原始大小 + 外框 */
 .options:focus img,
-.options:active img {
+.options.active img {
   transform: scale(1); /* 回到原始大小 */
-  border-color: $primary-40; /* 顯示外框 */
+  border-color: $primary-20; /* 顯示外框 */
 }
 @media (min-width: 992px) {
   .options {
     width: 25%;
   }
 }
+
 /*數量按鈕*/
+/* 數量按鈕 */
 .quantity-btn {
-  color: $primary;
+  color: #02B5D4; /* 你的主色 */
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2px;
+  transition: all 0.2s ease;
 }
-.quantity-btn:hover {
+
+.quantity-btn .material-icons-outlined {
+  color: inherit;
+}
+
+.quantity-btn:hover:not(.disabled) {
   background-color: rgba(255, 255, 255, 0.571);
   border-radius: 6px;
 }
+
+/* 禁用狀態 */
+.quantity-btn.disabled,
+.quantity-btn.disabled .material-icons-outlined {
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+  color: #9ca3af !important;
+}
+
+.quantity-btn.disabled:hover {
+  background-color: transparent !important;
+}
+
 @media (min-width: 992px) {
   .quantity-btn {
     padding: 4px;
   }
 }
-
 /*購物車.喜好按鈕.數量格線間距*/
 .row.g-custom {
   --bs-gutter-x: 12px; /* 左右間距 */
@@ -81,91 +101,213 @@
   gap: 12px 8px;
   justify-content: flex-start; /* 讓最後一排靠左對齊 */
 }
-
 .taste .btn {
-  display: flex;                /* 讓文字可用 flex 對齊 */
-  justify-content: center;      /* 水平置中 */
-  align-items: center;          /* 垂直置中 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex: 1 1 calc((100% - 16px) / 3);
   max-width: calc((100% - 16px) / 3);
-  padding: 12px 0;               /* 統一上下間距 */
+  padding: 12px 0;
   white-space: nowrap;
+  border-width: 1px;
+  border-color: $primary;
+  color: $primary;
+  background-color: transparent;
+}
+
+.taste .btn:hover,
+.taste .btn:focus,
+.taste .btn:active,
+.taste .btn.active {
+  border-color: $primary;
+  color: $white;
+  background-color: $primary;
 }
 
 @media (min-width: 992px) {
-
-.taste{
-    gap:0 6px;
+  .taste {
+    gap: 0 6px;
   }
-  .taste .btn{
+  .taste .btn {
     flex: 1 1 calc((100% - 24px) / 5);
     max-width: calc((100% - 24px) / 5);
-     padding: 14px 0;  
+    padding: 14px 0;
+     border-width: 2px;
+  }
 }
+/*購物車滑出*/
+
+.cart-offcanvas {
+  &.offcanvas.show,
+  &.offcanvas.showing,
+  &.offcanvas.hiding {
+    padding: 0 !important;
+    margin: 0;
+    border: none;
+  }
+  .cart-title {
+    letter-spacing: 1.92px;
+    line-height: 42px;
+  }
+
+.custom-close {
+  background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' stroke='%2302B5D4' stroke-width='2' stroke-linecap='round'><line x1='2' y1='2' x2='14' y2='14'/><line x1='14' y1='2' x2='2' y2='14'/></svg>")
+    center/15px 15px no-repeat;
+  width: 15px;
+  height: 15px;
+  opacity: 1;
+  background-color: transparent;
+  border: none;
 }
-/*產品詳情*/
+
+  .btn-close.custom-close:hover {
+    background-color: $primary-10;
+  }
+  .offcanvas-body {
+    padding: 0;
+  }
+
+  img {
+    object-fit: cover;
+  }
+  .cart-img {
+    object-fit: cover;
+    width: 90px;
+    height: 90px;
+    aspect-ratio: 1 / 1;
+  }
+  .cart-item:not(:last-child) {
+    border-bottom: 1px solid $secondary-15;
+  }
+
+  .cart-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* 預設靠上 */
+    height: 100%;
+    overflow-y: auto;
+    position: relative;
+  }
+
+  .cart-empty-text {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #666;
+  }
+  .cart-footer {
+    background: $secondary-5;
+    bottom: 0;
+    padding: 24px 32px;
+    position: sticky;
+  }
+
+  .cart-text {
+    letter-spacing: 0.56px;
+    line-height: 24px;
+  }
+  .cart-product-name {
+    letter-spacing: 1.28px;
+    line-height: 28px;
+  }
+  .cart-product-name:hover {
+    color: $primary;
+  }
+
+  .bi-trash-btn {
+    color: $primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 6px;
+    border-radius: 4px;
+  }
+  .bi-trash-btn:hover {
+    background-color: rgba(201, 221, 236, 0.571);
+  }
+  @media (min-width: 992px) {
+    .bi-trash-btn {
+      padding: 2px 4px;
+    }
+  }
+}
+/* 產品詳情 */
 #custom-tab .nav-link {
   position: relative;
   font-weight: 600;
   color: var(--bs-neutral-80);
   transition: color 0.3s ease;
   padding-bottom: 8px; /* 預留底線空間 */
+  border: none; /* 🔸移除 Bootstrap nav-underline 預設的下邊線 */
 }
 
+/* 🔹關閉 Bootstrap 原生的黑線效果 */
+.nav-underline .nav-link.active,
+.nav-underline .show > .nav-link {
+  border-bottom-color: transparent !important;
+  border: none !important;
+}
 
-/* 產品詳情底線的初始狀態 */
+/* 自訂底線動畫 */
 #custom-tab .nav-link::after {
   content: "";
   position: absolute;
   left: 0;
   bottom: 0;
   width: 0%;
-  height: 1px;
+  height: 2px;
   background-color: var(--bs-primary);
   transition: width 0.3s ease;
 }
 
-/* 產品詳情滑鼠移入時底線滑出 */
+/* 滑入時底線滑出 */
 #custom-tab .nav-link:hover::after {
   width: 100%;
 }
 
-/* 產品詳情點擊啟用(active)的狀態保持底線 */
+/* active 狀態保持底線 */
 #custom-tab .nav-link.active::after {
   width: 100%;
 }
 
-/* 產品詳情hover 或 active 時改變文字顏色 */
+/* hover 或 active 時改變文字顏色 */
 #custom-tab .nav-link:hover,
 #custom-tab .nav-link.active {
   color: var(--bs-primary);
 }
 
+/* 🔹取消點擊聚焦時的外框（避免有藍框或黑框） */
+#custom-tab .nav-link:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 /*你可能喜歡*/
-.product-like{
+.product-like {
   .like-list-hot-title {
-      letter-spacing: 0.3rem;
- @media (min-width: 992px) { 
+    letter-spacing: 0.3rem;
+    @media (min-width: 992px) {
       letter-spacing: 0.2rem;
+    }
   }
- }
-   
 
   .text-line {
     display: inline-block;
     background-color: $primary;
     height: 1px;
     width: 30px;
-     @media (min-width: 992px) {
-       width: 60px;
-      }
+    @media (min-width: 992px) {
+      width: 60px;
+    }
   }
-  
-    /*產品文字連結*/
+
+  /*產品文字連結*/
   .product-link {
-     a {
-    color: $neutral-80;
-  }
+    a {
+      color: $neutral-80;
+    }
     :hover {
       color: $primary;
     }
@@ -203,267 +345,266 @@
       opacity: 1;
     }
     img {
-    max-width: 100%;
-    object-fit: cover;
+      max-width: 100%;
+      object-fit: cover;
       aspect-ratio: 1 / 1;
       overflow: hidden;
-  }
- 
+    }
   }
 
-.mask{
+  .mask {
     position: relative;
-    &::before{
-        position: absolute;
-        content: "more detail";
-        color: $light;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        opacity: 0;
-        transition: all .4s;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        font-size: 12px;
-        font-family: 'Noto Serif TC', serif;
-        letter-spacing: 4px;
+    &::before {
+      position: absolute;
+      content: "more detail";
+      color: $light;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: all 0.4s;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      font-size: 12px;
+      font-family: "Noto Serif TC", serif;
+      letter-spacing: 4px;
     }
-        @media (min-width: 992px) {
-      &::before{font-size: 16px;}
+    @media (min-width: 992px) {
+      &::before {
+        font-size: 16px;
+      }
     }
-    &:hover{
-        &::before{
+    &:hover {
+      &::before {
         opacity: 0.7;
         letter-spacing: 2px;
-        }
+      }
     }
-}}
+  }
+}
 
 /*好評推薦*/
-.evaluate{
-.evaluate-list-hot {
-  h3 {
-    letter-spacing: 0.2em;
-  }
-  .vertical-text {
-    writing-mode: horizontal-tb;
-  }
-
-  .text-line {
-    display: inline-block;
-    background-color: $primary;
-    height: 1px;
-    width: 30px;
-  }
-
-  @media (min-width: 992px) {
+.evaluate {
+  .evaluate-list-hot {
     h3 {
-      letter-spacing: 0em;
+      letter-spacing: 0.2em;
     }
     .vertical-text {
-      writing-mode: vertical-rl;
-    }
-    .evaluate-list-hot-title {
-      letter-spacing: 0.3rem;
+      writing-mode: horizontal-tb;
     }
 
     .text-line {
       display: inline-block;
       background-color: $primary;
-      height: 60px;
-      width: 1px;
+      height: 1px;
+      width: 30px;
     }
-  }
 
-  .evaluate-list-hot-container {
-    padding: 0px 0px 0px 16px;
-     @media (min-width: 767px) {
-          max-width: 1608px;
-    margin-left: auto;
-      padding: 0px 0px 0px 10px;
-     }
-  }
-
-  .evaluate-list-hot-swiper {
-   .swiper-slide {
-      max-width: 240px;
-      max-height: 50px;
-      
-      @media (min-width: 767px) {
-        max-width: 473px;
-        max-height: 400px;
-        margin-right: 0px;
+    @media (min-width: 992px) {
+      h3 {
+        letter-spacing: 0em;
+      }
+      .vertical-text {
+        writing-mode: vertical-rl;
+      }
+      .evaluate-list-hot-title {
+        letter-spacing: 0.3rem;
       }
 
-      .product-image-container {
-        width: 100%;
-        height: 50px;
+      .text-line {
+        display: inline-block;
+        background-color: $primary;
+        height: 60px;
+        width: 1px;
+      }
+    }
+
+    .evaluate-list-hot-container {
+      padding: 0px 0px 0px 16px;
+      @media (min-width: 767px) {
+        max-width: 1608px;
+        margin-left: auto;
+        padding: 0px 0px 0px 10px;
+      }
+    }
+
+    .evaluate-list-hot-swiper {
+      .swiper-slide {
+        max-width: 240px;
+        max-height: 50px;
 
         @media (min-width: 767px) {
-          height: 319px;
+          max-width: 473px;
+          max-height: 400px;
+          margin-right: 0px;
+        }
+
+        .product-image-container {
+          width: 100%;
+          height: 50px;
+
+          @media (min-width: 767px) {
+            height: 319px;
+          }
         }
       }
-
-    
     }
-  }
-  .evaluate-list-hot-background {
-         display: inline-flex;
+    .evaluate-list-hot-background {
+      display: inline-flex;
       height: 250px;
-      width:300px;
+      width: 300px;
       background-color: $secondary-5;
       position: absolute;
       transform: translate(-50%, -50%);
       top: 80%;
       left: 75%;
-    @media (min-width: 992px) {
-      display: inline-flex;
-      height: 477px;
-      width: 1750px;
-      background-color: $secondary-5;
-      position: absolute;
-      transform: translate(-50%, -50%);
-      top: 78.6%;
-      left: 55%;
-    }
-  }
-}
-
-// swiper（手機優先版本）
-// Swiper 區塊
-.share {
-  height: auto; 
-  background-color: $primary;
-
-@media (min-width: 992px) {
-   height: auto;
-  }
-}
-
-.swiper {
-  width: 100%;
-  height: 300px; 
-
-@media (min-width: 992px) {
-    height: 429px;
-  }
-
-  &-img {
-    position: relative; 
-    width: 100%;
-    height: 213px;
-
-
-    img {
-      width: 77%;
-      height: 77%;
-      object-fit: cover;
-      margin-left: 0;
-      border-radius: 16px;
-      @media (min-width: 768px) { 
-        height: 90%;
-        width: 70%;
+      @media (min-width: 992px) {
+        display: inline-flex;
+        height: 477px;
+        width: 1750px;
+        background-color: $secondary-5;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 78.6%;
+        left: 55%;
       }
- @media (min-width: 992px) {
-      height: 77%;
- }
+    }
+  }
+
+  // swiper（手機優先版本）
+  // Swiper 區塊
+  .share {
+    height: auto;
+    background-color: $primary;
+
+    @media (min-width: 992px) {
+      height: auto;
+    }
+  }
+
+  .swiper {
+    width: 100%;
+    height: 300px;
+
+    @media (min-width: 992px) {
+      height: 429px;
     }
 
-    &::before {
-      content: "";
-      position: absolute;
-      width: 77%;
-      height: 77%;
-      border: 1px solid $primary;
-      top: 5px;
-      left: 5px;
-      border-radius: 16px;
-      z-index: -1;
-        @media (min-width: 768px) {
-        height: 90%;
-        width: 70%;
-        }
-            @media (min-width: 992px) {
-        width: 77%;
-      height: 77%;
-        top: 10px;
-      left: 0;
-       }
-    }
-
-  @media (min-width: 992px) {
-      position: absolute;
-      width: 85%;
-      top: 0;
-      left: 0;
-      height: 85%;
+    &-img {
+      position: relative;
+      width: 100%;
+      height: 213px;
 
       img {
-        width: calc(100% - 10px);
-        margin-left: 10px;
+        width: 77%;
+        height: 77%;
+        object-fit: cover;
+        margin-left: 0;
+        border-radius: 16px;
+        @media (min-width: 768px) {
+          height: 90%;
+          width: 70%;
+        }
+        @media (min-width: 992px) {
+          height: 77%;
+        }
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 77%;
+        height: 77%;
+        border: 1px solid $primary;
+        top: 5px;
+        left: 5px;
+        border-radius: 16px;
+        z-index: -1;
+        @media (min-width: 768px) {
+          height: 90%;
+          width: 70%;
+        }
+        @media (min-width: 992px) {
+          width: 77%;
+          height: 77%;
+          top: 10px;
+          left: 0;
+        }
+      }
+
+      @media (min-width: 992px) {
+        position: absolute;
+        width: 85%;
+        top: 0;
+        left: 0;
+        height: 85%;
+
+        img {
+          width: calc(100% - 10px);
+          margin-left: 10px;
+        }
       }
     }
-  }
 
-  .share__card {
-    position: relative; // 手機預設
-     width: 80%; 
-    color: $dark;
-    top:-80px;
-    right: -15%;
-    border-radius: 16px;
-    border: 1px solid $primary;
-          border-radius: 0px 16px 16px 16px;
-
-    &__img {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      position: relative;
-      top: -10px;
-      right: 0;
-      object-fit: cover;
-    }
-  @media (min-width: 768px) {
-      width: 70%;
-      position: absolute;
-      right: 10%;
-      bottom: 0;
-      top: 55%;
-
-      &__img {
-        width: 60px;
-        height: 60px;
-        top: -64px;
-        right: 32px;
-      }
-    }
-  @media (min-width: 992px) {
-      width: 60%;
-      position: absolute;
-      right: 5%;
-      bottom: 0;
-      top: 60%;
+    .share__card {
+      position: relative; // 手機預設
+      width: 80%;
+      color: $dark;
+      top: -80px;
+      right: -15%;
+      border-radius: 16px;
+      border: 1px solid $primary;
       border-radius: 0px 16px 16px 16px;
 
       &__img {
-        width: 100px;
-        height: 100px;
-        top: -64px;
-        right: 32px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        position: relative;
+        top: -10px;
+        right: 0;
+        object-fit: cover;
+      }
+      @media (min-width: 768px) {
+        width: 70%;
+        position: absolute;
+        right: 10%;
+        bottom: 0;
+        top: 55%;
+
+        &__img {
+          width: 60px;
+          height: 60px;
+          top: -64px;
+          right: 32px;
+        }
+      }
+      @media (min-width: 992px) {
+        width: 60%;
+        position: absolute;
+        right: 5%;
+        bottom: 0;
+        top: 60%;
+        border-radius: 0px 16px 16px 16px;
+
+        &__img {
+          width: 100px;
+          height: 100px;
+          top: -64px;
+          right: 32px;
+        }
       }
     }
   }
-}
-.star{
-   object-fit: cover;
-   width: 80px;
-   height:14px;
-  @media (min-width: 992px) {
-     width: 100px;
-   height:16px;
-   }
-}
+  .star {
+    object-fit: cover;
+    width: 80px;
+    height: 14px;
+    @media (min-width: 992px) {
+      width: 100px;
+      height: 16px;
+    }
+  }
 }

@@ -39,20 +39,16 @@
       </li>
     </ul>
     <div class="d-flex align-items-center">
-      <a href="checkout.html" class="text-neutral-80 p-4 me-lg-8"
+      <a href="shopping-cart.html" class="text-neutral-80 p-4 me-lg-8"
         ><span
           class="material-icons-outlined header-material-icon-scroll align-bottom header-nav-icon"
         >
           shopping_cart
         </span></a
       >
-      <a href="user.html" class="text-neutral-80 p-4 me-lg-8 d-none d-lg-flex"
-        ><span
-          class="material-icons-outlined header-material-icon-scroll align-bottom header-nav-icon"
-        >
-          favorite_border
-        </span></a
-      >
+      <a href="user.html#tab-favorite" id="header-favorite" class="text-neutral-80 p-4 me-lg-8 d-none d-lg-flex">
+        <span class="material-icons-outlined header-material-icon-scroll align-bottom header-nav-icon">favorite_border</span>
+      </a>
       <div class="dropdown">
         <a
           href="user.html"
@@ -73,48 +69,22 @@
           aria-labelledby="dropdown-header-menu"
         >
           <li>
-            <a
-              class="dropdown-item py-4 px-6 d-flex align-items-center"
-              href="user.html"
-              ><span
-                class="material-icons-outlined header-material-icon-scroll align-bottom me-4"
-              >
-                person_3 </span
-              >會員中心</a
-            >
+            <a class="dropdown-item py-4 px-6 d-flex align-items-center" href="user.html">
+              <span class="material-icons-outlined header-material-icon-scroll align-bottom me-4">person_3</span>
+              會員中心
+            </a>
           </li>
           <li>
-            <a
-              class="dropdown-item py-4 px-6 d-flex align-items-center"
-              href="productlist.html"
-              ><span
-                class="material-icons-outlined header-material-icon-scroll align-bottom me-4"
-              >
-                assignment </span
-              >訂單資訊</a
-            >
+            <a href="user.html#tab-orders" id="header-orders" class="dropdown-item py-4 px-6 d-flex align-items-center">
+              <span class="material-icons-outlined header-material-icon-scroll align-bottom me-4">shopping_bag</span>
+              訂單查詢
+            </a>
           </li>
           <li>
-            <a
-              class="dropdown-item py-4 px-6 d-flex align-items-center"
-              href="user.html"
-              ><span
-                class="material-icons-outlined header-material-icon-scroll align-bottom me-4"
-              >
-                favorite_border </span
-              >收藏清單</a
-            >
-          </li>
-          <li>
-            <a
-              class="dropdown-item py-4 px-6 d-flex align-items-center"
-              href="#"
-              ><span
-                class="material-icons-outlined header-material-icon-scroll align-bottom me-4"
-              >
-                logout </span
-              >會員登出</a
-            >
+            <a href="#" id="header-logout" class="dropdown-item py-4 px-6 d-flex align-items-center">
+              <span class="material-icons-outlined header-material-icon-scroll align-bottom me-4">logout</span>
+              會員登出
+            </a>
           </li>
         </ul>
       </div>
@@ -205,13 +175,13 @@
               >
             </li>
             <li class="py-5 w-100 d-flex justify-content-center">
-              <a class="text-white fs-6" href="user.html">
+              <a class="text-white fs-6" href="checkout.html">
                 <span
                   class="material-icons-outlined header-material-icon-scroll align-bottom me-4"
                 >
-                  assignment
+                  shopping_bag
                 </span>
-                訂單資訊</a
+                訂單查詢</a
               >
             </li>
             <li class="py-5 w-100 d-flex justify-content-center">
