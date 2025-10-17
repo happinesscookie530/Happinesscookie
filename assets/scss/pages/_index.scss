@@ -88,3 +88,177 @@
     }
   }
 }
+
+.slogan-section {
+    position: relative;
+    height: 60vh;
+    min-height: 400px;
+    max-height: 500px;
+    overflow: hidden; // 隱藏破格元素超出畫面的部分
+}
+
+.slogan-bg-block {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    background-color: $secondary-10;
+    z-index: 1;
+}
+
+.slogan-image-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 85%;
+    z-index: 2;
+}
+
+.slogan-text-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    pointer-events: none; // 讓文字層不影響滑鼠事件
+}
+
+.slogan-text {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+
+/* 3. News Section */
+.news-section {
+    padding: 100px 0;
+}
+
+.news-title-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: center;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  gap: 0.5rem;
+}
+
+.news-title-chinese,
+.news-title-english {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  letter-spacing: 0.3em;
+}
+
+.news-cards-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; // 在 iOS 上提供流暢的滾動體驗
+
+    // 隱藏滾動條
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.news-card {
+    flex: 0 0 80%; // 在手機上每張卡片佔 80% 寬度
+    max-width: 80%;
+    padding-right: 15px; // 卡片間距
+}
+
+.card-tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.8rem;
+    border-radius: 1rem;
+    color: $primary-10;
+}
+.tag-new { background-color: white; }
+.tag-promo { background-color: white; }
+.tag-limited { background-color: white; }
+
+.card-title {
+    font-weight: 700;
+    color: $neutral-80;
+}
+
+
+/* 4. Responsive (RWD) Styles */
+
+// 手機 ( < 768px )
+@media (max-width: 767.98px) {
+    .slogan-section {
+        height: 40vh;
+        min-height: 250px;
+    }
+    .slogan-text {
+        font-size: 1.8rem;
+    }
+    .news-section {
+        padding: 50px 0;
+    }
+    // 手機版 news-cards-container 會延伸出 container 外，所以要讓 container 沒有 padding
+    .news-section > .container {
+        padding: 0;
+    }
+    .news-cards-container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch;
+    }
+    .news-card:last-child {
+        padding-right: 0;
+    }
+    .d-md-none.mb-4 {
+        padding-left: 1rem;
+    }
+}
+
+// 平板 ( >= 768px )
+@media (min-width: 768px) {
+  @media (max-width: 767.98px) {
+    .news-cards-container {
+      display: flex !important;
+      flex-wrap: nowrap !important;
+      overflow-x: auto !important;
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+  .news-cards-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      overflow-x: visible;
+  }
+  .news-card {
+      flex: auto; // 重置 flex 屬性
+      max-width: 100%;
+      padding-right: 0;
+  }
+}
+
+// 桌機 ( >= 992px )
+@media (min-width: 992px) {
+    .slogan-text {
+        font-size: 3rem;
+    }
+    .news-cards-container {
+        gap: 30px;
+    }
+}
