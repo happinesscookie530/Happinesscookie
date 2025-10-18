@@ -22,8 +22,8 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <script type="module" crossorigin src="/Happinesscookie/assets/main-BFSSu1nz.js"></script>
-    <link rel="stylesheet" crossorigin href="/Happinesscookie/assets/main-0konVdlE.css">
+    <script type="module" crossorigin src="/Happinesscookie/assets/main-B85Z7TQn.js"></script>
+    <link rel="stylesheet" crossorigin href="/Happinesscookie/assets/main-DVjtPWq7.css">
   </head>
   <body>
     <header class="fixed-top bg-white">
@@ -181,7 +181,7 @@
         >
           <div class="d-flex">
             <button
-              class="btn btn-text-white fw-bold fs-lg-5 border-0 p-5 me-lg-12"
+              class="btn btn-text-white d-flex align-items-center fw-bold fs-lg-5 border-0 p-5 me-lg-12"
               type="button"
               id="product-list-filter"
               data-bs-toggle="dropdown"
@@ -201,21 +201,30 @@
               aria-labelledby="product-list-filter"
             >
               <div
-                class="accordion dropdown-stay-open px-10 py-5 px-lg-20 py-lg-16"
+                class="accordion dropdown-stay-open px-10 py-10 px-lg-20 py-lg-16"
                 id="accordion-productlist"
               >
                 <div
                   class="accordion-item accordion-item-hot border-0 border-bottom rounded-0 mb-10 mb-lg-16"
                 >
-                  <h2 class="accordion-header me-auto" id="headingHot">
-                    <button
-                      class="accordion-button dropdown-stay-open p-0 mb-5 mb-lg-16 fw-bold fs-lg-5 filter-btn collapsed accordion-item-hot"
-                      type="button"
-                      data-filter="hot"
-                    >
-                      熱門產品
-                    </button>
-                  </h2>
+                  <button
+                    class="accordion-button dropdown-stay-open p-0 mt-lg-0 mb-5 mb-lg-16 fw-bold fs-lg-5 filter-btn collapsed"
+                    id="clear-filters"
+                  >
+                    所有產品
+                  </button>
+                </div>
+
+                <div
+                  class="accordion-item border-0 border-bottom rounded-0 mb-10 mb-lg-16"
+                >
+                  <button
+                    class="accordion-button dropdown-stay-open p-0 mb-5 mb-lg-16 fw-bold fs-lg-5 filter-btn collapsed"
+                    type="button"
+                    data-filter="hot"
+                  >
+                    熱門產品
+                  </button>
                 </div>
 
                 <div
@@ -223,7 +232,7 @@
                 >
                   <h2 class="accordion-header me-auto" id="headingGift">
                     <button
-                      class="accordion-button dropdown-stay-open p-0 mb-5 mb-lg-16 fw-bold fs-lg-5 collapsed"
+                      class="accordion-button accordion-button-icon dropdown-stay-open p-0 mb-5 mb-lg-16 fw-bold fs-lg-5 collapsed"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapseGift"
@@ -299,7 +308,7 @@
                 >
                   <h2 class="accordion-header me-auto" id="headingVeg">
                     <button
-                      class="accordion-button dropdown-stay-open p-0 mb-5 mb-lg-16 fw-bold fs-lg-5 collapsed"
+                      class="accordion-button accordion-button-icon dropdown-stay-open p-0 mb-5 mb-lg-16 fw-bold fs-lg-5 collapsed"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapseVeg"
@@ -389,7 +398,7 @@
                 <div class="accordion-item border-0 rounded-0">
                   <h2 class="accordion-header me-auto" id="headingPrice">
                     <button
-                      class="accordion-button dropdown-stay-open p-0 fw-bold fs-lg-5 collapsed"
+                      class="accordion-button accordion-button-icon dropdown-stay-open p-0 fw-bold fs-lg-5 collapsed"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapsePrice"
@@ -445,24 +454,6 @@
                     </div>
                   </div>
                 </div>
-              </div>
-
-              <hr class="dropdown-divider" />
-              <div
-                class="d-flex flex-wrap flex-xl-nowrap justify-content-between p-8 p-lg-16"
-              >
-                <button
-                  class="btn btn-outline-primary rounded-pill w-100 me-xl-12 mb-8 mb-xl-0 fs-14 fs-lg-5"
-                  id="clear-filters"
-                >
-                  清除篩選
-                </button>
-                <button
-                  class="btn btn-primary rounded-pill w-100 ms-2 fs-14 fs-lg-5"
-                  id="apply-filters"
-                >
-                  確定篩選
-                </button>
               </div>
             </ul>
           </div>
@@ -2715,7 +2706,7 @@
     <div
       class="container-fluid product-list-hot overflow-x-hidden py-20 py-lg-60"
     >
-      <div class="row position-relative">
+      <div class="row position-relative z-n1">
         <div class="product-list-hot-container d-flex flex-wrap">
           <div
             class="col-lg-2 mb-20 mb-lg-0"
@@ -2896,7 +2887,6 @@
     </script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        // 【追蹤首次載入旗標】: 用於阻止頁面初始載入時自動滾動
         let isInitialLoad = true;
 
         // --- 產品篩選邏輯變數 ---
@@ -2905,11 +2895,24 @@
         );
         const filterRadios = document.querySelectorAll(".filter-radio");
         const clearButton = document.getElementById("clear-filters");
-        const applyButton = document.getElementById("apply-filters");
-        const allProductLists = document.querySelectorAll(".product-list");
         const hotProductButton = document.querySelector('[data-filter="hot"]');
+        const allProductLists = document.querySelectorAll(".product-list");
         const productTitle = document.querySelector("h3");
         const productListMain = document.querySelector(".product-list-main");
+
+        const filterDropdownToggle = document.getElementById(
+          "product-list-filter"
+        );
+        const filterDropdownMenu = document.getElementById(
+          "product-list-dropdown"
+        );
+
+        // 針對性收合 Accordion 的 ID
+        const specificAccordionIds = [
+          "#collapseGift",
+          "#collapseVeg",
+          "#collapsePrice",
+        ];
 
         // 【關鍵對應】：列表 ID 後綴 與 分頁 ID 後綴 的對應表
         const PAGINATION_SUFFIX_MAP = {
@@ -2918,14 +2921,54 @@
           sale: "3",
           "price-high-to-low": "3",
           "price-low-to-high": "2",
+          "gift-festival": "1",
+          "gift-baby": "1",
+          "gift-small": "1",
+          "veg-egg": "1",
+          "veg-milk": "1",
+          "veg-both": "1",
+          "veg-egg-alcohol": "1",
+          hot: "1",
         };
 
-        // 【關鍵】：為每個分頁區塊獨立追蹤當前頁碼
-        let currentPages = {
-          1: 1,
-          2: 1,
-          3: 1,
-        };
+        // 為每個分頁區塊獨立追蹤當前頁碼
+        let currentPages = { 1: 1, 2: 1, 3: 1 };
+
+        // --- 輔助函數：最暴力且保證生效的收合函數 ---
+        // 保持此函數不變，因為它是成功收合的關鍵
+        function collapseAllAccordions() {
+          specificAccordionIds.forEach((id) => {
+            const collapseEl = document.querySelector(id);
+            if (collapseEl) {
+              // 1. 【核心】: 直接移除 Bootstrap 展開類別 'show'，強制內容收起
+              collapseEl.classList.remove("show");
+
+              // 2. 調整 Accordion 按鈕的狀態：
+              const headerId = collapseEl.getAttribute("aria-labelledby");
+              if (headerId) {
+                const headerEl = document.getElementById(headerId);
+                const button = headerEl
+                  ? headerEl.querySelector(".accordion-button")
+                  : null;
+
+                if (button) {
+                  // 移除開啟狀態，並將 aria-expanded 設為 false
+                  button.classList.add("collapsed");
+                  button.setAttribute("aria-expanded", "false");
+                }
+              }
+            }
+          });
+        }
+
+        // --- 輔助函數：手動關閉篩選下拉選單 (僅供清除篩選使用) ---
+        function hideFilterDropdown() {
+          if (!filterDropdownToggle || !filterDropdownMenu) return;
+
+          if (filterDropdownMenu.classList.contains("show")) {
+            filterDropdownToggle.click();
+          }
+        }
 
         // --- 輔助函數：執行滾動 ---
         function scrollToListMain(isInitial = false) {
@@ -2940,16 +2983,14 @@
           }
         }
 
-        // --- 輔助函數：動態取得當前可見列表中的所有相關元件 ---
+        // *** 產品列表、分頁邏輯 (以下函數保持不變，為節省篇幅省略註釋) ***
         function getActiveElements() {
           const activeList = document.querySelector(
             ".product-list:not(.d-none)"
           );
           if (!activeList) return null;
-
           const listIdSuffix = activeList.id.split("-").slice(2).join("-");
           const paginationNumSuffix = PAGINATION_SUFFIX_MAP[listIdSuffix];
-
           if (!paginationNumSuffix) {
             return {
               productCards: activeList.querySelectorAll("[data-page-content]"),
@@ -2961,26 +3002,22 @@
               currentSuffix: null,
             };
           }
-
           const paginationId = `productPagination-${paginationNumSuffix}`;
-          const prevId = `prevPage-${paginationNumSuffix}`;
-          const nextId = `nextPage-${paginationNumSuffix}`;
-
           const paginationContainer = document.getElementById(paginationId);
           const productCards = activeList.querySelectorAll(
             "[data-page-content]"
           );
-
           if (!paginationContainer) {
-            console.error(`找不到分頁導航容器: ID 為 ${paginationId}`);
             return null;
           }
-
           const pageItems = paginationContainer.querySelectorAll("[data-page]");
-          const prevButton = document.getElementById(prevId);
-          const nextButton = document.getElementById(nextId);
+          const prevButton = document.getElementById(
+            `prevPage-${paginationNumSuffix}`
+          );
+          const nextButton = document.getElementById(
+            `nextPage-${paginationNumSuffix}`
+          );
           const totalPages = pageItems.length;
-
           return {
             activeList,
             productCards,
@@ -2993,10 +3030,8 @@
           };
         }
 
-        // --- 核心函數：切換內容可見性 ---
         function updateContentVisibility(paginationNumSuffix) {
           const elements = getActiveElements();
-
           if (
             !elements ||
             elements.currentSuffix !== paginationNumSuffix ||
@@ -3009,12 +3044,9 @@
             }
             return;
           }
-
           const currentPage = currentPages[paginationNumSuffix];
-
           elements.productCards.forEach((card) => {
             const cardPage = parseInt(card.dataset.pageContent);
-
             if (cardPage === currentPage) {
               card.classList.remove("d-none");
             } else {
@@ -3023,7 +3055,6 @@
           });
         }
 
-        // --- 分頁狀態函數：更新按鈕 active 狀態 ---
         function updatePaginationState(paginationNumSuffix) {
           const elements = getActiveElements();
           if (
@@ -3032,17 +3063,13 @@
             elements.currentSuffix !== paginationNumSuffix
           )
             return;
-
           const currentPage = currentPages[paginationNumSuffix];
-
-          // 數字分頁按鈕的 active 狀態
           elements.pageItems.forEach((link) => {
             link.closest(".page-item").classList.remove("active");
             if (parseInt(link.dataset.page) === currentPage) {
               link.closest(".page-item").classList.add("active");
             }
           });
-
           if (elements.prevButton) {
             elements.prevButton
               .closest(".page-item")
@@ -3055,39 +3082,30 @@
           }
         }
 
-        // --- 核心函數：在切換列表時，重新設定分頁事件監聽器 ---
         function setupPaginationHandlers() {
           const elements = getActiveElements();
           if (!elements || !elements.paginationContainer) return;
-
           elements.paginationContainer.onclick = null;
           const paginationNumSuffix = elements.currentSuffix;
-
-          // 綁定新的委派事件
           elements.paginationContainer.onclick = function (e) {
             e.preventDefault();
             const target = e.target.closest("a");
             if (!target) return;
-
             let page = currentPages[paginationNumSuffix];
             let pageChanged = false;
-
             if (target.dataset.page) {
-              // 1. 數字分頁按鈕
               const newPage = parseInt(target.dataset.page);
               if (newPage !== page) {
                 page = newPage;
                 pageChanged = true;
               }
             } else if (target.id.startsWith("prevPage")) {
-              // 2. 上一頁按鈕
               const newPage = page > 1 ? page - 1 : 1;
               if (newPage !== page) {
                 page = newPage;
                 pageChanged = true;
               }
             } else if (target.id.startsWith("nextPage")) {
-              // 3. 下一頁按鈕
               const newPage =
                 page < elements.totalPages ? page + 1 : elements.totalPages;
               if (newPage !== page) {
@@ -3095,14 +3113,11 @@
                 pageChanged = true;
               }
             }
-
             if (pageChanged) {
               currentPages[paginationNumSuffix] = page;
               updatePaginationState(paginationNumSuffix);
               updateContentVisibility(paginationNumSuffix);
-              scrollToListMain(false); // 分頁點擊，執行滾動
-
-              // 【AOS 修正 - 分頁】：分頁內容切換後，使用延遲強制 AOS 重新計算
+              scrollToListMain(false);
               if (typeof AOS !== "undefined") {
                 setTimeout(() => {
                   AOS.refreshHard();
@@ -3112,33 +3127,20 @@
           };
         }
 
-        // --- 產品篩選核心函數：更新產品顯示和標題 ---
         function updateProductDisplay(isUserAction = false) {
-          let checkedRadio = null;
-          filterRadios.forEach((radio) => {
-            if (radio.checked) {
-              checkedRadio = radio;
-            }
-          });
-
-          // 1. 隱藏所有產品列表
+          const checkedRadio = document.querySelector(".filter-radio:checked");
           allProductLists.forEach((list) => list.classList.add("d-none"));
-
-          // 2. 預設隱藏所有分頁區塊
           Object.values(PAGINATION_SUFFIX_MAP).forEach((suffix) => {
             const nav = document.getElementById(`productPagination-${suffix}`);
             if (nav) nav.closest(".col")?.classList.add("d-none");
           });
-
           let targetList = null;
           let listIdSuffix = "all";
-
           if (checkedRadio) {
             const checkedValue = checkedRadio.value;
             const targetId = `product-list-${checkedValue}`;
             targetList = document.getElementById(targetId);
             listIdSuffix = checkedValue;
-
             if (targetList) {
               targetList.classList.remove("d-none");
               const label = document.querySelector(
@@ -3147,7 +3149,6 @@
               productTitle.textContent = label ? label.textContent : "篩選商品";
             }
           } else {
-            // 預設列表「所有商品」
             targetList = document.getElementById("product-list-all");
             if (targetList) {
               targetList.classList.remove("d-none");
@@ -3155,29 +3156,21 @@
             productTitle.textContent = "所有商品";
             listIdSuffix = "all";
           }
-
-          // --- 統一處理分頁邏輯 ---
           const targetPaginationNumSuffix = PAGINATION_SUFFIX_MAP[listIdSuffix];
-
           if (targetPaginationNumSuffix) {
-            // 顯示該列表的分頁
             const targetPaginationContainer = document.getElementById(
               `productPagination-${targetPaginationNumSuffix}`
             );
             const targetPaginationParentCol = targetPaginationContainer
               ? targetPaginationContainer.closest(".col")
               : null;
-
             if (targetPaginationParentCol) {
               targetPaginationParentCol.classList.remove("d-none");
             }
-
-            // 綁定事件並顯示該區塊的當前頁面
             setupPaginationHandlers();
             updatePaginationState(targetPaginationNumSuffix);
             updateContentVisibility(targetPaginationNumSuffix);
           } else {
-            // 沒有分頁的列表 (如 hot)，則顯示所有卡片
             if (targetList) {
               targetList
                 .querySelectorAll("[data-page-content]")
@@ -3186,12 +3179,8 @@
                 });
             }
           }
-
-          // 【滾動修正邏輯】：判斷是否為用戶操作 AND 判斷是否為首次載入
           if (isUserAction) {
             scrollToListMain(false);
-
-            // 【AOS 修正 - 篩選/Radio】：切換列表後，使用延遲強制 AOS 重新計算
             if (typeof AOS !== "undefined") {
               setTimeout(() => {
                 AOS.refreshHard();
@@ -3201,28 +3190,22 @@
             scrollToListMain(true);
           }
         }
+        // --- 輔助函數結束 ---
 
-        // 【愛心收藏（點擊填滿）功能】
+        // --- 事件監聽器設定 ---
         const favoriteIcons = document.querySelectorAll(".love-icon");
-
         favoriteIcons.forEach((icon) => {
           icon.addEventListener("click", function (e) {
             e.preventDefault();
             e.stopPropagation();
-
-            if (icon.textContent.trim() === "favorite_border") {
-              icon.textContent = "favorite";
-              icon.classList.add("active");
-            } else {
-              icon.textContent = "favorite_border";
-              icon.classList.remove("active");
-            }
+            icon.textContent =
+              icon.textContent.trim() === "favorite_border"
+                ? "favorite"
+                : "favorite_border";
+            icon.classList.toggle("active");
           });
         });
 
-        // 【其他事件監聽器】
-
-        // 阻止下拉選單點擊後關閉
         dropdownStayOpenElements.forEach(function (element) {
           element.addEventListener("click", function (event) {
             event.stopPropagation();
@@ -3233,32 +3216,26 @@
         clearButton.addEventListener("click", function () {
           filterRadios.forEach((radio) => (radio.checked = false));
           updateProductDisplay(true);
+          collapseAllAccordions(); // 重置操作，收合 Accordion
         });
 
-        // 熱門產品按鈕
+        // 🚨 熱門產品按鈕 - 執行延遲強制收合 (保留延遲以確保重置時收合成功)
         hotProductButton.addEventListener("click", function (e) {
+          e.stopImmediatePropagation();
           e.preventDefault();
-          e.stopPropagation();
 
-          // 清除所有 radio 選擇
+          // 執行產品篩選邏輯 (不變)
           filterRadios.forEach((radio) => (radio.checked = false));
-
-          // 隱藏所有產品列表
           allProductLists.forEach((list) => list.classList.add("d-none"));
-
           const targetList = document.getElementById("product-list-hot");
           if (targetList) {
             targetList.classList.remove("d-none");
           }
           productTitle.textContent = "熱門產品";
-
-          // 隱藏所有分頁
           Object.values(PAGINATION_SUFFIX_MAP).forEach((suffix) => {
             const nav = document.getElementById(`productPagination-${suffix}`);
             if (nav) nav.closest(".col")?.classList.add("d-none");
           });
-
-          // 顯示熱門產品的所有卡片
           if (targetList) {
             targetList
               .querySelectorAll("[data-page-content]")
@@ -3266,41 +3243,36 @@
                 card.classList.remove("d-none");
               });
           }
-
           scrollToListMain(false);
-
-          // 【AOS 修正 - 熱門產品/Swiper】：列表顯示後，等待 100ms 再強制 AOS 重新計算
           if (typeof AOS !== "undefined") {
             setTimeout(() => {
               AOS.refreshHard();
             }, 100);
           }
+
+          // 【核心】: 延遲強制收合 (只有熱門產品才收合)
+          setTimeout(() => {
+            collapseAllAccordions();
+          }, 1);
         });
 
-        // 確定篩選按鈕
-        applyButton.addEventListener("click", function () {
-          updateProductDisplay(true);
-        });
-
-        // Radio 變更事件
+        // 🟢 UX 修正：Radio 改變時，**不執行**收合 (保持 Accordion 開啟)
         filterRadios.forEach((radio) => {
-          radio.addEventListener("change", () => {
+          radio.addEventListener("change", (e) => {
             updateProductDisplay(true);
+            // ！！！ 這裡已經移除了 collapseAllAccordions() 的呼叫 ！！！
           });
         });
 
         // --- 初始載入設定 ---
         updateProductDisplay(false);
 
-        // 【AOS 最終修正】：確保首次載入時的第一頁動畫也能正常觸發
-        // 頁面初次載入完成，等待 100ms 確保所有圖片和 CSS 都已渲染
         if (typeof AOS !== "undefined") {
           setTimeout(() => {
             AOS.refreshHard();
           }, 100);
         }
 
-        // 頁面初次載入完成，將標誌設為 false
         isInitialLoad = false;
       });
     </script>
