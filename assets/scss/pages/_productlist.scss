@@ -43,8 +43,8 @@
     box-shadow: none;
   }
 
-  .accordion-item-hot.accordion-button::after {
-    display: none;
+  .accordion-button-icon.accordion-button::after {
+    display: block;
   }
 
   .form-check-input {
