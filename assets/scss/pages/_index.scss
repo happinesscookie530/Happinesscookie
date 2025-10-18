@@ -259,8 +259,8 @@
   //   }
   // }
   .commitment-image-wrapper {
-    max-width: clamp(0px, 32.19vw, 618px);
-    max-height: clamp(0px, 77.78vh, 840px);
+    max-width: clamp(0px, 30vw, 618px);
+    max-height: clamp(0px, 70vh, 840px);
 
     img {
       width: 100%;
@@ -285,7 +285,7 @@
   .our-commitment-md::before {
     content: "";
     position: absolute;
-    inset: 270px 0px 130px 300px; // 上 24、右 16、下 0、左 16
+    inset: 270px 0px 0px 300px; // 上 24、右 16、下 0、左 16
     background: url("/assets/images/our-bg-md.png") no-repeat center / cover;
     z-index: -1;
     pointer-events: none;
