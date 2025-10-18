@@ -198,6 +198,58 @@
   color: $neutral-80;
 }
 
+.our-commitment-bg {
+  background-image: url("/assets/images/our-commitment-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center 180px; // ← 上方保留 32px 留白（自行調整）
+  background-size: cover;
+}
+.text-orientation-mix {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  display: flex;
+  align-items: center;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.text-before-line::before {
+  content: "";
+  display: block;
+  width: 1px; /* 線的寬度 */
+  height: 30px; /* 線的長度 */
+  background-color: #02b5d4; /* 線的顏色 */
+  margin-bottom: 8px; /* 微調間距 */
+  margin-top: 24px;
+}
+.our-commitment-heading-text {
+  width: 45%;
+}
+.our-commitment-heading-img {
+  // position: absolute;
+  // left: 0px;
+  width: 55%;
+
+  margin-left: -12px;
+
+  .our-commitment-heading-img-inner {
+    width: 100%;
+    display: block;
+  }
+}
+
+.commitment-img-wrapper {
+  width: 25%;
+  img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.commitment-text-wrapper {
+  width: 75%;
+}
+
 /* 4. Responsive (RWD) Styles */
 
 // 手機 ( < 768px )
