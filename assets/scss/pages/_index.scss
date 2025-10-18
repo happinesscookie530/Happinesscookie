@@ -197,6 +197,101 @@
   font-weight: 700;
   color: $neutral-80;
 }
+// 品牌堅持以下
+.our-commitment-bg {
+  background-image: url("/assets/images/our-commitment-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center 180px; // ← 上方保留 32px 留白（自行調整）
+  background-size: cover;
+}
+.text-orientation-mix {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  display: flex;
+  align-items: center;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.text-before-line::before {
+  content: "";
+  display: block;
+  width: 1px; /* 線的寬度 */
+  height: 30px; /* 線的長度 */
+  background-color: #02b5d4; /* 線的顏色 */
+  margin-bottom: 8px; /* 微調間距 */
+  margin-top: 24px;
+}
+.our-commitment-heading-text {
+  width: 45%;
+}
+.our-commitment-heading-img {
+  // position: absolute;
+  // left: 0px;
+  width: 55%;
+
+  margin-left: -12px;
+
+  .our-commitment-heading-img-inner {
+    width: 100%;
+    display: block;
+  }
+}
+
+.commitment-img-wrapper {
+  width: 25%;
+  img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.commitment-text-wrapper {
+  width: 75%;
+}
+@media (min-width: 768px) {
+  // .our-commitment-md-img-wrapper {
+  //   position: relative;
+  //   .our-commitment-md-img {
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //   }
+  // }
+  .commitment-image-wrapper {
+    max-width: clamp(0px, 32.19vw, 618px);
+    max-height: clamp(0px, 77.78vh, 840px);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .text-before-line::before {
+    content: "";
+    display: block;
+    width: 1.6px; /* 線的寬度 */
+    height: 60px; /* 線的長度 */
+    background-color: #02b5d4; /* 線的顏色 */
+    margin-bottom: 8px; /* 微調間距 */
+    margin-top: 24px;
+  }
+
+  .our-commitment-md {
+    position: relative;
+  }
+  .our-commitment-md::before {
+    content: "";
+    position: absolute;
+    inset: 270px 0px 130px 300px; // 上 24、右 16、下 0、左 16
+    background: url("/assets/images/our-commitment-bg.jpg") no-repeat center / cover;
+    z-index: -1;
+    pointer-events: none;
+  }
+}
+// 品牌堅持以上
 
 /* 4. Responsive (RWD) Styles */
 
