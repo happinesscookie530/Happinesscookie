@@ -199,7 +199,7 @@
 }
 // 品牌堅持以下
 .our-commitment-bg {
-  background-image: url("/assets/images/our-commitment-bg.jpg");
+  background-image: url("/assets/images/our-bg.jpg");
   background-repeat: no-repeat;
   background-position: center 180px; // ← 上方保留 32px 留白（自行調整）
   background-size: cover;
@@ -286,7 +286,7 @@
     content: "";
     position: absolute;
     inset: 270px 0px 130px 300px; // 上 24、右 16、下 0、左 16
-    background: url("/assets/images/our-commitment-bg.jpg") no-repeat center / cover;
+    background: url("/assets/images/our-bg-md.png") no-repeat center / cover;
     z-index: -1;
     pointer-events: none;
   }
