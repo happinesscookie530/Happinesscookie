@@ -22,8 +22,8 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <script type="module" crossorigin src="/Happinesscookie/assets/main-BxUu-_Mj.js"></script>
-    <link rel="stylesheet" crossorigin href="/Happinesscookie/assets/main-BJbRV0A7.css">
+    <script type="module" crossorigin src="/Happinesscookie/assets/main-CEM3IMkQ.js"></script>
+    <link rel="stylesheet" crossorigin href="/Happinesscookie/assets/main-BAj9EEZi.css">
   </head>
   <body>
     <header class="fixed-top bg-white">
@@ -1436,18 +1436,45 @@
       });
     </script>
     <script>
-      // 收藏按鈕功能
-      const favoriteBtns = document.querySelectorAll(".favorite-btn");
+    const favoriteBtns = document.querySelectorAll(".favorite-btn");
 
-      favoriteBtns.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          btn.classList.toggle("active");
-          const icon = btn.querySelector("span.material-icons-outlined");
-          icon.textContent = btn.classList.contains("active")
-            ? "favorite" // 實心
-            : "favorite_border"; // 空心
-        });
-      });
+favoriteBtns.forEach((btn) => {
+  const icon = btn.querySelector("span.material-icons-outlined");
+
+  // 滑鼠移入／觸控開始：模擬 hover 效果
+  const addHover = () => {
+    if (!btn.classList.contains("active")) {
+      btn.style.backgroundColor = "rgba(2, 181, 212, 0.1)"; // $primary-10
+    }
+  };
+
+  // 滑鼠離開／觸控結束：移除 hover 效果
+  const removeHover = () => {
+    if (!btn.classList.contains("active")) {
+      btn.style.backgroundColor = "transparent";
+    }
+  };
+
+  // 點擊切換收藏狀態
+  const toggleFavorite = () => {
+    const isActive = btn.classList.toggle("active");
+    icon.textContent = isActive ? "favorite" : "favorite_border";
+    btn.style.backgroundColor = isActive
+      ? "rgba(2, 181, 212, 0.1)" // $primary-10
+      : "transparent";
+  };
+
+  // 桌機 hover
+  btn.addEventListener("mouseenter", addHover);
+  btn.addEventListener("mouseleave", removeHover);
+
+  // 手機觸控 hover 效果
+  btn.addEventListener("touchstart", addHover);
+  btn.addEventListener("touchend", removeHover);
+
+  // 點擊切換
+  btn.addEventListener("click", toggleFavorite);
+});
     </script>
   </body>
 </html>
