@@ -4,11 +4,11 @@
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
-    width: 100%;
-    max-width: 220px;
+    width: 62%;
     height: 314px;
     max-height: 314px;
-    @media (min-width: 376px) {
+    object-fit: cover;
+    @media (min-width: 768px) {
       width: 100%;
       max-width: 416px;
       height: 500px;
@@ -24,11 +24,10 @@
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
-    width: 100%;
-    max-width: 271px;
+    width: 77%;
     height: 193px;
     max-height: 193px;
-    @media (min-width: 376px) {
+    @media (min-width: 768px) {
       width: 100%;
       max-width: 636px;
       height: 436px;
@@ -42,11 +41,10 @@
     background-position: 50% 50%;
     background-size: cover;
     width: 100%;
-    max-width: 351px;
     height: 225px;
     max-height: 225px;
 
-    @media (min-width: 376px) {
+    @media (min-width: 768px) {
       width: 100%;
       max-width: 856px;
       height: 556px;
@@ -57,12 +55,11 @@
   .box-4 {
     margin-top: 68px;
     background-color: $secondary-10;
-    width: 100%;
-    max-width: 297px;
+    width: 79%;
     height: 943px;
     max-height: 943px;
-    @media (min-width: 376px) {
-      margin-top: 212px;
+    @media (min-width: 768px) {
+      margin-top: 131px;
       width: 100%;
       max-width: 915px;
       height: 1560px;
