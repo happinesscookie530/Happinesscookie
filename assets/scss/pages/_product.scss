@@ -136,7 +136,6 @@
   }
 }
 /*收藏按鈕*/
-
 .favorite-btn {
   display: flex;
   align-items: center;
@@ -148,33 +147,30 @@
   border-radius: 8px;
   background-color: transparent;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
 
-  /* 圖示 */
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
   span.material-icons-outlined {
     font-size: 1.5rem;
     color: $primary;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
+    pointer-events: none;
   }
 
-  /* hover 效果（未收藏） */
-  &:hover:not(.active) {
-    background-color: $primary-10;
-  }
-
-  /* active 效果（已收藏） */
   &.active {
     background-color: $primary-10;
 
     span.material-icons-outlined {
       color: $primary;
     }
-  }
-
-  /* focus / active 按下時不影響外觀 */
-  &:focus {
-    outline: none;
-    box-shadow: none;
   }
 }
 /*購物車滑出*/
