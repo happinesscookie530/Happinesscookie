@@ -393,20 +393,27 @@
                 </div>
               </section>
               <!-- 品牌堅持 -->
-               <div class="container">
-              <section
-                class="slogan-section mt-5 pt-5 pt-lg-160 pb-5 py-lg-80"
+                <div>
+                     <section
+                class="slogan-section"
               >
                 <!-- Layer 3: Yellow background block -->
                 <div class="slogan-bg-block"></div>
 
                 <!-- Layer 2: Image -->
-                <div class="slogan-image-wrapper py-5 ">
-                  <img
-                    src="/assets/images/5cookies.png"
-                    alt="Five delicious cookies in a row"
-                    class="img-fluid"
-                  />
+                <div class="slogan-image-wrapper ">
+                                 <picture>
+  <!-- 當螢幕寬度 <= 768px 時，會使用這張圖片 -->
+  <source src="/assets/images/Slogan-pic.png" media="(max-width: 768px)">
+  
+  <!-- 否則預設載入這張圖片 -->
+  <img
+    src="/assets/images/5cookies.png"
+    alt="Five delicious cookies in a row"
+    class="img-fluid"
+  />
+</picture>
+
                 </div>
 
                 <!-- Layer 1: Text -->
@@ -415,12 +422,15 @@
                     <div class="d-flex align-items-center h-100">
                       <h1 class="slogan-text">
                         Bring A Little
-                        <span style="color: #02b5d4">Happiness</span> For You.
+                        <span class="text-primary">Happiness</span> For You.
                       </h1>
                     </div>
                   </div>
                 </div>
               </section>
+                </div>
+           
+                
 
               <!-- News Section -->
               <section class="news-section">
