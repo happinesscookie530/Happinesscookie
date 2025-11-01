@@ -190,7 +190,8 @@
             </p>
           </div>
         </div>
-        <div id="product-list-all" class="product-list row d-flex">
+        <div id="product-list-all" class="product-list row d-flex" data-aos="fade-right"
+              data-aos-duration="400">
           <div
             class="col-6 col-lg-3 mb-10 mb-lg-12 product-card"
             data-page-content="1"
@@ -295,7 +296,8 @@
     <section class="brand-story">
       <div class="container py-32 py-md-80">
         <div class="row position-relative">
-          <div class="col-md-6 mb-28 mb-md-0">
+          <div class="col-md-6 mb-28 mb-md-0" data-aos="fade-top"
+              data-aos-duration="400">
             <div class="d-flex align-items-end">
               <div class="box-1 mb-md-95"></div>
               <h3
@@ -307,6 +309,8 @@
           </div>
           <div
             class="col-md-6 mt-md-90 mb-8 mb-md-12 d-flex flex-column align-items-end"
+            data-aos="fade-top"
+              data-aos-duration="700"
           >
             <div class="d-flex mb-lg-12 mb-8 align-items-center">
               <h6 class="text-primary fs-md-5 me-8">Brand Story</h6>
@@ -523,8 +527,8 @@
                 <div class="slogan-bg-block"></div>
 
                 <!-- Layer 2: Image -->
-                <div class="slogan-image-wrapper ">
-                                 <picture>
+                <div class="slogan-image-wrapper">
+                                 <picture >
   <!-- 當螢幕寬度 <= 768px 時，會使用這張圖片 -->
   <source src="/Happinesscookie/assets/Slogan-pic-B5mqgJWJ.png" media="(max-width: 768px)">
   
@@ -532,7 +536,8 @@
   <img
     src="/Happinesscookie/assets/5cookies-BdDutnJs.png"
     alt="Five delicious cookies in a row"
-    class="img-fluid"
+    class="img-fluid" data-aos="fade-right"
+              data-aos-duration="400"
   />
 </picture>
 
@@ -542,7 +547,8 @@
                 <div class="slogan-text-wrapper">
                   <div class="container h-100 py-160">
                     <div class="d-flex align-items-center h-100">
-                      <h1 class="slogan-text">
+                      <h1 class="slogan-text"  data-aos="fade-right"
+              data-aos-duration="400">
                         Bring A Little
                         <span class="text-primary">Happiness</span> For You.
                       </h1>
@@ -691,8 +697,16 @@
     </div>
   </div>
 </footer>
-
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+      AOS.init({
+        offset: 100, // 觸發點距離（px）
+        easing: "ease-in-out",
+        delay: 0, // 預設延遲
+        once: false, // 是否只執行一次（滾出再回來不再重播）
+      });
+    </script>
   </body>
 </html>
