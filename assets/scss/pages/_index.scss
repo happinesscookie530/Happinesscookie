@@ -204,16 +204,12 @@
   padding: 0.25rem 0.75rem;
   font-size: 0.8rem;
   border-radius: 1rem;
-  color: $primary-10;
+  color: $primary;
 }
-.tag-new {
-  background-color: white;
-}
-.tag-promo {
-  background-color: white;
-}
+.tag-new,
+.tag-promo,
 .tag-limited {
-  background-color: white;
+  background-color: $primary-10;
 }
 
 .card-title {
