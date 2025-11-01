@@ -22,9 +22,18 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    
-    <script type="module" crossorigin src="/Happinesscookie/assets/main-Ba0HHmfi.js"></script>
-    <link rel="stylesheet" crossorigin href="/Happinesscookie/assets/main-KbWZ8oG2.css">
+    <link rel="icon" href="/Happinesscookie/assets/logo-sun-BtVaGnyZ.png" type="image/x-icon" />
+    <meta property="og:image" content="/Happinesscookie/assets/logo%E5%A4%AA%E9%99%BD%E6%96%87%E5%AD%97-01-C8cpEYPl.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="436" />
+    <meta property="og:image:height" content="228" />
+    <meta property="og:title" content="晴天餅乾・Happinesscookie" />
+    <meta
+      property="og:description"
+      content="晴天餅乾 手工製作,只為了在平凡的每一天,成為你心裡那道小小的光"
+    />
+    <script type="module" crossorigin src="/Happinesscookie/assets/main-A6ORUt9F.js"></script>
+    <link rel="stylesheet" crossorigin href="/Happinesscookie/assets/main-CC4E9Z2t.css">
     <link rel="stylesheet" crossorigin href="/Happinesscookie/assets/user-QNXNalH5.css">
   </head>
   <body>
@@ -76,8 +85,15 @@
           shopping_cart
         </span></a
       >
-      <a href="user.html#tab-favorite" id="header-favorite" class="text-neutral-80 p-4 me-lg-8 d-none d-lg-flex">
-        <span class="material-icons-outlined header-material-icon-scroll align-bottom header-nav-icon">favorite_border</span>
+      <a
+        href="user.html#tab-favorite"
+        id="header-favorite"
+        class="text-neutral-80 p-4 me-lg-8 d-none d-lg-flex"
+      >
+        <span
+          class="material-icons-outlined header-material-icon-scroll align-bottom header-nav-icon"
+          >favorite_border</span
+        >
       </a>
       <div class="dropdown">
         <a
@@ -95,24 +111,44 @@
           </span></a
         >
         <ul
-          class="dropdown-menu header-dropdown-menu p-4 mt-18 border-0"
+          class="dropdown-menu dropdown-menu-end shadow header-dropdown-menu p-4 mt-8 border-0"
           aria-labelledby="dropdown-header-menu"
         >
           <li>
-            <a class="dropdown-item py-4 px-6 d-flex align-items-center" href="user.html">
-              <span class="material-icons-outlined header-material-icon-scroll align-bottom me-4">person_3</span>
+            <a
+              class="dropdown-item py-4 px-6 d-flex align-items-center"
+              href="user.html"
+            >
+              <span
+                class="material-icons-outlined header-material-icon-scroll align-bottom me-4"
+                >person_3</span
+              >
               會員中心
             </a>
           </li>
           <li>
-            <a href="user.html#tab-orders" id="header-orders" class="dropdown-item py-4 px-6 d-flex align-items-center">
-              <span class="material-icons-outlined header-material-icon-scroll align-bottom me-4">shopping_bag</span>
+            <a
+              href="user.html#tab-orders"
+              id="header-orders"
+              class="dropdown-item py-4 px-6 d-flex align-items-center"
+            >
+              <span
+                class="material-icons-outlined header-material-icon-scroll align-bottom me-4"
+                >shopping_bag</span
+              >
               訂單查詢
             </a>
           </li>
           <li>
-            <a href="#" id="header-logout" class="dropdown-item py-4 px-6 d-flex align-items-center">
-              <span class="material-icons-outlined header-material-icon-scroll align-bottom me-4">logout</span>
+            <a
+              href="#"
+              id="header-logout"
+              class="dropdown-item py-4 px-6 d-flex align-items-center"
+            >
+              <span
+                class="material-icons-outlined header-material-icon-scroll align-bottom me-4"
+                >logout</span
+              >
               會員登出
             </a>
           </li>
@@ -567,12 +603,7 @@ document.querySelectorAll('#tab-favorite .btn-outline-danger').forEach(btn => {
     logoutBtn.addEventListener('click', (e) => {
       e.preventDefault();
       alert('您已成功登出');
-      logoutBtn.classList.add('d-none'); // 登出按鈕消失
-      // 可選擇回到會員中心
-      tabs.forEach(t => t.classList.add('d-none'));
-      document.querySelector('#tab-profile').classList.remove('d-none');
-      menuLinks.forEach(l => l.classList.remove('active'));
-      document.querySelector('[data-target="tab-profile"]').classList.add('active');
+      window.location.href = 'index.html'; // 登出後跳轉至首頁
     });
   }
 
