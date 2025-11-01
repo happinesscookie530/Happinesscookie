@@ -86,12 +86,11 @@
 
 .slogan-section {
   position: relative;
-  min-height: 298px;
+  min-height: 350px;
 
   overflow: hidden; // 隱藏破格元素超出畫面的部分
   @media (min-width: 768px) {
-  min-height: 800px;
-
+    min-height: 800px;
   }
 }
 
@@ -103,12 +102,12 @@
   height: 100%;
   background-color: $secondary-10;
   z-index: 1;
-     @media (min-width: 768px) {
-        position: absolute;
-  top: 0;
-  right: 0;
-  min-width: 684px;
-     }
+  @media (min-width: 768px) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 684px;
+  }
 }
 
 .slogan-image-wrapper {
@@ -118,17 +117,16 @@
   transform: translateY(-50%);
   z-index: 2;
   padding: 40px auto;
-       @media (min-width: 768px) {
-      padding: 160px auto;
-     }
-   
+  @media (min-width: 768px) {
+    padding: 160px auto;
+  }
 }
-.slogan-image-wrapper img{
+.slogan-image-wrapper img {
   overflow: hidden;
-   object-fit: cover;
-     @media (min-width: 768px) {
-      height: 600px;
-     }
+  object-fit: cover;
+  @media (min-width: 768px) {
+    height: 600px;
+  }
 }
 .slogan-text-wrapper {
   position: absolute;
@@ -141,22 +139,20 @@
 }
 
 .slogan-text {
-    font-size: 16px;
-     font-weight: 500;
-          letter-spacing: 3px;
-          text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-align: center;
   color: white;
-   font-family: "Noto Sans TC";
+  font-family: "Noto Sans TC";
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-      @media (min-width: 768px) {
-        font-size: 40px;
-  font-weight: 700;
-   letter-spacing: 8px;
-   padding-left: 30px;
-      }
+  @media (min-width: 768px) {
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    padding-left: 30px;
+  }
 }
-
-
 
 /* 3. News Section */
 .news-section {
@@ -170,8 +166,8 @@
   justify-content: flex-start;
   text-align: center;
   writing-mode: vertical-lr;
-  text-orientation: upright;
-  gap: 0.5rem;
+  text-orientation: mixed;
+  // gap: 0.5rem;
 }
 
 .news-title-chinese,
@@ -208,16 +204,12 @@
   padding: 0.25rem 0.75rem;
   font-size: 0.8rem;
   border-radius: 1rem;
-  color: $primary-10;
+  color: $primary;
 }
-.tag-new {
-  background-color: white;
-}
-.tag-promo {
-  background-color: white;
-}
+.tag-new,
+.tag-promo,
 .tag-limited {
-  background-color: white;
+  background-color: $primary-10;
 }
 
 .card-title {
@@ -324,7 +316,6 @@
 
 // 手機 ( < 768px )
 @media (max-width: 767.98px) {
-
   .news-section {
     padding: 50px 0;
   }
@@ -339,6 +330,9 @@
     flex-wrap: nowrap !important;
     overflow-x: auto !important;
     -webkit-overflow-scrolling: touch;
+  }
+  .news-card img {
+    object-fit: cover;
   }
   .news-card:last-child {
     padding-right: 0;
