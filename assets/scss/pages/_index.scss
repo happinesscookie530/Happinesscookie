@@ -335,6 +335,9 @@
     overflow-x: auto !important;
     -webkit-overflow-scrolling: touch;
   }
+  .news-card img {
+    object-fit: cover;
+  }
   .news-card:last-child {
     padding-right: 0;
   }
